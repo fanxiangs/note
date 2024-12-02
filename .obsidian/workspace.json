@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BPF Performance Tools/Chapter 7. Memory.md",
+                "file": "Chapter 4 Processor Architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 7. Memory"
+              "title": "Chapter 4 Processor Architecture"
             }
           }
         ],
@@ -209,10 +209,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BPF Performance Tools/Chapter 7. Memory.md"
+                "file": "Chapter 4 Processor Architecture.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Chapter 7. Memory"
+              "title": "Outline of Chapter 4 Processor Architecture"
             }
           }
         ],
@@ -220,7 +220,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 235.5
+    "width": 376.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -235,8 +235,9 @@
   },
   "active": "94cd9ca80265fab3",
   "lastOpenFiles": [
-    "BPF Performance Tools/Chapter 6. CPUs.md",
+    "Pasted image 20241202202620.png",
     "BPF Performance Tools/Chapter 7. Memory.md",
+    "BPF Performance Tools/Chapter 6. CPUs.md",
     "BPF Performance Tools/Chapter 3. PerformanceAnalysis.md",
     "BPF Performance Tools/Chapter 4. BCC.md",
     "BPF Performance Tools/Chapter 1. Introduction.md",
