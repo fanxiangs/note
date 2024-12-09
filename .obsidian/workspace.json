@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Systems Performance/Chapter 3 Operating Systems.md",
+                "file": "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix A_ USE Method_ Linux/A.1 References.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 3 Operating Systems"
+              "title": "A.1 References"
             }
           }
         ]
@@ -138,10 +138,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Systems Performance/Chapter 3 Operating Systems.md"
+                "file": "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix A_ USE Method_ Linux/A.1 References.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Chapter 3 Operating Systems"
+              "title": "Outline of A.1 References"
             }
           }
         ],
@@ -164,33 +164,52 @@
   },
   "active": "a3135687152e27ba",
   "lastOpenFiles": [
-    "attachments/Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library).epub",
-    "attachments/Figure 3.3 System call execution modes.png",
-    "attachments/Figure 3.2 BPF applications.png",
-    "attachments/Figure 3.1 Role of a monolithic operating system kernel.png",
     "Systems Performance/Chapter 3 Operating Systems.md",
-    "attachments/Pasted image 20241209170929.png",
-    "attachments",
-    "Systems Performance/README.md",
-    "Clippings/Pod创建流程.md",
-    "Clippings",
-    "Systems Performance/README/Untitled.md",
-    "BPF Performance Tools/README.md",
-    "Systems Performance/README",
-    "BPF Performance Tools/Chapter 8. File Systems.md",
-    "BPF Performance Tools/Chapter 1. Introduction.md",
-    "20241130004937.png",
-    "Systems Performance",
-    "Untitled.md",
-    "BPF Performance Tools/Chapter 7. Memory.md",
-    "BPF Performance Tools/Chapter 6. CPUs.md",
-    "BPF Performance Tools/Chapter 3. PerformanceAnalysis.md",
-    "Chapter 6 The Memory Hierarchy（存储器层次结构）.md",
-    "Pasted image 20241202202620.png",
-    "README.md",
-    "Chapter 4 Processor Architecture.md",
-    "BPF Performance Tools/Chapter 4. BCC.md",
-    "Untitled.canvas",
-    "BPF Performance Tools"
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 1. Introduction/1.5 Performance Is Challenging.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 1. Introduction/1.4 Perspectives.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 1. Introduction/1.2 Roles.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 1. Introduction/1.1 Systems Performance.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library).md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Code Snippets.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Index.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Glossary.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix E_ Systems Performance Who’s Who/E.1 References.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix E_ Systems Performance Who’s Who/Appendix E_ Systems Performance Who’s Who.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix E_ Systems Performance Who’s Who",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Chapter 11—Cloud Computing.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Chapter 9—Disks.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Chapter 8—File Systems.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Chapter 7—Memory.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Chapter 6—CPUs.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Chapter 3—Operating Systems.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Chapter 2—Methodology.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Appendix D_ Solutions to Selected Exercises.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix C_ bpftrace One-Liners/Networking.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix C_ bpftrace One-Liners/Disks.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix C_ bpftrace One-Liners/File Systems.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix C_ bpftrace One-Liners/Memory.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix C_ bpftrace One-Liners/CPUs.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix C_ bpftrace One-Liners/Appendix C_ bpftrace One-Liners.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix C_ bpftrace One-Liners",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix B_ sar Summary.md",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix A_ USE Method_ Linux",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 16. Case Study",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 15. BPF",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 14. Ftrace",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 13. perf",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 12. Benchmarking",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 11. Cloud Computing",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pub.jpg",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-9.jpg",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-7.jpg",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-8.jpg",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-6.jpg",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-5.jpg",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-4.jpg",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-2.jpg",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-3.jpg",
+    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-13.jpg",
+    "Untitled.canvas"
   ]
 }
