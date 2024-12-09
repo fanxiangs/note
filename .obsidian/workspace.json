@@ -118,9 +118,37 @@
               "icon": "lucide-file",
               "title": "Chapter 8. File Systems"
             }
+          },
+          {
+            "id": "72bf7f982f582a8e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "BPF Performance Tools/Chapter 7. Memory.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chapter 7. Memory"
+            }
+          },
+          {
+            "id": "fd95919df5c348c4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "BPF Performance Tools/Chapter 7. Memory.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chapter 7. Memory"
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -237,10 +265,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BPF Performance Tools/Chapter 8. File Systems.md"
+                "file": "BPF Performance Tools/Chapter 7. Memory.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Chapter 8. File Systems"
+              "title": "Outline of Chapter 7. Memory"
             }
           }
         ],
@@ -261,8 +289,9 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "aee0144caa3f514d",
+  "active": "fd95919df5c348c4",
   "lastOpenFiles": [
+    "Untitled.md",
     "BPF Performance Tools/Chapter 7. Memory.md",
     "BPF Performance Tools/Chapter 8. File Systems.md",
     "BPF Performance Tools/Chapter 6. CPUs.md",
