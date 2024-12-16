@@ -1761,7 +1761,7 @@ $ perf stat -e instructions,cycles,L1-dcache-load-misses,LLC-load-misses,dTLB-lo
 - **L1-dcache-load-misses**：一级数据缓存加载未命中的次数，衡量内存访问的效率。
 - **LLC-load-misses**：最后一级缓存加载未命中的次数，通常反映了访问主内存的负载。
 - **dTLB-load-misses**：数据转换后备缓冲区（dTLB）加载未命中的次数，反映了虚拟地址到物理地址的映射效率。
-### Software Tracing
+#### Software Tracing
 
 `perf` 支持记录多种与 CPU 和调度相关的软件事件。这些事件通常与操作系统的调度、上下文切换和其他高层次的操作有关。可以通过 `perf list` 列出可用的事件：
 
@@ -2299,7 +2299,7 @@ Duration: 48777395993
 - **Intel vTune**：[22] 用于Intel CPU的性能分析工具，提供应用程序行为的深入洞察，包括CPU使用情况、内存使用情况和线程性能。
 - **AMD uprof**：[23] 用于AMD处理器的性能分析工具，功能与Intel vTune类似，但专为AMD架构设计。
 
-### GPUs
+#### GPUs
 
 目前，尚未有一套全面的标准GPU分析工具。GPU供应商通常会发布针对其产品的专用工具。常见的工具包括：
 
