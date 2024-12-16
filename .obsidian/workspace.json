@@ -4,39 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "368547b16e3351c4",
+        "id": "115e9cd359d5c88b",
         "type": "tabs",
         "children": [
           {
-            "id": "9204d57099230c27",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Systems Performance/Chapter 3 Operating Systems/Chapter 3 Operating Systems.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Chapter 3 Operating Systems"
-            }
-          },
-          {
-            "id": "4f7d9db3ce3848a3",
+            "id": "2ae45c368d7781e5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 6 章 CPU/第 6 章 CPU.md",
                 "mode": "source",
+                "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
               "title": "第 6 章 CPU"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -177,15 +163,27 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "4f7d9db3ce3848a3",
+  "active": "2ae45c368d7781e5",
   "lastOpenFiles": [
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/第 5 章应用.md",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/Cover.md",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 4 章可观察性工具/第 4 章可观察性工具.md",
-    "Systems Performance/Chapter 3 Operating Systems/Chapter 3 Operating Systems.md",
-    "Systems Performance/Chapter 4 Observability Tools/Chapter 4 Observability Tools.md",
-    "Systems Performance/Chapter 3 Operating Systems/3.3 Kernels.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/images/06fig18 1.jpg",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 6 章 CPU/第 6 章 CPU.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 6 章 CPU/6.11 参考文献.md",
+    "Systems Performance/README.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 6 章 CPU/6.5 方法论.md",
+    "a",
     "book.json",
+    "attachments/Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library).epub",
+    "attachments/Figure 3.9 Process environment.jpg",
+    "attachments/Figure 3.8 Process life cycle.jpg",
+    "attachments/Figure 3.7 Process creation.jpg",
+    "attachments/Figure 3.6 Interrupt processing.jpg",
+    "attachments/Figure 3.5 Asynchronous interrupt example.jpg",
+    "attachments/Figure 3.4 Interrupt types.jpg",
+    "attachments/Figure 3.3 System call execution modes.png",
+    "attachments/Figure 3.3 System call execution modes.jpg",
+    "attachments/Figure 3.2 BPF applications.png",
+    "attachments",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录A：使用方法：Linux/附录A：使用方法：Linux.md",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录A：使用方法：Linux/软件资源.md",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录A：使用方法：Linux/物质资源.md",
@@ -210,21 +208,9 @@
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/文件系统.md",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/中央处理器.md",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 B：SAR 摘要.md",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 7 章 记忆",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 6 章 CPU",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/images/pub.jpg",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/images/pg808-9.jpg",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/images/pg808-8.jpg",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/images/pg808-7.jpg",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/images/pg808-6.jpg",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/images/pg808-5.jpg",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/images/pg808-4.jpg",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/images/pg808-3.jpg",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/images/pg808-2.jpg",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/images/pg808-13.jpg",
     "Untitled.canvas"
   ]
 }

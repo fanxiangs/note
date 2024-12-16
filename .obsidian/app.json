@@ -1,7 +1,4 @@
 {
-  "alwaysUpdateLinks": true,
   "vimMode": true,
-  "attachmentFolderPath": "./",
-  "promptDelete": false,
-  "useMarkdownLinks": true
+  "alwaysUpdateLinks": true
 }

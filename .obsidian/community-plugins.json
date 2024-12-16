@@ -1,5 +1,6 @@
 [
   "github-sync",
   "epub-importer",
-  "custom-sort"
+  "marker-api",
+  "reading-comments"
 ]
