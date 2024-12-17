@@ -2319,3 +2319,255 @@ Duration: 48777395993
 
 GPU分析与CPU分析不同，因为GPU没有堆栈跟踪来显示代码路径的传承。GPU分析工具通过检测API调用（如CUDA或OpenCL调用）和内存传输的时序来进行分析。
 ## 6.7 Visualizations
+以下是对《Systems Performance》一书中第6.9节部分段落的翻译，并且对文字的Markdown格式进行了修复和优化。
+
+---
+
+## 6.9 Tuning
+
+对于CPU，最大的性能提升通常来自于消除不必要的工作，这是有效的调优方法。第6.5节《方法论》和第6.6节《可观察性工具》介绍了许多分析和识别执行任务的方式，帮助你找到任何不必要的工作。此外，还介绍了其他调优方法，如优先级调优和CPU绑定。本节包括这些以及其他一些调优示例。
+
+调优的具体内容——可用选项以及该如何设置——取决于处理器类型、操作系统版本以及预期的工作负载。以下内容按类型组织，提供了可能可用的选项以及如何调优的示例。前面的方法论部分提供了何时和为何要调优这些可调参数的指导。
+
+### 6.9.1 编译器选项
+
+编译器及其提供的代码优化选项可能对CPU性能产生巨大影响。常见的选项包括针对64位而非32位进行编译，选择优化级别等。编译器优化在第5章《应用程序》中有详细讨论。
+
+### 6.9.2 调度优先级和调度类
+
+`nice(1)`命令可用于调整进程的优先级。正值`nice`降低优先级，负值`nice`（只有超级用户可以设置）则提高优先级。`nice`值的范围是从-20到+19。例如：
+
+```bash
+$ nice -n 19 command
+```
+
+上面的命令将以`nice`值19（最低优先级）运行命令。要更改已运行进程的优先级，可以使用`renice(1)`。
+
+在Linux系统上，`chrt(1)`命令可以直接显示和设置调度优先级以及调度策略。例如：
+
+```bash
+$ chrt -b command
+```
+
+该命令将以`SCHED_BATCH`策略运行命令（见第6.4.2节《调度类》）。`nice(1)`和`chrt(1)`也可以通过PID而非启动命令来调整（请参见它们的手册页）。
+
+调度优先级也可以通过`setpriority(2)`系统调用直接设置，调度策略和优先级可以通过`sched_setscheduler(2)`系统调用设置。
+
+### 6.9.3 调度器选项
+
+内核可能提供可调参数来控制调度器的行为，尽管这些通常不需要调优。
+
+在Linux系统上，各种`CONFIG`选项可以在内核编译时控制调度器行为。以下表格展示了Ubuntu 19.10和Linux 5.3内核的部分选项示例：
+
+表6.12 Linux调度器`CONFIG`选项示例
+
+| 选项                    | 默认值 | 描述                                                         |
+|-------------------------|--------|--------------------------------------------------------------|
+| `CONFIG_CGROUP_SCHED`    | y      | 允许将任务分组，并按组分配CPU时间                              |
+| `CONFIG_FAIR_GROUP_SCHED`| y      | 允许对CFS任务进行分组                                       |
+| `CONFIG_RT_GROUP_SCHED`  | n      | 允许对实时任务进行分组                                       |
+| `CONFIG_SCHED_AUTOGROUP` | y      | 自动识别并创建任务组（例如构建任务）                           |
+| `CONFIG_SCHED_SMT`       | y      | 支持超线程                                                   |
+| `CONFIG_SCHED_MC`        | y      | 支持多核                                                     |
+| `CONFIG_HZ`              | 250    | 设置内核时钟频率（定时器中断）                               |
+| `CONFIG_NO_HZ`           | y      | 无滴答内核行为                                               |
+| `CONFIG_SCHED_HRTICK`    | y      | 使用高分辨率定时器                                           |
+| `CONFIG_PREEMPT`         | n      | 完全内核抢占（不包括自旋锁区域和中断）                       |
+| `CONFIG_PREEMPT_NONE`    | n      | 不进行内核抢占                                               |
+| `CONFIG_PREEMPT_VOLUNTARY`| y     | 在自愿内核代码点进行抢占                                     |
+
+此外，还有一些`sysctl(8)`调度器调优参数，可以在运行时进行设置，以下表格展示了Ubuntu系统中的一些默认值：
+
+表6.13 Linux调度器`sysctl(8)`调优参数
+
+| 参数                                | 默认值  | 描述                                                       |
+|-------------------------------------|---------|------------------------------------------------------------|
+| `kernel.sched_cfs_bandwidth_slice_us`| 5000    | 用于CFS带宽计算的CPU时间片（单位：微秒）                   |
+| `kernel.sched_latency_ns`           | 12000000| 目标抢占延迟。增加该值可能会增加任务在CPU上的时间，代价是延迟更长 |
+| `kernel.sched_migration_cost_ns`    | 500000  | 任务迁移延迟成本，用于亲和性计算。最近运行的任务被认为是缓存热的 |
+| `kernel.sched_nr_migrate`           | 32      | 设置一次迁移的任务数（用于负载均衡）                       |
+| `kernel.sched_schedstats`           | 0       | 启用附加的调度器统计信息，包括`sched:sched_stat*`跟踪点    |
+
+这些`sysctl(8)`调优参数也可以通过`/proc/sys/sched`进行设置。
+
+### 6.9.4 CPU频率调节器
+
+Linux支持不同的CPU频率调节器（governor），通过软件（内核）控制CPU的时钟频率。这些设置可以通过`/sys`文件进行修改。例如，对于CPU 0：
+
+```bash
+# cat /sys/devices/system/cpu/cpufreq/policy0/scaling_available_governors
+performance powersave
+# cat /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+powersave
+```
+
+这是一个未调优的系统示例，当前的调节器是“powersave”，它会使用较低的CPU频率来节省电力。可以将其设置为“performance”以始终使用最高频率。例如：
+
+```bash
+# echo performance > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+```
+
+这必须为所有CPU（policy0..N）执行。该策略目录还包含设置频率的文件（`scaling_setspeed`）以及确定可能的频率范围的文件（`scaling_min_freq`，`scaling_max_freq`）。
+
+将CPU设置为始终以最大频率运行可能会对环境产生巨大影响。如果该设置对性能的提升不显著，考虑为了环保而继续使用powersave设置。对于有权限访问功耗MSR（云主机可能会屏蔽这些）的主机，也可以使用这些MSR来测量在最大CPU频率设置与不设置下的功耗，从而量化（部分）环境成本。
+
+> **注意：** 主机级功耗测量并不考虑服务器空调、服务器制造与运输等环境成本。
+
+### 6.9.5 电源状态
+
+可以使用`cpupower(1)`工具启用或禁用处理器的电源状态。正如在第6.6.21节《其他工具》中所提到的，较深的睡眠状态可能具有较高的退出延迟（例如，C10状态的退出延迟为890微秒）。可以使用`-d`选项禁用个别状态，使用`-D`选项禁用所有具有高于给定延迟（以微秒为单位）的状态。这允许你微调哪些低功耗状态可以被使用，同时禁用那些退出延迟过长的状态。
+
+### 6.9.6 CPU绑定
+
+可以将进程绑定到一个或多个CPU上，这有助于提高缓存热度和内存局部性，从而提高性能。
+
+在Linux中，可以使用`taskset(1)`命令，通过CPU掩码或范围来设置CPU亲和性。例如：
+
+```bash
+$ taskset -pc 7-10 10790
+pid 10790's current affinity list: 0-15
+pid 10790's new affinity list: 7-10
+```
+
+上面的命令将PID为10790的进程绑定到CPU 7到10上。
+
+`numactl(8)`命令也可以进行CPU绑定，并且可以绑定内存节点（见第7章《内存》，第7.6.4节《NUMA绑定》）。
+
+### 6.9.7 独占CPU集合
+
+Linux提供了`cpuset`，允许将CPU分组并分配进程。这与CPU绑定类似，可以提高性能，但通过使cpuset成为独占的，可以进一步提升性能，避免其他进程使用这些CPU。这样做的代价是减少系统可用的CPU。
+
+以下是创建独占CPU集合的示例：
+
+```bash
+# mount -t cgroup
+
+ -ocpuset cpuset /sys/fs/cgroup/cpuset  # 可能不需要
+# cd /sys/fs/cgroup/cpuset
+# mkdir prodset                    # 创建名为"prodset"的cpuset
+# cd prodset
+# echo 7-10 > cpuset.cpus          # 分配CPU 7-10
+# echo 1 > cpuset.cpu_exclusive    # 将prodset设置为独占
+# echo 1159 > tasks                # 将PID 1159分配给prodset
+```
+
+参考`cpuset(7)`手册页。
+
+在创建CPU集合时，你可能还想了解哪些CPU将继续处理中断。`irqbalance(1)`守护进程会尝试在CPU之间分配中断，以改善性能。你也可以通过`/proc/irq/IRQ/smp_affinity`文件手动设置中断的CPU亲和性。
+
+### 6.9.8 资源控制
+
+除了将进程与整个CPU关联外，现代操作系统还提供了细粒度的资源控制，以管理CPU使用情况。
+
+在Linux中，使用控制组（cgroups）可以控制单个进程或一组进程的资源使用。可以通过设置权重来控制CPU的使用，CFS调度器允许对CPU带宽施加固定限制（即每个时间间隔内分配的微秒数）。
+
+第11章《云计算》描述了如何管理虚拟化环境中的CPU使用情况，包括如何结合使用权重和限制。
+
+### 6.9.9 安全引导选项
+
+针对Meltdown和Spectre安全漏洞的内核缓解措施可能会降低性能。在某些场景下，如果安全性不是要求，可能希望禁用这些缓解措施以获取更高的性能。由于存在安全风险，因此不推荐这样做，但你应该知道有这些选项。这些选项是GRUB命令行选项，包括`nospectre_v1`和`nospectre_v2`。它们在Linux源代码中的`Documentation/admin-guide/kernel-parameters.txt`文档中有详细说明。以下是其中的一个摘录：
+
+```bash
+nospectre_v1    [PPC] 禁用Spectre变种1（边界检查绕过）的缓解措施。使用此选项时，系统可能会发生数据泄漏。
+
+nospectre_v2    [X86,PPC_FSL_BOOK3E,ARM64] 禁用Spectre变种2（间接分支预测）漏洞的所有缓解措施。系统可能允许数据泄漏。
+```
+
+还有一个网站列出了这些选项：[Make Linux Fast Again](https://make-linux-fast-again.com)。该网站未注明内核文档中的警告信息。
+
+### 6.9.10 处理器选项（BIOS调优）
+
+处理器通常提供设置，允许启用、禁用和调节处理器级别的特性。对于x86系统，这些设置通常在启动时通过BIOS设置菜单进行访问。
+
+这些设置通常默认提供最佳性能，通常不需要调整。今天我调整这些设置的最常见原因是禁用Intel Turbo Boost，以便CPU基准测试在一致的时钟频率下执行（请注意，对于生产用途，应启用Turbo Boost以获得略微更高的性能）。
+## 6.10 Exercises
+Answer the following questions about CPU terminology:
+
+What is the difference between a process and a processor?
+
+What is a hardware thread?
+
+What is the run queue?
+
+What is the difference between user time and kernel time?
+
+Answer the following conceptual questions:
+
+Describe CPU utilization and saturation.
+
+Describe how the instruction pipeline improves CPU throughput.
+
+Describe how processor instruction width improves CPU throughput.
+
+Describe the advantages of multiprocess and multithreaded models.
+
+Answer the following deeper questions:
+
+Describe what happens when the system CPUs are overloaded with runnable work, including the effect on application performance.
+
+When there is no runnable work to perform, what do the CPUs do?
+
+When handed a suspected CPU performance issue, name two methodologies you would use early during the investigation, and explain why.
+
+Develop the following procedures for your environment:
+
+A USE method checklist for CPU resources. Include how to fetch each metric (e.g., which command to execute) and how to interpret the result. Try to use existing OS observability tools before installing or using additional software products.
+
+A workload characterization checklist for CPU resources. Include how to fetch each metric, and try to use existing OS observability tools first.
+
+Perform these tasks:
+
+Calculate the load average for the following system, whose load is at steady state with no significant disk/lock load:
+
+The system has 64 CPUs.
+
+The system-wide CPU utilization is 50%.
+
+The system-wide CPU saturation, measured as the total number of runnable and queued threads on average, is 2.0.
+
+Choose an application, and profile its user-level CPU usage. Show which code paths are consuming the most CPU.
+
+(optional, advanced) Develop bustop(1)—a tool that shows physical bus or interconnect utilization—with a presentation similar to iostat(1): a list of buses, columns for throughput in each direction, and utilization. Include saturation and error metrics if possible. This will require using PMCs.
+### 6.11 References
+- **[Saltzer 70]** Saltzer, J., and Gintell, J., “The Instrumentation of Multics,” _Communications of the ACM_, August 1970.
+- **[Bobrow 72]** Bobrow, D. G., Burchfiel, J. D., Murphy, D. L., and Tomlinson, R. S., “TENEX: A Paged Time Sharing System for the PDP-10*,” _Communications of the ACM_, March 1972.
+- **[Myer 73]** Myer, T. H., Barnaby, J. R., and Plummer, W. W., _TENEX Executive Manual_, Bolt, Baranek and Newman, Inc., April 1973.
+- **[Thomas 73]** Thomas, B., “RFC 546: TENEX Load Averages for July 1973,” _Network Working Group_, [RFC 546](http://tools.ietf.org/html/rfc546), 1973.
+- **[TUHS 73]** “V4,” _The Unix Heritage Society_, [V4](http://minnie.tuhs.org/cgi-bin/utree.pl?file=V4), materials from 1973.
+- **[Hinnant 84]** Hinnant, D., “Benchmarking UNIX Systems,” _BYTE magazine_, Vol. 9, No. 8, August 1984.
+- **[Bulpin 05]** Bulpin, J., and Pratt, I., “Hyper-Threading Aware Process Scheduling Heuristics,” _USENIX_, 2005.
+- **[Corbet 06a]** Corbet, J., “Priority inheritance in the kernel,” _LWN.net_, [LWN Article](http://lwn.net/Articles/178253), 2006.
+- **[Otto 06]** Otto, E., “Temperature-Aware Operating System Scheduling,” University of Virginia (Thesis), 2006.
+- **[Ruggiero 08]** Ruggiero, J., “Measuring Cache and Memory Latency and CPU to Memory Bandwidth,” Intel (Whitepaper), 2008.
+- **[Intel 09]** “An Introduction to the Intel QuickPath Interconnect,” Intel (Whitepaper), 2009.
+- **[Levinthal 09]** Levinthal, D., “Performance Analysis Guide for Intel® Core™ i7 Processor and Intel® Xeon™ 5500 Processors,” Intel (Whitepaper), 2009.
+- **[Gregg 10a]** Gregg, B., “Visualizing System Latency,” _Communications of the ACM_, July 2010.
+- **[Weaver 11]** Weaver, V., “The Unofficial Linux Perf Events Web-Page,” [Perf Events Webpage](http://web.eece.maine.edu/~vweaver/projects/perf_events), 2011.
+- **[McVoy 12]** McVoy, L., “LMbench - Tools for Performance Analysis,” [LMbench Tools](http://www.bitmover.com/lmbench), 2012.
+- **[Stevens 13]** Stevens, W. R., and Rago, S., _Advanced Programming in the UNIX Environment_, 3rd Edition, Addison-Wesley, 2013.
+- **[Perf 15]** “Tutorial: Linux kernel profiling with perf,” _perf wiki_, [Tutorial](https://perf.wiki.kernel.org/index.php/Tutorial), last updated 2015.
+- **[Gregg 16b]** Gregg, B., “The Flame Graph,” _Communications of the ACM_, Vol. 59, Issue 6, pp. 48–57, June 2016.
+- **[ACPI 17]** Advanced Configuration and Power Interface (ACPI) Specification, [ACPI Specification](https://uefi.org/sites/default/files/resources/ACPI%206_2_A_Sept29.pdf), 2017.
+- **[Gregg 17b]** Gregg, B., “CPU Utilization Is Wrong,” [Blog Post](http://www.brendangregg.com/blog/2017-05-09/cpu-utilization-is-wrong.html), 2017.
+- **[Gregg 17c]** Gregg, B., “Linux Load Averages: Solving the Mystery,” [Blog Post](http://www.brendangregg.com/blog/2017-08-08/linux-load-averages.html), 2017.
+- **[Mulnix 17]** Mulnix, D., “Intel® Xeon® Processor Scalable Family Technical Overview,” [Intel Xeon Overview](https://software.intel.com/en-us/articles/intel-xeon-processor-scalable-family-technical-overview), 2017.
+- **[Gregg 18b]** Gregg, B., “Netflix FlameScope,” _Netflix Technology Blog_, [Netflix Blog](https://netflixtechblog.com/netflix-flamescope-a57ca19d47bb), 2018.
+- **[Ather 19]** Ather, A., “General Purpose GPU Computing,” [Tech Blog](http://techblog.cloudperf.net/2019/12/general-purpose-gpu-computing.html), 2019.
+- **[Gregg 19]** Gregg, B., _BPF Performance Tools: Linux System and Application Observability_, Addison-Wesley, 2019.
+- **[Intel 19a]** Intel 64 and IA-32 Architectures Software Developer’s Manual, Combined Volumes 1, 2A, 2B, 2C, 3A, 3B, and 3C, Intel, 2019.
+- **[Intel 19b]** Intel 64 and IA-32 Architectures Software Developer’s Manual, Volume 3B, System Programming Guide, Part 2, Intel, 2019.
+- **[Netflix 19]** “FlameScope Is a Visualization Tool for Exploring Different Time Ranges as Flame Graphs,” [FlameScope GitHub](https://github.com/Netflix/flamescope), 2019.
+- **[Wysocki 19]** Wysocki, R., “CPU Idle Time Management,” _Linux documentation_, [Linux Documentation](https://www.kernel.org/doc/html/latest/driver-api/pm/cpuidle.html), 2019.
+- **[AMD 20]** “AMD μProf,” [AMD μProf](https://developer.amd.com/amd-uprof), accessed 2020.
+- **[Gregg 20d]** Gregg, B., “MSR Cloud Tools,” [MSR Cloud Tools](https://github.com/brendangregg/msr-cloud-tools), last updated 2020.
+- **[Gregg 20e]** Gregg, B., “PMC (Performance Monitoring Counter) Tools for the Cloud,” [PMC Cloud Tools](https://github.com/brendangregg/pmc-cloud-tools), last updated 2020.
+- **[Gregg 20f]** Gregg, B., “perf Examples,” [perf Examples](http://www.brendangregg.com/perf.html), accessed 2020.
+- **[Gregg 20g]** Gregg, B., “FlameGraph: Stack Trace Visualizer,” [FlameGraph GitHub](https://github.com/brendangregg/FlameGraph), last updated 2020.
+- **[Intel 20a]** “Product Specifications,” [Intel Product Specifications](https://ark.intel.com/), accessed 2020.
+- **[Intel 20b]** “Intel® VTune™ Profiler,” [VTune Profiler](https://software.intel.com/content/www/us/en/develop/tools/vtune-profiler.html), accessed 2020.
+- **[Iovisor 20a]** “bpftrace: High-level Tracing Language for Linux eBPF,” [bpftrace GitHub](https://github.com/iovisor/bpftrace), last updated 2020.
+- **[Linux 20f]** “The Kernel’s Command-Line Parameters,” _Linux documentation_, [Linux Kernel Parameters](https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html), accessed 2020.
+- **[Spier 20a]** Spier, M., “A D3.js Plugin That Produces Flame Graphs from Hierarchical Data,” [D3 Flame Graph GitHub](https://github.com/spiermar/d3-flame-graph), last updated 2020.
+- **[Spier 20b]** Spier, M., “Template,” [D3 Flame Graph Template](https://github.com/spiermar/d3-flame-graph#template), last updated 2020.
+- **[Valgrind 20]** “Valgrind Documentation,” [Valgrind Documentation](http://valgrind.org/docs/manual), May 2020.
+- **[Verma 20]** Verma, A., “CUDA Cores vs Stream Processors Explained,” [CUDA vs Stream Processors](https://graphicscardhub.com/cuda-cores-vs-stream-processors), 2020.
