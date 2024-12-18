@@ -1,0 +1,3069 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第 16 章案例研究 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Xiang Fan">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 16 章案例研究/16.1 无法解释的胜利.md" />
+    
+    
+    <link rel="prev" href="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 15 章 BPF/15.3 参考文献.md" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../BPF%20Performance Tools/README.md">
+            
+                <span>
+            
+                    
+                    BPF Performance Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../BPF%20Performance Tools/Chapter 1. Introduction.md">
+            
+                <span>
+            
+                    
+                    Chapter 1. Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../BPF%20Performance Tools/Chapter 3. PerformanceAnalysis.md">
+            
+                <span>
+            
+                    
+                    Chapter 3. PerformanceAnalysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../BPF%20Performance Tools/Chapter 4. BCC.md">
+            
+                <span>
+            
+                    
+                    Chapter 4. BCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../BPF%20Performance Tools/Chapter 6. CPUs.md">
+            
+                <span>
+            
+                    
+                    Chapter 6. CPUs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../BPF%20Performance Tools/Chapter 7. Memory.md">
+            
+                <span>
+            
+                    
+                    Chapter 7. Memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../BPF%20Performance Tools/Chapter 8. File Systems.md">
+            
+                <span>
+            
+                    
+                    Chapter 8. File Systems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../Systems%20Performance/README.md">
+            
+                <span>
+            
+                    
+                    Systems Performance
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../Systems Performance/Chapter 3 Operating Systems/Chapter 3 Operating Systems.html">
+            
+                <a href="../../Systems Performance/Chapter 3 Operating Systems/Chapter 3 Operating Systems.html">
+            
+                    
+                    Chapter 3 Operating Systems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../Systems Performance/Chapter 4 Observability Tools/Chapter 4 Observability Tools.html">
+            
+                <a href="../../Systems Performance/Chapter 4 Observability Tools/Chapter 4 Observability Tools.html">
+            
+                    
+                    Chapter 4 Observability Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Systems Performance_ Enterprise and the Cl - Brendan Gregg.html">
+            
+                <a href="../Systems Performance_ Enterprise and the Cl - Brendan Gregg.html">
+            
+                    
+                    Systems Performance Enterprise And The Cl Brendan Gregg
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../前言/前言.html">
+            
+                <a href="../前言/前言.html">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/前言/关于本书.md">
+            
+                <span>
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/前言/关于此版本.md">
+            
+                <span>
+            
+                    
+                    关于此版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../第 1 章简介/第 1 章简介.html">
+            
+                <a href="../第 1 章简介/第 1 章简介.html">
+            
+                    
+                    第 1 章简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.1 系统性能.md">
+            
+                <span>
+            
+                    
+                    1.1 系统性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.10 方法论.md">
+            
+                <span>
+            
+                    
+                    1.10 方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.11 案例研究.md">
+            
+                <span>
+            
+                    
+                    1.11 案例研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.12 参考文献.md">
+            
+                <span>
+            
+                    
+                    1.12 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.2 角色.md">
+            
+                <span>
+            
+                    
+                    1.2 角色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.3 活动.md">
+            
+                <span>
+            
+                    
+                    1.3 活动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.4 观点.md">
+            
+                <span>
+            
+                    
+                    1.4 观点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.5 性能具有挑战性.md">
+            
+                <span>
+            
+                    
+                    1.5 性能具有挑战性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.9" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.6 延迟.md">
+            
+                <span>
+            
+                    
+                    1.6 延迟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.10" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.7 可观察性.md">
+            
+                <span>
+            
+                    
+                    1.7 可观察性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.11" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.8 实验.md">
+            
+                <span>
+            
+                    
+                    1.8 实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.12" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.9 云计算.md">
+            
+                <span>
+            
+                    
+                    1.9 云计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../第 10 章 网络/第 10 章 网络.html">
+            
+                <a href="../第 10 章 网络/第 10 章 网络.html">
+            
+                    
+                    第 10 章 网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.1 术语.md">
+            
+                <span>
+            
+                    
+                    10.1 术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.10 参考文献.md">
+            
+                <span>
+            
+                    
+                    10.10 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.2 模型.md">
+            
+                <span>
+            
+                    
+                    10.2 模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.3 概念.md">
+            
+                <span>
+            
+                    
+                    10.3 概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.4 架构.md">
+            
+                <span>
+            
+                    
+                    10.4 架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.6" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.5 方法论.md">
+            
+                <span>
+            
+                    
+                    10.5 方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.7" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.6 可观测性工具.md">
+            
+                <span>
+            
+                    
+                    10.6 可观测性工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.8" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.7 实验.md">
+            
+                <span>
+            
+                    
+                    10.7 实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.9" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.8 调优.md">
+            
+                <span>
+            
+                    
+                    10.8 调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.10" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.9 练习.md">
+            
+                <span>
+            
+                    
+                    10.9 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../第 11 章云计算/第 11 章云计算.html">
+            
+                <a href="../第 11 章云计算/第 11 章云计算.html">
+            
+                    
+                    第 11 章云计算
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.1 背景.md">
+            
+                <span>
+            
+                    
+                    11.1 背景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.2 硬件虚拟化.md">
+            
+                <span>
+            
+                    
+                    11.2 硬件虚拟化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.3 操作系统虚拟化.md">
+            
+                <span>
+            
+                    
+                    11.3 操作系统虚拟化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.4 轻量级虚拟化.md">
+            
+                <span>
+            
+                    
+                    11.4 轻量级虚拟化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.5 其他类型.md">
+            
+                <span>
+            
+                    
+                    11.5 其他类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.6 比较.md">
+            
+                <span>
+            
+                    
+                    11.6 比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.7 练习.md">
+            
+                <span>
+            
+                    
+                    11.7 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.8 参考文献.md">
+            
+                <span>
+            
+                    
+                    11.8 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../第 12 章. 基准测试/第 12 章. 基准测试.html">
+            
+                <a href="../第 12 章. 基准测试/第 12 章. 基准测试.html">
+            
+                    
+                    第 12 章. 基准测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 12 章. 基准测试/12.1 背景.md">
+            
+                <span>
+            
+                    
+                    12.1 背景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 12 章. 基准测试/12.2 基准测试类型.md">
+            
+                <span>
+            
+                    
+                    12.2 基准测试类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 12 章. 基准测试/12.3 方法论.md">
+            
+                <span>
+            
+                    
+                    12.3 方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 12 章. 基准测试/12.4 基准问题.md">
+            
+                <span>
+            
+                    
+                    12.4 基准问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 12 章. 基准测试/12.5 练习.md">
+            
+                <span>
+            
+                    
+                    12.5 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 12 章. 基准测试/12.6 参考文献.md">
+            
+                <span>
+            
+                    
+                    12.6 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../第 13 章. 性能/第 13 章. 性能.html">
+            
+                <a href="../第 13 章. 性能/第 13 章. 性能.html">
+            
+                    
+                    第 13 章. 性能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.1 子命令概述.md">
+            
+                <span>
+            
+                    
+                    13.1 子命令概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.10 性能报告.md">
+            
+                <span>
+            
+                    
+                    13.10 性能报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.11 性能脚本.md">
+            
+                <span>
+            
+                    
+                    13.11 性能脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.4" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.12 性能跟踪.md">
+            
+                <span>
+            
+                    
+                    13.12 性能跟踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.5" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.13 其他命令.md">
+            
+                <span>
+            
+                    
+                    13.13 其他命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.6" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.14 性能文档.md">
+            
+                <span>
+            
+                    
+                    13.14 性能文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.7" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.15 参考文献.md">
+            
+                <span>
+            
+                    
+                    13.15 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.8" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.2 单行线.md">
+            
+                <span>
+            
+                    
+                    13.2 单行线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.9" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.3 性能事件.md">
+            
+                <span>
+            
+                    
+                    13.3 性能事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.10" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.4 硬件事件.md">
+            
+                <span>
+            
+                    
+                    13.4 硬件事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.11" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.5 软件事件.md">
+            
+                <span>
+            
+                    
+                    13.5 软件事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.12" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.6 跟踪点事件.md">
+            
+                <span>
+            
+                    
+                    13.6 跟踪点事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.13" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.7 探测事件.md">
+            
+                <span>
+            
+                    
+                    13.7 探测事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.14" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.8 性能统计.md">
+            
+                <span>
+            
+                    
+                    13.8 性能统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.15" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.9 性能记录.md">
+            
+                <span>
+            
+                    
+                    13.9 性能记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../第 14 章 Ftrace/第 14 章 Ftrace.html">
+            
+                <a href="../第 14 章 Ftrace/第 14 章 Ftrace.html">
+            
+                    
+                    第 14 章 Ftrace
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.7.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.1 能力概述.md">
+            
+                <span>
+            
+                    
+                    14.1 能力概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.10 FTrace 历史触发器.md">
+            
+                <span>
+            
+                    
+                    14.10 FTrace 历史触发器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.3" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.11 跟踪命令.md">
+            
+                <span>
+            
+                    
+                    14.11 跟踪命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.4" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.12 性能跟踪.md">
+            
+                <span>
+            
+                    
+                    14.12 性能跟踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.5" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.13 性能工具.md">
+            
+                <span>
+            
+                    
+                    14.13 性能工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.6" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.14 FTrace 文档.md">
+            
+                <span>
+            
+                    
+                    14.14 FTrace 文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.7" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.15 参考文献.md">
+            
+                <span>
+            
+                    
+                    14.15 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.8" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.2 跟踪 (_sys">
+            
+                <span>
+            
+                    
+                    14.2 跟踪 (_sys)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.9" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.3 FTrace 函数分析器.md">
+            
+                <span>
+            
+                    
+                    14.3 FTrace 函数分析器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.10" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.4 ftrace函数跟踪.md">
+            
+                <span>
+            
+                    
+                    14.4 ftrace函数跟踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.11" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.5 跟踪点.md">
+            
+                <span>
+            
+                    
+                    14.5 跟踪点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.12" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.6 k探针.md">
+            
+                <span>
+            
+                    
+                    14.6 k探针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.13" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.7 升级.md">
+            
+                <span>
+            
+                    
+                    14.7 升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.14" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.8 FTrace函数图.md">
+            
+                <span>
+            
+                    
+                    14.8 FTrace函数图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.15" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.9 ftrace hwlat.md">
+            
+                <span>
+            
+                    
+                    14.9 ftrace hwlat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../第 15 章 BPF/第 15 章 BPF.html">
+            
+                <a href="../第 15 章 BPF/第 15 章 BPF.html">
+            
+                    
+                    第 15 章 BPF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.8.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 15 章 BPF/15.1 密件抄送.md">
+            
+                <span>
+            
+                    
+                    15.1 密件抄送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 15 章 BPF/15.2 bpftrace.md">
+            
+                <span>
+            
+                    
+                    15.2 bpftrace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.3" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 15 章 BPF/15.3 参考文献.md">
+            
+                <span>
+            
+                    
+                    15.3 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.9" data-path="第 16 章案例研究.html">
+            
+                <a href="第 16 章案例研究.html">
+            
+                    
+                    第 16 章案例研究
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.9.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 16 章案例研究/16.1 无法解释的胜利.md">
+            
+                <span>
+            
+                    
+                    16.1 无法解释的胜利
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 16 章案例研究/16.2 附加信息.md">
+            
+                <span>
+            
+                    
+                    16.2 附加信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.3" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 16 章案例研究/16.3 参考文献.md">
+            
+                <span>
+            
+                    
+                    16.3 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../第 2 章方法论/第 2 章方法论.html">
+            
+                <a href="../第 2 章方法论/第 2 章方法论.html">
+            
+                    
+                    第 2 章方法论
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.1 术语.md">
+            
+                <span>
+            
+                    
+                    2.1 术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.10 可视化.md">
+            
+                <span>
+            
+                    
+                    2.10 可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.3" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.11 练习.md">
+            
+                <span>
+            
+                    
+                    2.11 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.4" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.12 参考文献.md">
+            
+                <span>
+            
+                    
+                    2.12 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.5" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.2 模型.md">
+            
+                <span>
+            
+                    
+                    2.2 模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.6" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.3 概念.md">
+            
+                <span>
+            
+                    
+                    2.3 概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.7" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.4 观点.md">
+            
+                <span>
+            
+                    
+                    2.4 观点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.8" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.5 方法论.md">
+            
+                <span>
+            
+                    
+                    2.5 方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.9" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.6 建模.md">
+            
+                <span>
+            
+                    
+                    2.6 建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.10" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.7 容量规划.md">
+            
+                <span>
+            
+                    
+                    2.7 容量规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.11" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.8 统计.md">
+            
+                <span>
+            
+                    
+                    2.8 统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.12" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.9 监控.md">
+            
+                <span>
+            
+                    
+                    2.9 监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../第 3 章操作系统/第 3 章操作系统.html">
+            
+                <a href="../第 3 章操作系统/第 3 章操作系统.html">
+            
+                    
+                    第 3 章操作系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../第 4 章可观察性工具/第 4 章可观察性工具.html">
+            
+                <a href="../第 4 章可观察性工具/第 4 章可观察性工具.html">
+            
+                    
+                    第 4 章可观察性工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../第 5 章应用/第 5 章应用.html">
+            
+                <a href="../第 5 章应用/第 5 章应用.html">
+            
+                    
+                    第 5 章应用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.13.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.1 应用基础知识.md">
+            
+                <span>
+            
+                    
+                    5.1 应用基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.2 应用性能技术.md">
+            
+                <span>
+            
+                    
+                    5.2 应用性能技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13.3" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.3 编程语言.md">
+            
+                <span>
+            
+                    
+                    5.3 编程语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13.4" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.4 方法论.md">
+            
+                <span>
+            
+                    
+                    5.4 方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13.5" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.5 可观测性工具.md">
+            
+                <span>
+            
+                    
+                    5.5 可观测性工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13.6" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.6 陷阱.md">
+            
+                <span>
+            
+                    
+                    5.6 陷阱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13.7" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.7 练习.md">
+            
+                <span>
+            
+                    
+                    5.7 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13.8" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.8 参考文献.md">
+            
+                <span>
+            
+                    
+                    5.8 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../第 6 章 CPU/第 6 章 CPU.html">
+            
+                <a href="../第 6 章 CPU/第 6 章 CPU.html">
+            
+                    
+                    第 6 章 CPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../第 7 章 Memory/第 7 章 Memory.html">
+            
+                <a href="../第 7 章 Memory/第 7 章 Memory.html">
+            
+                    
+                    第 7 章 Memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../第 8 章文件系统/第 8 章文件系统.html">
+            
+                <a href="../第 8 章文件系统/第 8 章文件系统.html">
+            
+                    
+                    第 8 章文件系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.16.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.1 术语.md">
+            
+                <span>
+            
+                    
+                    8.1 术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.10 参考文献.md">
+            
+                <span>
+            
+                    
+                    8.10 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.3" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.2 模型.md">
+            
+                <span>
+            
+                    
+                    8.2 模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.4" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.3 概念.md">
+            
+                <span>
+            
+                    
+                    8.3 概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.5" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.4 架构.md">
+            
+                <span>
+            
+                    
+                    8.4 架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.6" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.5 方法论.md">
+            
+                <span>
+            
+                    
+                    8.5 方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.7" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.6 可观测性工具.md">
+            
+                <span>
+            
+                    
+                    8.6 可观测性工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.8" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.7 实验.md">
+            
+                <span>
+            
+                    
+                    8.7 实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.9" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.8 调优.md">
+            
+                <span>
+            
+                    
+                    8.8 调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.10" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.9 练习.md">
+            
+                <span>
+            
+                    
+                    8.9 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../第 9 章磁盘/第 9 章磁盘.html">
+            
+                <a href="../第 9 章磁盘/第 9 章磁盘.html">
+            
+                    
+                    第 9 章磁盘
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.17.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.1 术语.md">
+            
+                <span>
+            
+                    
+                    9.1 术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.10 练习.md">
+            
+                <span>
+            
+                    
+                    9.10 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.3" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.11 参考文献.md">
+            
+                <span>
+            
+                    
+                    9.11 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.4" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.2 模型.md">
+            
+                <span>
+            
+                    
+                    9.2 模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.5" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.3 概念.md">
+            
+                <span>
+            
+                    
+                    9.3 概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.6" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.4 架构.md">
+            
+                <span>
+            
+                    
+                    9.4 架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.7" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.5 方法论.md">
+            
+                <span>
+            
+                    
+                    9.5 方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.8" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.6 可观测性工具.md">
+            
+                <span>
+            
+                    
+                    9.6 可观测性工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.9" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.7 可视化.md">
+            
+                <span>
+            
+                    
+                    9.7 可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.10" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.8 实验.md">
+            
+                <span>
+            
+                    
+                    9.8 实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.11" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.9 调优.md">
+            
+                <span>
+            
+                    
+                    9.9 调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../附录 C：bpftrace 单行代码/附录 C：bpftrace 单行代码.html">
+            
+                <a href="../附录 C：bpftrace 单行代码/附录 C：bpftrace 单行代码.html">
+            
+                    
+                    附录 C：bpftrace 单行代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.18.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/中央处理器.md">
+            
+                <span>
+            
+                    
+                    中央处理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/文件系统.md">
+            
+                <span>
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18.3" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/磁盘.md">
+            
+                <span>
+            
+                    
+                    磁盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18.4" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/联网.md">
+            
+                <span>
+            
+                    
+                    联网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18.5" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/记忆.md">
+            
+                <span>
+            
+                    
+                    记忆
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="../附录 D：选定练习的答案/附录 D：选定练习的答案.html">
+            
+                <a href="../附录 D：选定练习的答案/附录 D：选定练习的答案.html">
+            
+                    
+                    附录 D：选定练习的答案
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.19.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 11 章—云计算.md">
+            
+                <span>
+            
+                    
+                    第 11 章—云计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 2 章——方法论.md">
+            
+                <span>
+            
+                    
+                    第 2 章——方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19.3" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 3 章——操作系统.md">
+            
+                <span>
+            
+                    
+                    第 3 章——操作系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19.4" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 6 章—CPU.md">
+            
+                <span>
+            
+                    
+                    第 6 章—CPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19.5" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 8 章—文件系统.md">
+            
+                <span>
+            
+                    
+                    第 8 章—文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19.6" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 9 章—磁盘.md">
+            
+                <span>
+            
+                    
+                    第 9 章—磁盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19.7" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第7章——记忆.md">
+            
+                <span>
+            
+                    
+                    第7章——记忆
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="../附录 E：系统性能名人录/附录 E：系统性能名人录.html">
+            
+                <a href="../附录 E：系统性能名人录/附录 E：系统性能名人录.html">
+            
+                    
+                    附录 E：系统性能名人录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.20.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 E：系统性能名人录/E.1 参考文献.md">
+            
+                <span>
+            
+                    
+                    E.1 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="../附录A：使用方法：Linux/附录A：使用方法：Linux.html">
+            
+                <a href="../附录A：使用方法：Linux/附录A：使用方法：Linux.html">
+            
+                    
+                    附录A：使用方法：Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.21.1" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录A：使用方法：Linux/A.1 参考文献.md">
+            
+                <span>
+            
+                    
+                    A.1 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21.2" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录A：使用方法：Linux/物质资源.md">
+            
+                <span>
+            
+                    
+                    物质资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21.3" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录A：使用方法：Linux/软件资源.md">
+            
+                <span>
+            
+                    
+                    软件资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/Cover.md">
+            
+                <span>
+            
+                    
+                    Cover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/Systems Performance_ Enterprise and the Cl - Brendan Gregg.md">
+            
+                <span>
+            
+                    
+                    Systems Performance Enterprise And The Cl Brendan Gregg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/代码片段.md">
+            
+                <span>
+            
+                    
+                    代码片段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/关于作者.md">
+            
+                <span>
+            
+                    
+                    关于作者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.26" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/关于这本电子书.md">
+            
+                <span>
+            
+                    
+                    关于这本电子书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.27" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/内容.md">
+            
+                <span>
+            
+                    
+                    内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.28" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/内容一览.md">
+            
+                <span>
+            
+                    
+                    内容一览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.29" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/半扉页.md">
+            
+                <span>
+            
+                    
+                    半扉页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.30" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/奉献页面.md">
+            
+                <span>
+            
+                    
+                    奉献页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.31" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/封面.md">
+            
+                <span>
+            
+                    
+                    封面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.32" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/封面页.md">
+            
+                <span>
+            
+                    
+                    封面页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.33" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/指数.md">
+            
+                <span>
+            
+                    
+                    指数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.34" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/版权页.md">
+            
+                <span>
+            
+                    
+                    版权页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.35" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/致谢.md">
+            
+                <span>
+            
+                    
+                    致谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.36" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/词汇表.md">
+            
+                <span>
+            
+                    
+                    词汇表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.37" data-path="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 B：SAR 摘要.md">
+            
+                <span>
+            
+                    
+                    附录 B：SAR 摘要
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../Chapter%204 Processor Architecture.md">
+            
+                <span>
+            
+                    
+                    Chapter 4 Processor Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Chapter%206 The Memory Hierarchy（存储器层次结构）.md">
+            
+                <span>
+            
+                    
+                    Chapter 6 The Memory Hierarchy（存储器层次结构）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../Figure.html">
+            
+                <a href="../../Figure.html">
+            
+                    
+                    Figure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >第 16 章案例研究</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x7B2C;16&#x7AE0;">&#x7B2C;16&#x7AE0;</h2>
+<p>&#x6848;&#x4F8B;&#x7814;&#x7A76;</p>
+<p>&#x672C;&#x7AE0;&#x662F;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x6848;&#x4F8B;&#x7814;&#x7A76;&#xFF1A;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x7684;&#x6545;&#x4E8B;&#xFF0C;&#x4ECE;&#x6700;&#x521D;&#x7684;&#x62A5;&#x544A;&#x5230;&#x6700;&#x7EC8;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;&#x8FD9;&#x4E2A;&#x7279;&#x6B8A;&#x95EE;&#x9898;&#x53D1;&#x751F;&#x5728;&#x751F;&#x4EA7;&#x4E91;&#x8BA1;&#x7B97;&#x73AF;&#x5883;&#x4E2D;&#xFF1B;&#x6211;&#x9009;&#x62E9;&#x5B83;&#x4F5C;&#x4E3A;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x5206;&#x6790;&#x7684;&#x5E38;&#x89C4;&#x793A;&#x4F8B;&#x3002;</p>
+<p>&#x6211;&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#x7684;&#x76EE;&#x7684;&#x4E0D;&#x662F;&#x4ECB;&#x7ECD;&#x65B0;&#x7684;&#x6280;&#x672F;&#x5185;&#x5BB9;&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7;&#x8BB2;&#x6545;&#x4E8B;&#x6765;&#x5C55;&#x793A;&#x5982;&#x4F55;&#x5728;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x73AF;&#x5883;&#x4E2D;&#x5E94;&#x7528;&#x5DE5;&#x5177;&#x548C;&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x5BF9;&#x4E8E;&#x5C1A;&#x672A;&#x5904;&#x7406;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x7684;&#x521D;&#x5B66;&#x8005;&#x7279;&#x522B;&#x6709;&#x7528;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x4E13;&#x5BB6;&#x5982;&#x4F55;&#x5904;&#x7406;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#x7684;&#x5168;&#x9762;&#x89C6;&#x56FE;&#xFF0C;&#x5BF9;&#x4E13;&#x5BB6;&#x5728;&#x5206;&#x6790;&#x8FC7;&#x7A0B;&#x4E2D;&#x53EF;&#x80FD;&#x60F3;&#x5230;&#x7684;&#x5185;&#x5BB9;&#x4EE5;&#x53CA;&#x539F;&#x56E0;&#x7684;&#x8BC4;&#x8BBA;&#x3002;&#x8FD9;&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#x8BB0;&#x5F55;&#x53EF;&#x80FD;&#x7684;&#x6700;&#x4F73;&#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x662F;&#x8BB0;&#x5F55;&#x4E3A;&#x4EC0;&#x4E48;&#x91C7;&#x7528;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="161-&#x65E0;&#x6CD5;&#x89E3;&#x91CA;&#x7684;&#x80DC;&#x5229;">16.1 &#x65E0;&#x6CD5;&#x89E3;&#x91CA;&#x7684;&#x80DC;&#x5229;</h3>
+<p>Netflix &#x7684;&#x5FAE;&#x670D;&#x52A1;&#x5728;&#x57FA;&#x4E8E;&#x5BB9;&#x5668;&#x7684;&#x65B0;&#x5E73;&#x53F0;&#x4E0A;&#x8FDB;&#x884C;&#x4E86;&#x6D4B;&#x8BD5;&#xFF0C;&#x7ED3;&#x679C;&#x53D1;&#x73B0;&#x53EF;&#x4EE5;&#x5C06;&#x8BF7;&#x6C42;&#x5EF6;&#x8FDF;&#x51CF;&#x5C11;&#x4E09;&#x5230;&#x56DB;&#x500D;&#x3002;&#x867D;&#x7136;&#x5BB9;&#x5668;&#x5E73;&#x53F0;&#x6709;&#x5F88;&#x591A;&#x597D;&#x5904;&#xFF0C;&#x4F46;&#x5982;&#x6B64;&#x5927;&#x7684;&#x6536;&#x76CA;&#x5374;&#x51FA;&#x4E4E;&#x610F;&#x6599;&#xFF01;&#x8FD9;&#x542C;&#x8D77;&#x6765;&#x597D;&#x5F97;&#x4EE4;&#x4EBA;&#x96BE;&#x4EE5;&#x7F6E;&#x4FE1;&#xFF0C;&#x6211;&#x88AB;&#x8981;&#x6C42;&#x8C03;&#x67E5;&#x5E76;&#x89E3;&#x91CA;&#x8FD9;&#x662F;&#x5982;&#x4F55;&#x53D1;&#x751F;&#x7684;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x6211;&#x4F7F;&#x7528;&#x4E86;&#x5404;&#x79CD;&#x5DE5;&#x5177;&#xFF0C;&#x5305;&#x62EC;&#x57FA;&#x4E8E;&#x8BA1;&#x6570;&#x5668;&#x3001;&#x9759;&#x6001;&#x914D;&#x7F6E;&#x3001;PMC&#x3001;&#x8F6F;&#x4EF6;&#x4E8B;&#x4EF6;&#x548C;&#x8DDF;&#x8E2A;&#x7684;&#x5DE5;&#x5177;&#x3002;&#x6240;&#x6709;&#x8FD9;&#x4E9B;&#x5DE5;&#x5177;&#x7C7B;&#x578B;&#x90FD;&#x53D1;&#x6325;&#x4E86;&#x4F5C;&#x7528;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x76F8;&#x4E92;&#x914D;&#x5408;&#x7684;&#x7EBF;&#x7D22;&#x3002;&#x7531;&#x4E8E;&#x8FD9;&#x5BF9;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x5206;&#x6790;&#x8FDB;&#x884C;&#x4E86;&#x5E7F;&#x6CDB;&#x7684;&#x4ECB;&#x7ECD;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x5C06;&#x5176;&#x7528;&#x4F5C; USENIX LISA 2019 &#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x6F14;&#x8BB2;&#x7684;&#x5F00;&#x573A;&#x6545;&#x4E8B; [Gregg 19h]&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x4F5C;&#x4E3A;&#x6848;&#x4F8B;&#x7814;&#x7A76;&#x7EB3;&#x5165;&#x6B64;&#x5904;&#x3002;</p>
+<h4 id="1611-&#x95EE;&#x9898;&#x9648;&#x8FF0;">16.1.1 &#x95EE;&#x9898;&#x9648;&#x8FF0;</h4>
+<p>&#x901A;&#x8FC7;&#x4E0E;&#x670D;&#x52A1;&#x56E2;&#x961F;&#x7684;&#x4EA4;&#x8C08;&#xFF0C;&#x6211;&#x4E86;&#x89E3;&#x4E86;&#x8BE5;&#x5FAE;&#x670D;&#x52A1;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF1A;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x5BA2;&#x6237;&#x63A8;&#x8350;&#x7684; Java &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x76EE;&#x524D;&#x6B63;&#x5728; AWS EC2 &#x4E91;&#x4E2D;&#x7684;&#x865A;&#x62DF;&#x673A;&#x5B9E;&#x4F8B;&#x4E0A;&#x8FD0;&#x884C;&#x3002;&#x8BE5;&#x5FAE;&#x670D;&#x52A1;&#x7531;&#x4E24;&#x4E2A;&#x7EC4;&#x4EF6;&#x7EC4;&#x6210;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x6B63;&#x5728;&#x540D;&#x4E3A; Titus &#x7684;&#x65B0; Netflix &#x5BB9;&#x5668;&#x5E73;&#x53F0;&#x4E0A;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;&#x8BE5;&#x5E73;&#x53F0;&#x4E5F;&#x5728; AWS EC2 &#x4E0A;&#x8FD0;&#x884C;&#x3002;&#x8BE5;&#x7EC4;&#x4EF6;&#x5728;&#x865A;&#x62DF;&#x673A;&#x5B9E;&#x4F8B;&#x4E0A;&#x7684;&#x8BF7;&#x6C42;&#x5EF6;&#x8FDF;&#x4E3A;&#x4E09;&#x5230;&#x56DB;&#x79D2;&#xFF0C;&#x5728;&#x5BB9;&#x5668;&#x4E0A;&#x53D8;&#x4E3A;&#x4E00;&#x79D2;&#xFF1A;&#x901F;&#x5EA6;&#x5FEB;&#x4E86;&#x4E09;&#x5230;&#x56DB;&#x500D;&#xFF01;</p>
+<p>&#x95EE;&#x9898;&#x662F;&#x89E3;&#x91CA;&#x8FD9;&#x79CD;&#x6027;&#x80FD;&#x5DEE;&#x5F02;&#x3002;&#x5982;&#x679C;&#x4EC5;&#x4EC5;&#x662F;&#x7531;&#x4E8E;&#x5BB9;&#x5668;&#x79FB;&#x52A8;&#xFF0C;&#x5FAE;&#x670D;&#x52A1;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x79FB;&#x52A8;&#x83B7;&#x5F97;&#x6C38;&#x4E45;&#x7684; 3-4 &#x500D;&#x7684;&#x80DC;&#x5229;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x662F;&#x7531;&#x4E8E;&#x5176;&#x4ED6;&#x4E00;&#x4E9B;&#x56E0;&#x7D20;&#x9020;&#x6210;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x503C;&#x5F97;&#x4E86;&#x89E3;&#x5B83;&#x662F;&#x4EC0;&#x4E48;&#x4EE5;&#x53CA;&#x5B83;&#x662F;&#x5426;&#x4F1A;&#x662F;&#x6C38;&#x4E45;&#x6027;&#x7684;&#x3002;&#x4E5F;&#x8BB8;&#x5B83;&#x4E5F;&#x53EF;&#x4EE5;&#x66F4;&#x5927;&#x7A0B;&#x5EA6;&#x5730;&#x5E94;&#x7528;&#x4E8E;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x3002;</p>
+<p>&#x6211;&#x7ACB;&#x5373;&#x60F3;&#x5230;&#x7684;&#x662F;&#x72EC;&#x7ACB;&#x8FD0;&#x884C;&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#x7684;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x597D;&#x5904;&#xFF1A;&#x5B83;&#x5C06;&#x80FD;&#x591F;&#x4F7F;&#x7528;&#x6574;&#x4E2A; CPU &#x7F13;&#x5B58;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x4E0E;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x4E89;&#x7528;&#xFF0C;&#x4ECE;&#x800C;&#x63D0;&#x9AD8;&#x7F13;&#x5B58;&#x547D;&#x4E2D;&#x7387;&#xFF0C;&#x4ECE;&#x800C;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#x3002;&#x53E6;&#x4E00;&#x4E2A;&#x731C;&#x6D4B;&#x662F;&#x5BB9;&#x5668;&#x5E73;&#x53F0;&#x4E0A;&#x7684;&#x7206;&#x53D1;&#xFF0C;&#x5BB9;&#x5668;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x5BB9;&#x5668;&#x7684;&#x7A7A;&#x95F2; CPU &#x8D44;&#x6E90;&#x3002;</p>
+<h4 id="1612-&#x5206;&#x6790;&#x7B56;&#x7565;">16.1.2 &#x5206;&#x6790;&#x7B56;&#x7565;</h4>
+<p>&#x7531;&#x4E8E;&#x6D41;&#x91CF;&#x7531;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x5668; (AWS ELB) &#x5904;&#x7406;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x5728;&#x865A;&#x62DF;&#x673A;&#x548C;&#x5BB9;&#x5668;&#x4E4B;&#x95F4;&#x62C6;&#x5206;&#x6D41;&#x91CF;&#xFF0C;&#x4EE5;&#x4FBF;&#x6211;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x767B;&#x5F55;&#x4E24;&#x8005;&#x3002;&#x8FD9;&#x662F;&#x6BD4;&#x8F83;&#x5206;&#x6790;&#x7684;&#x7406;&#x60F3;&#x60C5;&#x51B5;&#xFF1A;&#x6211;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x5929;&#x4E2D;&#x7684;&#x540C;&#x4E00;&#x65F6;&#x95F4;&#xFF08;&#x76F8;&#x540C;&#x7684;&#x6D41;&#x91CF;&#x7EC4;&#x5408;&#x548C;&#x8D1F;&#x8F7D;&#xFF09;&#x8FD0;&#x884C;&#x76F8;&#x540C;&#x7684;&#x5206;&#x6790;&#x547D;&#x4EE4;&#x5E76;&#x7ACB;&#x5373;&#x6BD4;&#x8F83;&#x8F93;&#x51FA;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5BB9;&#x5668;&#x4E3B;&#x673A;&#xFF0C;&#x800C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x5BB9;&#x5668;&#xFF0C;&#x8FD9;&#x5141;&#x8BB8;&#x6211;&#x4F7F;&#x7528;&#x4EFB;&#x4F55;&#x5206;&#x6790;&#x5DE5;&#x5177;&#xFF0C;&#x5E76;&#x4E3A;&#x8FD9;&#x4E9B;&#x5DE5;&#x5177;&#x63D0;&#x4F9B;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x6743;&#x9650;&#x3002;&#x5982;&#x679C;&#x6211;&#x53EA;&#x6709;&#x5BB9;&#x5668;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF0C;&#x7531;&#x4E8E;&#x53EF;&#x89C2;&#x5BDF;&#x6027;&#x6765;&#x6E90;&#x548C;&#x5185;&#x6838;&#x6743;&#x9650;&#x6709;&#x9650;&#xFF0C;&#x5206;&#x6790;&#x4F1A;&#x66F4;&#x52A0;&#x8017;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x4ECE;&#x6709;&#x9650;&#x7684;&#x6307;&#x6807;&#x4E2D;&#x8FDB;&#x884C;&#x66F4;&#x591A;&#x7684;&#x63A8;&#x65AD;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x6D4B;&#x91CF;&#x3002;&#x76EE;&#x524D;&#xFF0C;&#x4EC5;&#x4ECE;&#x5BB9;&#x5668;&#x4E2D;&#x5206;&#x6790;&#x67D0;&#x4E9B;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x662F;&#x4E0D;&#x5207;&#x5B9E;&#x9645;&#x7684;&#xFF08;&#x8BF7;&#x53C2;&#x9605;&#x7B2C; 11 &#x7AE0;&#xFF0C;&#x4E91;&#x8BA1;&#x7B97;&#xFF09;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x65B9;&#x6CD5;&#x8BBA;&#xFF0C;&#x6211;&#x8BA1;&#x5212;&#x4ECE; 60 &#x79D2;&#x6E05;&#x5355;&#xFF08;&#x7B2C; 1 &#x7AE0;&#xFF0C;&#x7B80;&#x4ECB;&#xFF0C;&#x7B2C; 1.10.1 &#x8282;&#xFF0C;60 &#x5E74;&#x4EE3;&#x7684; Linux &#x6027;&#x80FD;&#x5206;&#x6790;&#xFF09;&#x548C; USE &#x65B9;&#x6CD5;&#xFF08;&#x7B2C; 2 &#x7AE0;&#xFF0C;&#x65B9;&#x6CD5;&#x8BBA;&#xFF0C;&#x7B2C; 2.5.9 &#x8282;&#xFF0C;USE &#x65B9;&#x6CD5;&#xFF09;&#x5F00;&#x59CB;&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x4ED6;&#x4EEC;&#x7684;&#x7EBF;&#x7D22;&#x8FDB;&#x884C;&#x6DF1;&#x5165;&#x5206;&#x6790;&#xFF08;&#x7B2C; 2.5.12 &#x8282;&#xFF0C;&#x6DF1;&#x5165;&#x5206;&#x6790;&#xFF09;&#x548C;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x6211;&#x5728;&#x4EE5;&#x4E0B;&#x90E8;&#x5206;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x6211;&#x8FD0;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x53CA;&#x5176;&#x8F93;&#x51FA;&#xFF0C;&#x5BF9;&#x865A;&#x62DF;&#x673A;&#x5B9E;&#x4F8B;&#x4F7F;&#x7528;&#x201C;serverA#&#x201D;&#x63D0;&#x793A;&#x7B26;&#xFF0C;&#x5BF9;&#x5BB9;&#x5668;&#x4E3B;&#x673A;&#x4F7F;&#x7528;&#x201C;serverB#&#x201D;&#x63D0;&#x793A;&#x7B26;&#x3002;</p>
+<h4 id="1613-&#x7EDF;&#x8BA1;">16.1.3 &#x7EDF;&#x8BA1;</h4>
+<p>&#x6211;&#x9996;&#x5148;&#x8FD0;&#x884C; uptime(1) &#x6765;&#x68C0;&#x67E5;&#x8D1F;&#x8F7D;&#x5E73;&#x5747;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#x3002;&#x5728;&#x4E24;&#x4E2A;&#x7CFB;&#x7EDF;&#x4E0A;&#xFF1A;</p>
+<p>&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x67E5;&#x770B;&#x4EE3;&#x7801;&#x56FE;&#x7247;</p>
+<p>serverA# <strong>uptime</strong>
+ 22:07:23 up 15 days,  5:01,  1 user,  load average: 85.09, 89.25, 91.26</p>
+<p>serverB# <strong>uptime</strong>
+ 22:06:24 up 91 days, 23:52,  1 user,  load average: 17.94, 16.92, 16.62</p>
+<p>&#x8FD9;&#x8868;&#x660E;&#x8D1F;&#x8F7D;&#x5927;&#x81F4;&#x7A33;&#x5B9A;&#xFF0C;VM &#x5B9E;&#x4F8B;&#x4E0A;&#x7684;&#x8D1F;&#x8F7D;&#x7A0D;&#x8F7B;&#xFF08;85.09 &#x4E0E; 91.26 &#x76F8;&#x6BD4;&#xFF09;&#xFF0C;&#x5BB9;&#x5668;&#x4E0A;&#x7684;&#x8D1F;&#x8F7D;&#x7A0D;&#x91CD;&#xFF08;17.94 &#x4E0E; 16.62 &#x76F8;&#x6BD4;&#xFF09;&#x3002;&#x6211;&#x68C0;&#x67E5;&#x4E86;&#x8D8B;&#x52BF;&#xFF0C;&#x770B;&#x770B;&#x95EE;&#x9898;&#x662F;&#x589E;&#x52A0;&#x3001;&#x51CF;&#x5C11;&#x8FD8;&#x662F;&#x7A33;&#x5B9A;&#xFF1A;&#x8FD9;&#x5728;&#x4E91;&#x73AF;&#x5883;&#x4E2D;&#x5C24;&#x5176;&#x91CD;&#x8981;&#xFF0C;&#x56E0;&#x4E3A;&#x4E91;&#x73AF;&#x5883;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x5C06;&#x8D1F;&#x8F7D;&#x4ECE;&#x4E0D;&#x5065;&#x5EB7;&#x7684;&#x5B9E;&#x4F8B;&#x8FC1;&#x79FB;&#x51FA;&#x53BB;&#x3002;&#x6211;&#x4E0D;&#x6B62;&#x4E00;&#x6B21;&#x767B;&#x5F55;&#x5230;&#x6709;&#x95EE;&#x9898;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x53D1;&#x73B0;&#x51E0;&#x4E4E;&#x6CA1;&#x6709;&#x6D3B;&#x52A8;&#xFF0C;&#x5E76;&#x4E14;&#x4E00;&#x5206;&#x949F;&#x5E73;&#x5747;&#x8D1F;&#x8F7D;&#x63A5;&#x8FD1;&#x4E8E;&#x96F6;&#x3002;</p>
+<p>&#x5E73;&#x5747;&#x8D1F;&#x8F7D;&#x8FD8;&#x663E;&#x793A;&#xFF0C;&#x865A;&#x62DF;&#x673A;&#x7684;&#x8D1F;&#x8F7D;&#x6BD4;&#x5BB9;&#x5668;&#x4E3B;&#x673A;&#x9AD8;&#x5F97;&#x591A;&#xFF08;85.09 &#x6BD4; 17.94&#xFF09;&#xFF0C;&#x5C3D;&#x7BA1;&#x6211;&#x9700;&#x8981;&#x5176;&#x4ED6;&#x5DE5;&#x5177;&#x7684;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#x6765;&#x7406;&#x89E3;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x4EC0;&#x4E48;&#x3002;&#x9AD8;&#x5E73;&#x5747;&#x8D1F;&#x8F7D;&#x901A;&#x5E38;&#x8868;&#x660E; CPU &#x9700;&#x6C42;&#xFF0C;&#x4F46;&#x4E5F;&#x53EF;&#x80FD;&#x4E0E; I/O &#x76F8;&#x5173;&#xFF08;&#x8BF7;&#x53C2;&#x9605;&#x7B2C; 6 &#x7AE0;&#x201C;CPU&#x201D;&#x3001;&#x7B2C; 6.6.1 &#x8282;&#x201C;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#x201D;&#xFF09;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x63A2;&#x7D22; CPU &#x8D1F;&#x8F7D;&#xFF0C;&#x6211;&#x8F6C;&#x5411; mpstat(1)&#xFF0C;&#x4ECE;&#x7CFB;&#x7EDF;&#x8303;&#x56F4;&#x7684;&#x5E73;&#x5747;&#x503C;&#x5F00;&#x59CB;&#x3002;&#x5728;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#xFF1A;</p>
+<p>&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x67E5;&#x770B;&#x4EE3;&#x7801;&#x56FE;&#x7247;</p>
+<p>serverA# <strong>mpstat 10</strong>
+Linux 4.4.0-130-generic (...) 07/18/2019        _x86_64_  (48 CPU)</p>
+<p>10:07:55 PM  CPU   %usr  %nice  %sys %iowait  %irq %soft %steal %guest %gnice  %idle
+10:08:05 PM  all  89.72   0.00  7.84    0.00  0.00  0.04   0.00   0.00   0.00   2.40
+10:08:15 PM  all  88.60   0.00  9.18    0.00  0.00  0.05   0.00   0.00   0.00   2.17
+10:08:25 PM  all  89.71   0.00  9.01    0.00  0.00  0.05   0.00   0.00   0.00   1.23
+10:08:35 PM  all  89.55   0.00  8.11    0.00  0.00  0.06   0.00   0.00   0.00   2.28
+10:08:45 PM  all  89.87   0.00  8.21    0.00  0.00  0.05   0.00   0.00   0.00   1.86
+^C
+Average:     all  89.49   0.00  8.47    0.00  0.00  0.05   0.00   0.00   0.00   1.99</p>
+<p>&#x548C;&#x5BB9;&#x5668;&#xFF1A;</p>
+<p>&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x67E5;&#x770B;&#x4EE3;&#x7801;&#x56FE;&#x7247;</p>
+<p>serverB# <strong>mpstat 10</strong>
+Linux 4.19.26 (...) 07/18/2019        _x86_64_  (64 CPU)</p>
+<p>09:56:11 PM CPU    %usr  %nice  %sys %iowait  %irq %soft %steal %guest %gnice  %idle
+09:56:21 PM  all  23.21   0.01  0.32    0.00  0.00  0.10   0.00   0.00   0.00  76.37
+09:56:31 PM  all  20.21   0.00  0.38    0.00  0.00  0.08   0.00   0.00   0.00  79.33
+09:56:41 PM  all  21.58   0.00  0.39    0.00  0.00  0.10   0.00   0.00   0.00  77.92
+09:56:51 PM  all  21.57   0.01  0.39    0.02  0.00  0.09   0.00   0.00   0.00  77.93
+09:57:01 PM  all  20.93   0.00  0.35    0.00  0.00  0.09   0.00   0.00   0.00  78.63
+^C
+Average:     all  21.50   0.00  0.36    0.00  0.00  0.09   0.00   0.00   0.00  78.04</p>
+<p>mpstat(1) &#x5C06; CPU &#x6570;&#x91CF;&#x6253;&#x5370;&#x4E3A;&#x7B2C;&#x4E00;&#x884C;&#x3002;&#x8F93;&#x51FA;&#x663E;&#x793A;&#x865A;&#x62DF;&#x673A;&#x6709; 48 &#x4E2A; CPU&#xFF0C;&#x5BB9;&#x5668;&#x4E3B;&#x673A;&#x6709; 64 &#x4E2A;&#x3002;&#x8FD9;&#x5E2E;&#x52A9;&#x6211;&#x8FDB;&#x4E00;&#x6B65;&#x89E3;&#x91CA;&#x8D1F;&#x8F7D;&#x5E73;&#x5747;&#x503C;&#xFF1A;&#x5982;&#x679C;&#x5B83;&#x4EEC;&#x662F;&#x57FA;&#x4E8E; CPU &#x7684;&#xFF0C;&#x5219;&#x8868;&#x660E;&#x865A;&#x62DF;&#x673A;&#x5B9E;&#x4F8B;&#x8FD0;&#x884C;&#x826F;&#x597D;&#xFF0C;&#x8FBE;&#x5230;&#x4E86; CPU &#x9971;&#x548C;&#x72B6;&#x6001;&#xFF0C;&#x56E0;&#x4E3A;&#x5E73;&#x5747;&#x8D1F;&#x8F7D;&#x5927;&#x7EA6;&#x662F; CPU &#x6570;&#x91CF;&#x7684;&#x4E24;&#x500D;&#xFF0C;&#x800C;&#x5BB9;&#x5668;&#x4E3B;&#x673A;&#x5229;&#x7528;&#x7387;&#x4E0D;&#x8DB3;&#x3002; mpstat(1) &#x6307;&#x6807;&#x652F;&#x6301;&#x8FD9;&#x4E00;&#x5047;&#x8BBE;&#xFF1A;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#x7684;&#x7A7A;&#x95F2;&#x65F6;&#x95F4;&#x7EA6;&#x4E3A; 2%&#xFF0C;&#x800C;&#x5BB9;&#x5668;&#x4E3B;&#x673A;&#x4E0A;&#x7684;&#x7A7A;&#x95F2;&#x65F6;&#x95F4;&#x7EA6;&#x4E3A; 78%&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x68C0;&#x67E5;&#x5176;&#x4ED6; mpstat(1) &#x7EDF;&#x8BA1;&#x6570;&#x636E;&#xFF0C;&#x6211;&#x53D1;&#x73B0;&#x4E86;&#x5176;&#x4ED6;&#x7EBF;&#x7D22;&#xFF1A;</p>
+<ul>
+<li><p>CPU &#x5229;&#x7528;&#x7387; (<code>%usr</code> + <code>%sys</code> + ...) &#x663E;&#x793A;&#x865A;&#x62DF;&#x673A;&#x7684;&#x5229;&#x7528;&#x7387;&#x4E3A; 98%&#xFF0C;&#x800C;&#x5BB9;&#x5668;&#x7684;&#x5229;&#x7528;&#x7387;&#x4E3A; 22%&#x3002;&#x8FD9;&#x4E9B;&#x5904;&#x7406;&#x5668;&#x7684;&#x6BCF;&#x4E2A; CPU &#x6838;&#x5FC3;&#x6709;&#x4E24;&#x4E2A;&#x8D85;&#x7EBF;&#x7A0B;&#xFF0C;&#x56E0;&#x6B64;&#x8D85;&#x8FC7; 50% &#x7684;&#x5229;&#x7528;&#x7387;&#x901A;&#x5E38;&#x610F;&#x5473;&#x7740;&#x8D85;&#x7EBF;&#x7A0B;&#x6838;&#x5FC3;&#x4E89;&#x7528;&#xFF0C;&#x4ECE;&#x800C;&#x964D;&#x4F4E;&#x6027;&#x80FD;&#x3002;&#x865A;&#x62DF;&#x673A;&#x5DF2;&#x7ECF;&#x5F88;&#x597D;&#x5730;&#x8FDB;&#x5165;&#x4E86;&#x8FD9;&#x4E00;&#x9886;&#x57DF;&#xFF0C;&#x800C;&#x5BB9;&#x5668;&#x4E3B;&#x673A;&#x53EF;&#x80FD;&#x4ECD;&#x7136;&#x53D7;&#x76CA;&#x4E8E;&#x6BCF;&#x4E2A;&#x6838;&#x5FC3;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x7E41;&#x5FD9;&#x7684;&#x8D85;&#x7EBF;&#x7A0B;&#x3002;</p>
+</li>
+<li><p>VM &#x4E0A;&#x7684;&#x7CFB;&#x7EDF;&#x65F6;&#x95F4; (<code>%sys</code>) &#x8981;&#x957F;&#x5F97;&#x591A;&#xFF1A;&#x5927;&#x7EA6; 8% &#x5BF9; 0.38%&#x3002;&#x5982;&#x679C;&#x865A;&#x62DF;&#x673A;&#x5728; CPU &#x9971;&#x548C;&#x72B6;&#x6001;&#x4E0B;&#x8FD0;&#x884C;&#xFF0C;&#x5219;&#x989D;&#x5916;&#x7684; <code>%sys</code> &#x65F6;&#x95F4;&#x53EF;&#x80FD;&#x5305;&#x62EC;&#x5185;&#x6838;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x4EE3;&#x7801;&#x8DEF;&#x5F84;&#x3002;&#x5185;&#x6838;&#x8DDF;&#x8E2A;&#x6216;&#x5206;&#x6790;&#x53EF;&#x4EE5;&#x786E;&#x8BA4;&#x3002;</p>
+</li>
+</ul>
+<p>&#x6211;&#x7EE7;&#x7EED;&#x6267;&#x884C; 60 &#x79D2;&#x6E05;&#x5355;&#x4E0A;&#x7684;&#x5176;&#x4ED6;&#x547D;&#x4EE4;&#x3002; vmstat(8) &#x663E;&#x793A;&#x7684;&#x8FD0;&#x884C;&#x961F;&#x5217;&#x957F;&#x5EA6;&#x4E0E;&#x5E73;&#x5747;&#x8D1F;&#x8F7D;&#x76F8;&#x4F3C;&#xFF0C;&#x786E;&#x8BA4;&#x5E73;&#x5747;&#x8D1F;&#x8F7D;&#x662F;&#x57FA;&#x4E8E; CPU &#x7684;&#x3002; iostat(1) &#x663E;&#x793A;&#x5F88;&#x5C11;&#x7684;&#x78C1;&#x76D8; I/O&#xFF0C;sar(1) &#x663E;&#x793A;&#x5F88;&#x5C11;&#x7684;&#x7F51;&#x7EDC; I/O&#x3002; &#xFF08;&#x8FD9;&#x4E9B;&#x8F93;&#x51FA;&#x672A;&#x5305;&#x542B;&#x5728;&#x6B64;&#x5904;&#x3002;&#xFF09;&#x8FD9;&#x8BC1;&#x5B9E;&#x4E86;&#x865A;&#x62DF;&#x673A;&#x5728; CPU &#x9971;&#x548C;&#x72B6;&#x6001;&#x4E0B;&#x8FD0;&#x884C;&#xFF0C;&#x5BFC;&#x81F4;&#x53EF;&#x8FD0;&#x884C;&#x7EBF;&#x7A0B;&#x7B49;&#x5F85;&#x8F6E;&#x5230;&#x5B83;&#x4EEC;&#xFF0C;&#x800C;&#x5BB9;&#x5668;&#x4E3B;&#x673A;&#x5219;&#x4E0D;&#x7136;&#x3002;&#x5BB9;&#x5668;&#x4E3B;&#x673A;&#x4E0A;&#x7684; top(1) &#x8FD8;&#x663E;&#x793A;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x63D0;&#x4F9B;&#x4E86; USE &#x65B9;&#x6CD5;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x4E5F;&#x786E;&#x5B9A;&#x4E86; CPU &#x8D1F;&#x8F7D;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x6211;&#x89E3;&#x51B3;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5417;&#xFF1F;&#x6211;&#x53D1;&#x73B0;&#x865A;&#x62DF;&#x673A;&#x5728; 48 &#x4E2A; CPU &#x7684;&#x7CFB;&#x7EDF;&#x4E0A;&#x7684;&#x5E73;&#x5747;&#x8D1F;&#x8F7D;&#x4E3A; 85&#xFF0C;&#x5E76;&#x4E14;&#x8BE5;&#x5E73;&#x5747;&#x8D1F;&#x8F7D;&#x662F;&#x57FA;&#x4E8E; CPU &#x7684;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x7EBF;&#x7A0B;&#x5927;&#x7EA6;&#x6709; 77% &#x7684;&#x65F6;&#x95F4;&#x5728;&#x7B49;&#x5F85; (85/48 &#x2013; 1)&#xFF0C;&#x6D88;&#x9664;&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#x5C06;&#x4EA7;&#x751F;&#x5927;&#x7EA6; 4 &#x500D;&#x7684;&#x52A0;&#x901F; (1 / (1 &#x2013; 0.77))&#x3002;&#x867D;&#x7136;&#x8FD9;&#x4E2A;&#x5E45;&#x5EA6;&#x4E0E;&#x95EE;&#x9898;&#x76F8;&#x5BF9;&#x5E94;&#xFF0C;&#x4F46;&#x6211;&#x8FD8;&#x65E0;&#x6CD5;&#x89E3;&#x91CA;&#x4E3A;&#x4EC0;&#x4E48;&#x5E73;&#x5747;&#x8D1F;&#x8F7D;&#x8F83;&#x9AD8;&#xFF1A;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x66F4;&#x591A;&#x5206;&#x6790;&#x3002;</p>
+<h4 id="1614-&#x914D;&#x7F6E;">16.1.4 &#x914D;&#x7F6E;</h4>
+<p>&#x77E5;&#x9053;&#x5B58;&#x5728; CPU &#x95EE;&#x9898;&#x540E;&#xFF0C;&#x6211;&#x68C0;&#x67E5;&#x4E86; CPU &#x7684;&#x914D;&#x7F6E;&#x53CA;&#x5176;&#x9650;&#x5236;&#xFF08;&#x9759;&#x6001;&#x6027;&#x80FD;&#x8C03;&#x6574;&#xFF1A;&#x7B2C; 2.5.17 &#x8282;&#x548C; 6.5.7 &#x8282;&#xFF09;&#x3002;&#x865A;&#x62DF;&#x673A;&#x548C;&#x5BB9;&#x5668;&#x4E4B;&#x95F4;&#x7684;&#x5904;&#x7406;&#x5668;&#x672C;&#x8EAB;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x3002;&#x8FD9;&#x662F;&#x865A;&#x62DF;&#x673A;&#x7684; /proc/cpuinfo&#xFF1A;</p>
+<p>&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x67E5;&#x770B;&#x4EE3;&#x7801;&#x56FE;&#x7247;</p>
+<p>serverA# <strong>cat /proc/cpuinfo</strong>
+processor       : 47
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 85
+model name      : Intel(R) Xeon(R) Platinum 8175M CPU @ 2.50GHz
+stepping        : 4
+microcode       : 0x200005e
+cpu MHz         : 2499.998
+cache size      : 33792 KB
+physical id     : 0
+siblings        : 48
+core id         : 23
+cpu cores       : 24
+apicid          : 47
+initial apicid  : 47
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat
+pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc
+arch_perfmon rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq
+monitor ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes
+xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single kaiser
+fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f rdseed adx
+smap clflushopt clwb avx512cd xsaveopt xsavec xgetbv1 ida arat
+bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass
+bogomips        : 4999.99
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 46 bits physical, 48 bits virtual
+power management:</p>
+<p>&#x548C;&#x5BB9;&#x5668;&#xFF1A;</p>
+<p>&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x67E5;&#x770B;&#x4EE3;&#x7801;&#x56FE;&#x7247;</p>
+<p>serverB# <strong>cat /proc/cpuinfo</strong>
+processor       : 63
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 79
+model name      : Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+stepping        : 1
+microcode       : 0xb000033
+cpu MHz         : 1200.601
+cache size      : 46080 KB
+physical id     : 1
+siblings        : 32
+core id         : 15
+cpu cores       : 16
+apicid          : 95
+initial apicid  : 95
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat
+pse36 clflush mmx fxsr sse sse2 ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_
+perfmon rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq monitor
+est ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes
+xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault
+invpcid_single pti fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx
+xsaveopt ida
+bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips        : 4662.22
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 46 bits physical, 48 bits virtual
+power management:</p>
+<p>&#x5BB9;&#x5668;&#x4E3B;&#x673A;&#x7684; CPU &#x7684;&#x57FA;&#x672C;&#x9891;&#x7387;&#x7A0D;&#x6162;&#xFF08;2.30 GHz &#x4E0E; 2.50 GHz&#xFF09;&#xFF1B;&#x7136;&#x800C;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x672B;&#x7EA7;&#x7F13;&#x5B58;&#x8981;&#x5927;&#x5F97;&#x591A;&#xFF08;45 MB &#x4E0E; 33 MB&#xFF09;&#x3002;&#x6839;&#x636E;&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#xFF0C;&#x8F83;&#x5927;&#x7684;&#x7F13;&#x5B58;&#x5927;&#x5C0F;&#x53EF;&#x4EE5;&#x5BF9; CPU &#x6027;&#x80FD;&#x4EA7;&#x751F;&#x663E;&#x7740;&#x5F71;&#x54CD;&#x3002;&#x4E3A;&#x4E86;&#x8FDB;&#x4E00;&#x6B65;&#x8C03;&#x67E5;&#xFF0C;&#x6211;&#x9700;&#x8981;&#x4F7F;&#x7528; PMC&#x3002;</p>
+<h4 id="1615-pmc">16.1.5 PMC</h4>
+<p>&#x6027;&#x80FD;&#x76D1;&#x63A7;&#x8BA1;&#x6570;&#x5668; (PMC) &#x53EF;&#x4EE5;&#x89E3;&#x91CA; CPU &#x5468;&#x671F;&#x6027;&#x80FD;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x5728; AWS EC2 &#x4E2D;&#x7684;&#x67D0;&#x4E9B;&#x5B9E;&#x4F8B;&#x4E0A;&#x4F7F;&#x7528;&#x3002;&#x6211;&#x53D1;&#x5E03;&#x4E86;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x4E91;&#x4E0A; PMC &#x5206;&#x6790;&#x7684;&#x5DE5;&#x5177;&#x5305; [Gregg 20e]&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x62EC; pmcarch(8)&#xFF08;&#x7B2C; 6.6.11 &#x8282;&#xFF0C;pmcarch&#xFF09;&#x3002; pmcarch(8) &#x663E;&#x793A;&#x4E86;&#x82F1;&#x7279;&#x5C14; PMC&#x201C;&#x67B6;&#x6784;&#x96C6;&#x201D;&#xFF0C;&#x8FD9;&#x662F;&#x5E38;&#x7528;&#x7684;&#x6700;&#x57FA;&#x672C;&#x7684;&#x96C6;&#x3002;</p>
+<p>&#x5728;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#xFF1A;</p>
+<p>&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x67E5;&#x770B;&#x4EE3;&#x7801;&#x56FE;&#x7247;</p>
+<p>serverA# <strong>./pmcarch -p 4093 10</strong>
+K_CYCLES  K_INSTR    IPC BR_RETIRED   BR_MISPRED  BMR% LLCREF      LLCMISS     LLC%
+982412660 575706336 0.59 126424862460 2416880487  1.91 15724006692 10872315070 30.86
+999621309 555043627 0.56 120449284756 2317302514  1.92 15378257714 11121882510 27.68
+991146940 558145849 0.56 126350181501 2530383860  2.00 15965082710 11464682655 28.19
+996314688 562276830 0.56 122215605985 2348638980  1.92 15558286345 10835594199 30.35
+979890037 560268707 0.57 125609807909 2386085660  1.90 15828820588 11038597030 30.26
+[...]</p>
+<p>&#x5728;&#x5BB9;&#x5668;&#x5B9E;&#x4F8B;&#x4E0A;&#xFF1A;</p>
+<p>&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x67E5;&#x770B;&#x4EE3;&#x7801;&#x56FE;&#x7247;</p>
+<p>serverB# <strong>./pmcarch -p 1928219 10</strong>
+K_CYCLES  K_INSTR    IPC BR_RETIRED   BR_MISPRED  BMR% LLCREF      LLCMISS     LLC%
+147523816 222396364 1.51 46053921119  641813770   1.39 8880477235  968809014  89.09
+156634810 229801807 1.47 48236123575  653064504   1.35 9186609260  1183858023 87.11
+152783226 237001219 1.55 49344315621  692819230   1.40 9314992450  879494418  90.56
+140787179 213570329 1.52 44518363978  631588112   1.42 8675999448  712318917  91.79
+136822760 219706637 1.61 45129020910  651436401   1.44 8689831639  617678747  92.89
+[...]</p>
+<p>&#x7ED3;&#x679C;&#x663E;&#x793A;&#xFF0C;&#x865A;&#x62DF;&#x673A;&#x7684;&#x6BCF;&#x5468;&#x671F;&#x6307;&#x4EE4;&#x6570; (IPC) &#x7EA6;&#x4E3A; 0.57&#xFF0C;&#x800C;&#x5BB9;&#x5668;&#x7684;&#x6BCF;&#x5468;&#x671F;&#x6307;&#x4EE4;&#x6570; (IPC) &#x7EA6;&#x4E3A; 1.52&#xFF1A;&#x76F8;&#x5DEE; 2.6 &#x500D;&#x3002;</p>
+<p>IPC &#x8F83;&#x4F4E;&#x7684;&#x539F;&#x56E0;&#x4E4B;&#x4E00;&#x53EF;&#x80FD;&#x662F;&#x8D85;&#x7EBF;&#x7A0B;&#x4E89;&#x7528;&#xFF0C;&#x56E0;&#x4E3A; VM &#x4E3B;&#x673A;&#x7684; CPU &#x5229;&#x7528;&#x7387;&#x8D85;&#x8FC7; 50%&#x3002;&#x6700;&#x540E;&#x4E00;&#x5217;&#x663E;&#x793A;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x539F;&#x56E0;&#xFF1A;&#x865A;&#x62DF;&#x673A;&#x7684;&#x672B;&#x7EA7;&#x7F13;&#x5B58; (LLC) &#x547D;&#x4E2D;&#x7387;&#x4EC5;&#x4E3A; 30%&#xFF0C;&#x800C;&#x5BB9;&#x5668;&#x7684;&#x547D;&#x4E2D;&#x7387;&#x7EA6;&#x4E3A; 90%&#x3002;&#x8FD9;&#x4F1A;&#x5BFC;&#x81F4;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#x7684;&#x6307;&#x4EE4;&#x5728;&#x8BBF;&#x95EE;&#x4E3B;&#x5185;&#x5B58;&#x65F6;&#x9891;&#x7E41;&#x505C;&#x6EDE;&#xFF0C;&#x4ECE;&#x800C;&#x964D;&#x4F4E; IPC &#x548C;&#x6307;&#x4EE4;&#x541E;&#x5410;&#x91CF;&#xFF08;&#x6027;&#x80FD;&#xFF09;&#x3002;</p>
+<p>&#x865A;&#x62DF;&#x673A;&#x4E0A;&#x8F83;&#x4F4E;&#x7684; LLC &#x547D;&#x4E2D;&#x7387;&#x53EF;&#x80FD;&#x81F3;&#x5C11;&#x5F52;&#x56E0;&#x4E8E;&#x4E09;&#x4E2A;&#x56E0;&#x7D20;&#xFF1A;</p>
+<ul>
+<li><p>LLC &#x5927;&#x5C0F;&#x8F83;&#x5C0F;&#xFF08;33 MB &#x4E0E; 45 MB&#xFF09;&#x3002;</p>
+</li>
+<li><p>&#x8FD0;&#x884C;&#x5B8C;&#x6574;&#x7684;&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#x800C;&#x4E0D;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#xFF08;&#x5982;&#x95EE;&#x9898;&#x9648;&#x8FF0;&#x4E2D;&#x6240;&#x8FF0;&#xFF09;&#xFF1B;&#x5B50;&#x7EC4;&#x4EF6;&#x53EF;&#x80FD;&#x4F1A;&#x66F4;&#x597D;&#x5730;&#x7F13;&#x5B58;&#xFF1A;&#x66F4;&#x5C11;&#x7684;&#x6307;&#x4EE4;&#x548C;&#x6570;&#x636E;&#x3002;</p>
+</li>
+<li><p>CPU &#x9971;&#x548C;&#x4F1A;&#x5BFC;&#x81F4;&#x66F4;&#x591A;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x4EE5;&#x53CA;&#x4EE3;&#x7801;&#x8DEF;&#x5F84;&#xFF08;&#x5305;&#x62EC;&#x7528;&#x6237;&#x548C;&#x5185;&#x6838;&#xFF09;&#x4E4B;&#x95F4;&#x7684;&#x8DF3;&#x8F6C;&#xFF0C;&#x4ECE;&#x800C;&#x589E;&#x52A0;&#x7F13;&#x5B58;&#x538B;&#x529B;&#x3002;</p>
+</li>
+</ul>
+<p>&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x56E0;&#x7D20;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8DDF;&#x8E2A;&#x5DE5;&#x5177;&#x8FDB;&#x884C;&#x8C03;&#x67E5;&#x3002;</p>
+<h4 id="1616-&#x8F6F;&#x4EF6;&#x4E8B;&#x4EF6;">16.1.6 &#x8F6F;&#x4EF6;&#x4E8B;&#x4EF6;</h4>
+<p>&#x4E3A;&#x4E86;&#x7814;&#x7A76;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#xFF0C;&#x6211;&#x9996;&#x5148;&#x4F7F;&#x7528; perf(1) &#x547D;&#x4EE4;&#x6765;&#x8BA1;&#x7B97;&#x7CFB;&#x7EDF;&#x8303;&#x56F4;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x7387;&#x3002;&#x8FD9;&#x4F7F;&#x7528;&#x4E86;&#x8F6F;&#x4EF6;&#x4E8B;&#x4EF6;&#xFF0C;&#x5B83;&#x4E0E;&#x786C;&#x4EF6;&#x4E8B;&#x4EF6; (PMC) &#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x5728;&#x8F6F;&#x4EF6;&#x4E2D;&#x5B9E;&#x73B0;&#xFF08;&#x53C2;&#x89C1;&#x7B2C; 4 &#x7AE0;&#x201C;&#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x5DE5;&#x5177;&#x201D;&#x3001;&#x56FE; 4.5 &#x548C;&#x7B2C; 13 &#x7AE0;&#x201C;perf&#x201D;&#x3001;&#x7B2C; 13.5 &#x8282;&#x201C;&#x8F6F;&#x4EF6;&#x4E8B;&#x4EF6;&#x201D;&#xFF09;&#x3002;</p>
+<p>&#x5728;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#xFF1A;</p>
+<p>&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x67E5;&#x770B;&#x4EE3;&#x7801;&#x56FE;&#x7247;</p>
+<p>serverA# <strong>perf stat -e cs -a -I 1000</strong></p>
+<h1 id="time-------------counts-unit-events">time             counts unit events</h1>
+<pre><code> 1.000411740          2,063,105      cs
+ 2.000977435          2,065,354      cs
+ 3.001537756          1,527,297      cs
+ 4.002028407            515,509      cs
+ 5.002538455          2,447,126      cs
+ 6.003114251          2,021,182      cs
+ 7.003665091          2,329,157      cs
+ 8.004093520          1,740,898      cs
+ 9.004533912          1,235,641      cs
+10.005106500          2,340,443      cs
+</code></pre><p>^C    10.513632795          1,496,555      cs</p>
+<p>&#x6B64;&#x8F93;&#x51FA;&#x663E;&#x793A;&#x6BCF;&#x79D2;&#x5927;&#x7EA6; 200 &#x4E07;&#x6B21;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x3002;&#x7136;&#x540E;&#x6211;&#x5728;&#x5BB9;&#x5668;&#x4E3B;&#x673A;&#x4E0A;&#x8FD0;&#x884C;&#x5B83;&#xFF0C;&#x8FD9;&#x6B21;&#x5339;&#x914D;&#x5BB9;&#x5668;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684; PID &#x4EE5;&#x6392;&#x9664;&#x5176;&#x4ED6;&#x53EF;&#x80FD;&#x7684;&#x5BB9;&#x5668;&#xFF08;&#x6211;&#x5728;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#x8FDB;&#x884C;&#x4E86;&#x7C7B;&#x4F3C;&#x7684; PID &#x5339;&#x914D;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x6CA1;&#x6709;&#x660E;&#x663E;&#x6539;&#x53D8;&#x4E4B;&#x524D;&#x7684;&#x7ED3;&#x679C;<sup><a href="#fn_1" id="reffn_1">1</a></sup>&#xFF09;&#xFF1A;</p>
+<p><sup><a href="#fn_1" id="reffn_1">1</a></sup>&#x90A3;&#x4E48;&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4E0D;&#x5305;&#x542B;&#x865A;&#x62DF;&#x673A;&#x7684; PID &#x5339;&#x914D;&#x8F93;&#x51FA;&#x5462;&#xFF1F;&#x6211;&#x6CA1;&#x6709;&#x3002;</p>
+<p>&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x67E5;&#x770B;&#x4EE3;&#x7801;&#x56FE;&#x7247;</p>
+<p>serverB# <strong>perf stat -e cs -p 1928219 -I 1000</strong></p>
+<h1 id="time-------------counts-unit-events">time             counts unit events</h1>
+<pre><code> 1.001931945              1,172      cs
+ 2.002664012              1,370      cs
+ 3.003441563              1,034      cs
+ 4.004140394              1,207      cs
+ 5.004947675              1,053      cs
+ 6.005605844                955      cs
+ 7.006311221                619      cs
+ 8.007082057              1,050      cs
+ 9.007716475              1,215      cs
+10.008415042              1,373      cs
+</code></pre><p>^C    10.584617028                894      cs</p>
+<p>&#x8BE5;&#x8F93;&#x51FA;&#x663E;&#x793A;&#x6BCF;&#x79D2;&#x5927;&#x7EA6;&#x53EA;&#x6709;&#x4E00;&#x5343;&#x6B21;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x3002;</p>
+<p>&#x9AD8;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x7387;&#x4F1A;&#x7ED9; CPU &#x7F13;&#x5B58;&#x5E26;&#x6765;&#x66F4;&#x5927;&#x7684;&#x538B;&#x529B;&#xFF0C;&#x56E0;&#x4E3A; CPU &#x7F13;&#x5B58;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x4EE3;&#x7801;&#x8DEF;&#x5F84;&#x4E4B;&#x95F4;&#x5207;&#x6362;&#xFF0C;&#x5305;&#x62EC;&#x7BA1;&#x7406;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x7684;&#x5185;&#x6838;&#x4EE3;&#x7801;&#x4EE5;&#x53CA;&#x53EF;&#x80FD;&#x7684;&#x4E0D;&#x540C;&#x8FDB;&#x7A0B;&#x3002;<sup><a href="#fn_2" id="reffn_2">2</a></sup>&#x4E3A;&#x4E86;&#x8FDB;&#x4E00;&#x6B65;&#x7814;&#x7A76;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#xFF0C;&#x6211;&#x4F7F;&#x7528;&#x4E86;&#x8FFD;&#x8E2A;&#x5DE5;&#x5177;&#x3002;</p>
+<p><sup><a href="#fn_2" id="reffn_2">2</a></sup>&#x5BF9;&#x4E8E;&#x67D0;&#x4E9B;&#x5904;&#x7406;&#x5668;&#x548C;&#x5185;&#x6838;&#x914D;&#x7F6E;&#xFF0C;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x4E5F;&#x53EF;&#x80FD;&#x5237;&#x65B0; L1 &#x7F13;&#x5B58;&#x3002;</p>
+<h4 id="1617-&#x8FFD;&#x8E2A;">16.1.7 &#x8FFD;&#x8E2A;</h4>
+<p>&#x6709;&#x51E0;&#x79CD;&#x57FA;&#x4E8E; BPF &#x7684;&#x8DDF;&#x8E2A;&#x5DE5;&#x5177;&#x53EF;&#x7528;&#x4E8E;&#x8FDB;&#x4E00;&#x6B65;&#x5206;&#x6790; CPU &#x4F7F;&#x7528;&#x60C5;&#x51B5;&#x548C;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#xFF0C;&#x5305;&#x62EC;&#x6765;&#x81EA; BCC &#x7684;&#xFF1A; cpudist(8)&#x3001;cpuwalk(8)&#x3001;runqlen(8)&#x3001;runqlat(8)&#x3001;runqslower(8)&#x3001;cpuunclaimed(8 &#xFF09;&#x4EE5;&#x53CA;&#x66F4;&#x591A;&#xFF08;&#x89C1;&#x56FE; 15.1&#xFF09;&#x3002;</p>
+<p>cpudist(8) &#x663E;&#x793A;&#x7EBF;&#x7A0B;&#x5728; CPU &#x4E0A;&#x7684;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x3002;&#x5728;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#xFF1A;</p>
+<p>&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x67E5;&#x770B;&#x4EE3;&#x7801;&#x56FE;&#x7247;</p>
+<p>serverA# <strong>cpudist -p 4093 10 1</strong>
+Tracing on-CPU time... Hit Ctrl-C to end.</p>
+<pre><code> usecs               : count     distribution
+     0 -&gt; 1          : 3618650  |\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*|
+     2 -&gt; 3          : 2704935  |\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*           |
+     4 -&gt; 7          : 421179   |\*\*\*\*                                    |
+     8 -&gt; 15         : 99416    |\*                                       |
+    16 -&gt; 31         : 16951    |                                        |
+    32 -&gt; 63         : 6355     |                                        |
+    64 -&gt; 127        : 3586     |                                        |
+   128 -&gt; 255        : 3400     |                                        |
+   256 -&gt; 511        : 4004     |                                        |
+   512 -&gt; 1023       : 4445     |                                        |
+  1024 -&gt; 2047       : 8173     |                                        |
+  2048 -&gt; 4095       : 9165     |                                        |
+  4096 -&gt; 8191       : 7194     |                                        |
+  8192 -&gt; 16383      : 11954    |                                        |
+ 16384 -&gt; 32767      : 1426     |                                        |
+ 32768 -&gt; 65535      : 967      |                                        |
+ 65536 -&gt; 131071     : 338      |                                        |
+131072 -&gt; 262143     : 93       |                                        |
+262144 -&gt; 524287     : 28       |                                        |
+524288 -&gt; 1048575    : 4        |                                        |
+</code></pre><p>&#x6B64;&#x8F93;&#x51FA;&#x663E;&#x793A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x901A;&#x5E38;&#x5728; CPU &#x4E0A;&#x82B1;&#x8D39;&#x7684;&#x65F6;&#x95F4;&#x975E;&#x5E38;&#x5C11;&#xFF0C;&#x901A;&#x5E38;&#x5C11;&#x4E8E; 7 &#x5FAE;&#x79D2;&#x3002;&#x5176;&#x4ED6;&#x5DE5;&#x5177;&#xFF08;t:sched:sched_switch &#x7684; stackcount(8) &#x548C; /proc/PID/status&#xFF09;&#x663E;&#x793A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x901A;&#x5E38;&#x7531;&#x4E8E;&#x975E;&#x81EA;&#x613F;&#x7684; <sup><a href="#fn_3" id="reffn_3">3</a></sup> &#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x800C;&#x79BB;&#x5F00; CPU&#x3002;</p>
+<p><sup><a href="#fn_3" id="reffn_3">3</a></sup>/proc/PID/status &#x5C06;&#x5B83;&#x4EEC;&#x79F0;&#x4E3A; <code>nonvoluntary_ctxt_switches</code>&#x3002;</p>
+<p>&#x5728;&#x5BB9;&#x5668;&#x4E3B;&#x673A;&#x4E0A;&#xFF1A;</p>
+<p>&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x67E5;&#x770B;&#x4EE3;&#x7801;&#x56FE;&#x7247;</p>
+<p>serverB# <strong>cpudist -p 1928219 10 1</strong>
+Tracing on-CPU time... Hit Ctrl-C to end.</p>
+<pre><code> usecs               : count     distribution
+     0 -&gt; 1          : 0        |                                        |
+     2 -&gt; 3          : 16       |                                        |
+     4 -&gt; 7          : 6        |                                        |
+     8 -&gt; 15         : 7        |                                        |
+    16 -&gt; 31         : 8        |                                        |
+    32 -&gt; 63         : 10       |                                        |
+    64 -&gt; 127        : 18       |                                        |
+   128 -&gt; 255        : 40       |                                        |
+   256 -&gt; 511        : 44       |                                        |
+   512 -&gt; 1023       : 156      |\*                                       |
+  1024 -&gt; 2047       : 238      |\*\*                                      |
+  2048 -&gt; 4095       : 4511     |\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*|
+  4096 -&gt; 8191       : 277      |\*\*                                      |
+  8192 -&gt; 16383      : 286      |\*\*                                      |
+ 16384 -&gt; 32767      : 77       |                                        |
+ 32768 -&gt; 65535      : 63       |                                        |
+ 65536 -&gt; 131071     : 44       |                                        |
+131072 -&gt; 262143     : 9        |                                        |
+262144 -&gt; 524287     : 14       |                                        |
+524288 -&gt; 1048575    : 5        |                                        |
+</code></pre><p>&#x73B0;&#x5728;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x901A;&#x5E38;&#x5728; CPU &#x4E0A;&#x82B1;&#x8D39; 2 &#x5230; 4 &#x6BEB;&#x79D2;&#x3002;&#x5176;&#x4ED6;&#x5DE5;&#x5177;&#x8868;&#x660E;&#xFF0C;&#x5B83;&#x5E76;&#x6CA1;&#x6709;&#x56E0;&#x4E3A;&#x975E;&#x81EA;&#x613F;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x800C;&#x53D7;&#x5230;&#x592A;&#x5927;&#x5E72;&#x6270;&#x3002;</p>
+<p>&#x865A;&#x62DF;&#x673A;&#x4E0A;&#x7684;&#x975E;&#x81EA;&#x613F;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x4EE5;&#x53CA;&#x968F;&#x540E;&#x51FA;&#x73B0;&#x7684;&#x9AD8;&#x9891;&#x7387;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x5BFC;&#x81F4;&#x4E86;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x3002;&#x5BFC;&#x81F4;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5728;&#x901A;&#x5E38;&#x4E0D;&#x5230; 10 &#x5FAE;&#x79D2;&#x540E;&#x79BB;&#x5F00; CPU &#x4E5F;&#x4E0D;&#x4F1A;&#x7ED9; CPU &#x7F13;&#x5B58;&#x592A;&#x591A;&#x65F6;&#x95F4;&#x6765;&#x9884;&#x70ED;&#x5F53;&#x524D;&#x7684;&#x4EE3;&#x7801;&#x8DEF;&#x5F84;&#x3002;</p>
+<h4 id="1618-&#x7ED3;&#x8BBA;">16.1.8 &#x7ED3;&#x8BBA;</h4>
+<p>&#x6211;&#x5F97;&#x51FA;&#x7684;&#x7ED3;&#x8BBA;&#x662F;&#xFF0C;&#x6027;&#x80FD;&#x63D0;&#x5347;&#x7684;&#x539F;&#x56E0;&#x662F;&#xFF1A;</p>
+<ul>
+<li><p>&#x65E0;&#x5BB9;&#x5668;&#x90BB;&#x5C45;&#xFF1A;&#x5BB9;&#x5668;&#x4E3B;&#x673A;&#x9664;&#x4E86;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x5916;&#x5904;&#x4E8E;&#x7A7A;&#x95F2;&#x72B6;&#x6001;&#x3002;&#x8FD9;&#x4F7F;&#x5F97;&#x5BB9;&#x5668;&#x53EF;&#x4EE5;&#x62E5;&#x6709;&#x5168;&#x90E8; CPU &#x7F13;&#x5B58;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x5728;&#x6CA1;&#x6709; CPU &#x4E89;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8FD0;&#x884C;&#x3002;&#x867D;&#x7136;&#x8FD9;&#x5728;&#x6D4B;&#x8BD5;&#x671F;&#x95F4;&#x4EA7;&#x751F;&#x4E86;&#x5BF9;&#x5BB9;&#x5668;&#x6709;&#x5229;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x4F46;&#x8FD9;&#x5E76;&#x4E0D;&#x662F;&#x957F;&#x671F;&#x751F;&#x4EA7;&#x4F7F;&#x7528;&#x7684;&#x9884;&#x671F;&#x60C5;&#x51B5;&#xFF0C;&#x76F8;&#x90BB;&#x5BB9;&#x5668;&#x5C06;&#x6210;&#x4E3A;&#x5E38;&#x6001;&#x3002;&#x5F53;&#x5176;&#x4ED6;&#x79DF;&#x6237;&#x642C;&#x5165;&#x65F6;&#xFF0C;&#x5FAE;&#x670D;&#x52A1;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x73B0; 3-4 &#x500D;&#x7684;&#x6027;&#x80FD;&#x4F18;&#x52BF;&#x6D88;&#x5931;&#x4E86;&#x3002;</p>
+</li>
+<li><p>LLC &#x5927;&#x5C0F;&#x548C;&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#x5DEE;&#x5F02;&#xFF1A;VM &#x4E0A;&#x7684; IPC &#x964D;&#x4F4E;&#x4E86; 2.6 &#x500D;&#xFF0C;&#x8FD9;&#x53EF;&#x4EE5;&#x89E3;&#x91CA; 2.6 &#x500D;&#x7684;&#x901F;&#x5EA6;&#x4E0B;&#x964D;&#x3002;&#x539F;&#x56E0;&#x4E4B;&#x4E00;&#x53EF;&#x80FD;&#x662F;&#x8D85;&#x7EBF;&#x7A0B;&#x4E89;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x865A;&#x62DF;&#x673A;&#x4E3B;&#x673A;&#x7684;&#x5229;&#x7528;&#x7387;&#x8D85;&#x8FC7; 50%&#xFF08;&#x5E76;&#x4E14;&#x6BCF;&#x4E2A;&#x6838;&#x5FC3;&#x6709;&#x4E24;&#x4E2A;&#x8D85;&#x7EBF;&#x7A0B;&#xFF09;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x4E3B;&#x8981;&#x539F;&#x56E0;&#x53EF;&#x80FD;&#x662F; LLC &#x547D;&#x4E2D;&#x7387;&#x8F83;&#x4F4E;&#xFF1A;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#x4E3A; 30%&#xFF0C;&#x800C;&#x5BB9;&#x5668;&#x4E0A;&#x4E3A; 90%&#x3002; LLC &#x547D;&#x4E2D;&#x7387;&#x4F4E;&#x53EF;&#x80FD;&#x6709;&#x4EE5;&#x4E0B;&#x4E09;&#x4E2A;&#x539F;&#x56E0;&#xFF1A;</p>
+<ul>
+<li><p>VM &#x4E0A;&#x7684; LLC &#x5927;&#x5C0F;&#x8F83;&#x5C0F;&#xFF1A;33 MB &#x4E0E; 45 MB&#x3002;</p>
+</li>
+<li><p>VM &#x4E0A;&#x7684;&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#x66F4;&#x52A0;&#x590D;&#x6742;&#xFF1A;&#x5B8C;&#x6574;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x66F4;&#x591A;&#x7684;&#x6307;&#x4EE4;&#x6587;&#x672C;&#x548C;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5728;&#x5BB9;&#x5668;&#x4E0A;&#x8FD0;&#x884C;&#x7684;&#x7EC4;&#x4EF6;&#x3002;</p>
+</li>
+<li><p>VM &#x4E0A;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x7387;&#x5F88;&#x9AD8;&#xFF1A;&#x6BCF;&#x79D2;&#x5927;&#x7EA6; 200 &#x4E07;&#x6B21;&#x3002;&#x8FD9;&#x4E9B;&#x53EF;&#x4EE5;&#x9632;&#x6B62;&#x7EBF;&#x7A0B;&#x5728; CPU &#x4E0A;&#x957F;&#x65F6;&#x95F4;&#x8FD0;&#x884C;&#xFF0C;&#x4ECE;&#x800C;&#x5E72;&#x6270;&#x7F13;&#x5B58;&#x9884;&#x70ED;&#x3002; VM &#x4E0A;&#x7684; CPU &#x6301;&#x7EED;&#x65F6;&#x95F4;&#x901A;&#x5E38;&#x5C0F;&#x4E8E; 10 &#x5FAE;&#x79D2;&#xFF0C;&#x800C;&#x5BB9;&#x5668;&#x4E3B;&#x673A;&#x4E0A;&#x7684;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x4E3A; 2-4 &#x6BEB;&#x79D2;&#x3002;</p>
+</li>
+</ul>
+</li>
+<li><p>CPU &#x8D1F;&#x8F7D;&#x5DEE;&#x5F02;&#xFF1A;&#x66F4;&#x9AD8;&#x7684;&#x8D1F;&#x8F7D;&#x88AB;&#x5B9A;&#x5411;&#x5230; VM&#xFF0C;&#x5BFC;&#x81F4; CPU &#x9971;&#x548C;&#xFF1A;&#x5728; 48-CPU &#x7CFB;&#x7EDF;&#x4E0A;&#x57FA;&#x4E8E; CPU &#x7684;&#x8D1F;&#x8F7D;&#x5E73;&#x5747;&#x503C;&#x4E3A; 85&#x3002;&#x8FD9;&#x5BFC;&#x81F4;&#x6BCF;&#x79D2;&#x5927;&#x7EA6; 200 &#x4E07;&#x6B21;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#xFF0C;&#x5E76;&#x5728;&#x7EBF;&#x7A0B;&#x7B49;&#x5F85;&#x8F6E;&#x5230;&#x65F6;&#x4EA7;&#x751F;&#x8FD0;&#x884C;&#x961F;&#x5217;&#x5EF6;&#x8FDF;&#x3002;&#x8D1F;&#x8F7D;&#x5E73;&#x5747;&#x503C;&#x6697;&#x793A;&#x7684;&#x8FD0;&#x884C;&#x961F;&#x5217;&#x5EF6;&#x8FDF;&#x8868;&#x660E;&#x865A;&#x62DF;&#x673A;&#x7684;&#x8FD0;&#x884C;&#x901F;&#x5EA6;&#x5927;&#x7EA6;&#x6162;&#x4E86; 4 &#x500D;&#x3002;</p>
+</li>
+</ul>
+<p>&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#x89E3;&#x91CA;&#x4E86;&#x89C2;&#x5BDF;&#x5230;&#x7684;&#x6027;&#x80FD;&#x5DEE;&#x5F02;&#x3002;</p>
+<h3 id="162-&#x9644;&#x52A0;&#x4FE1;&#x606F;">16.2 &#x9644;&#x52A0;&#x4FE1;&#x606F;</h3>
+<p>&#x6709;&#x5173;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x5206;&#x6790;&#x7684;&#x66F4;&#x591A;&#x6848;&#x4F8B;&#x7814;&#x7A76;&#xFF0C;&#x8BF7;&#x68C0;&#x67E5;&#x60A8;&#x516C;&#x53F8;&#x7684;&#x9519;&#x8BEF;&#x6570;&#x636E;&#x5E93;&#xFF08;&#x6216;&#x7968;&#x52A1;&#x7CFB;&#x7EDF;&#xFF09;&#x4EE5;&#x4E86;&#x89E3;&#x4EE5;&#x524D;&#x4E0E;&#x6027;&#x80FD;&#x76F8;&#x5173;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4EE5;&#x53CA;&#x60A8;&#x4F7F;&#x7528;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x548C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x516C;&#x5171;&#x9519;&#x8BEF;&#x6570;&#x636E;&#x5E93;&#x3002;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#x901A;&#x5E38;&#x4EE5;&#x95EE;&#x9898;&#x9648;&#x8FF0;&#x5F00;&#x59CB;&#xFF0C;&#x4EE5;&#x6700;&#x7EC8;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x7ED3;&#x675F;&#x3002;&#x8BB8;&#x591A;&#x9519;&#x8BEF;&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;&#x8FD8;&#x5305;&#x542B;&#x5E26;&#x6709;&#x65F6;&#x95F4;&#x6233;&#x7684;&#x8BC4;&#x8BBA;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7814;&#x7A76;&#x8BE5;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x6765;&#x67E5;&#x770B;&#x5206;&#x6790;&#x7684;&#x8FDB;&#x5C55;&#x60C5;&#x51B5;&#xFF0C;&#x5305;&#x62EC;&#x63A2;&#x7D22;&#x7684;&#x5047;&#x8BBE;&#x548C;&#x91C7;&#x53D6;&#x7684;&#x9519;&#x8BEF;&#x6B65;&#x9AA4;&#x3002;&#x8D70;&#x9519;&#x8DEF;&#x5E76;&#x627E;&#x51FA;&#x591A;&#x79CD;&#x5F71;&#x54CD;&#x56E0;&#x7D20;&#x662F;&#x6B63;&#x5E38;&#x7684;&#x3002;</p>
+<p>&#x4E00;&#x4E9B;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x6848;&#x4F8B;&#x7814;&#x7A76;&#x4F1A;&#x4E0D;&#x65F6;&#x53D1;&#x5E03;&#xFF0C;&#x4F8B;&#x5982;&#x6211;&#x7684;&#x535A;&#x5BA2; [Gregg 20j]&#x3002;&#x6CE8;&#x91CD;&#x5B9E;&#x8DF5;&#x7684;&#x6280;&#x672F;&#x671F;&#x520A;&#xFF0C;&#x4F8B;&#x5982; USENIX ;login: [USENIX 20] &#x548C; ACM Queue [ACM 20]&#xFF0C;&#x5728;&#x63CF;&#x8FF0;&#x95EE;&#x9898;&#x7684;&#x65B0;&#x6280;&#x672F;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x65F6;&#x4E5F;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x6848;&#x4F8B;&#x7814;&#x7A76;&#x4F5C;&#x4E3A;&#x80CC;&#x666F;&#x3002;</p>
+<h3 id="163-&#x53C2;&#x8003;&#x6587;&#x732E;">16.3 &#x53C2;&#x8003;&#x6587;&#x732E;</h3>
+<p>[Gregg 19h] Gregg, B.&#xFF0C;&#x201C;LISA2019 Linux &#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x201D;&#xFF0C;USENIX LISA&#xFF0C;<a href="http://www.brendangregg.com/blog/2020-03-08/lisa2019-linux-systems-performance.html&#xFF0C;2019&#x3002;" target="_blank">http://www.brendangregg.com/blog/2020-03-08/lisa2019-linux-systems-performance.html&#xFF0C;2019&#x3002;</a></p>
+<p>[ACM 20]&#x201C;acmqueue&#x201D;&#xFF0C;<a href="http://queue.acm.org&#xFF0C;2020" target="_blank">http://queue.acm.org&#xFF0C;2020</a> &#x5E74;&#x8BBF;&#x95EE;&#x3002;</p>
+<p>[Gregg 20e] Gregg, B.&#xFF0C;&#x201C;&#x4E91;&#x7684; PMC&#xFF08;&#x6027;&#x80FD;&#x76D1;&#x63A7;&#x8BA1;&#x6570;&#x5668;&#xFF09;&#x5DE5;&#x5177;&#x201D;&#xFF0C;<a href="https://github.com/brendangregg/pmc-cloud-tools&#xFF0C;&#x6700;&#x540E;&#x66F4;&#x65B0;&#x4E8E;" target="_blank">https://github.com/brendangregg/pmc-cloud-tools&#xFF0C;&#x6700;&#x540E;&#x66F4;&#x65B0;&#x4E8E;</a> 2020 &#x5E74;&#x3002;</p>
+<p>[Gregg 20j]&#x201C;Brendan Gregg &#x7684;&#x535A;&#x5BA2;&#x201D;&#xFF0C;<a href="http://www.brendangregg.com/blog&#xFF0C;&#x6700;&#x540E;&#x66F4;&#x65B0;&#x4E8E;" target="_blank">http://www.brendangregg.com/blog&#xFF0C;&#x6700;&#x540E;&#x66F4;&#x65B0;&#x4E8E;</a> 2020 &#x5E74;&#x3002;</p>
+<p>[USENIX 20]&#x201C;;login&#xFF1A;USENIX &#x6742;&#x5FD7;&#x201D;&#xFF0C;<a href="https://www.usenix.org/publications/login&#xFF0C;2020" target="_blank">https://www.usenix.org/publications/login&#xFF0C;2020</a> &#x5E74;&#x8BBF;&#x95EE;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 15 章 BPF/15.3 参考文献.md" class="navigation navigation-prev " aria-label="Previous page: 15.3 参考文献">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 16 章案例研究/16.1 无法解释的胜利.md" class="navigation navigation-next " aria-label="Next page: 16.1 无法解释的胜利">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第 16 章案例研究","level":"1.4.9","depth":2,"next":{"title":"16.1 无法解释的胜利","level":"1.4.9.1","depth":3,"path":"Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 16 章案例研究/16.1 无法解释的胜利.md","ref":"Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 16 章案例研究/16.1 无法解释的胜利.md","articles":[]},"previous":{"title":"15.3 参考文献","level":"1.4.8.3","depth":3,"path":"Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 15 章 BPF/15.3 参考文献.md","ref":"Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 15 章 BPF/15.3 参考文献.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","disqus","splitter","intopic-toc","github","expandable-chapters-small","chapter-fold","edit-link-plus"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"disqus":{"useIdentifier":false,"shortName":"fanxiang"},"github":{"url":"https://github.com/fanxiangs"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"simple-page-toc":{"maxDepth":3,"skipFirstH1":false},"splitter":{},"search":{},"edit-link-plus":{"label":"Edit This Page","base":"https://github.com/fanxiangs/notebook/edit/main"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"showGoTop":true},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Xiang Fan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 16 章案例研究/第 16 章案例研究.md","mtime":"2024-12-18T12:49:40.654Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-12-18T12:50:25.215Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link-plus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

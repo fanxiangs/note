@@ -1,0 +1,3029 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Systems Performance Enterprise And The Cl Brendan Gregg · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Xiang Fan">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="前言/前言.html" />
+    
+    
+    <link rel="prev" href="../Systems Performance/Chapter 4 Observability Tools/Chapter 4 Observability Tools.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../BPF%20Performance Tools/README.md">
+            
+                <span>
+            
+                    
+                    BPF Performance Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../BPF%20Performance Tools/Chapter 1. Introduction.md">
+            
+                <span>
+            
+                    
+                    Chapter 1. Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../BPF%20Performance Tools/Chapter 3. PerformanceAnalysis.md">
+            
+                <span>
+            
+                    
+                    Chapter 3. PerformanceAnalysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../BPF%20Performance Tools/Chapter 4. BCC.md">
+            
+                <span>
+            
+                    
+                    Chapter 4. BCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../BPF%20Performance Tools/Chapter 6. CPUs.md">
+            
+                <span>
+            
+                    
+                    Chapter 6. CPUs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../BPF%20Performance Tools/Chapter 7. Memory.md">
+            
+                <span>
+            
+                    
+                    Chapter 7. Memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../BPF%20Performance Tools/Chapter 8. File Systems.md">
+            
+                <span>
+            
+                    
+                    Chapter 8. File Systems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Systems%20Performance/README.md">
+            
+                <span>
+            
+                    
+                    Systems Performance
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Systems Performance/Chapter 3 Operating Systems/Chapter 3 Operating Systems.html">
+            
+                <a href="../Systems Performance/Chapter 3 Operating Systems/Chapter 3 Operating Systems.html">
+            
+                    
+                    Chapter 3 Operating Systems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Systems Performance/Chapter 4 Observability Tools/Chapter 4 Observability Tools.html">
+            
+                <a href="../Systems Performance/Chapter 4 Observability Tools/Chapter 4 Observability Tools.html">
+            
+                    
+                    Chapter 4 Observability Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="Systems Performance_ Enterprise and the Cl - Brendan Gregg.html">
+            
+                <a href="Systems Performance_ Enterprise and the Cl - Brendan Gregg.html">
+            
+                    
+                    Systems Performance Enterprise And The Cl Brendan Gregg
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="前言/前言.html">
+            
+                <a href="前言/前言.html">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/前言/关于本书.md">
+            
+                <span>
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/前言/关于此版本.md">
+            
+                <span>
+            
+                    
+                    关于此版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="第 1 章简介/第 1 章简介.html">
+            
+                <a href="第 1 章简介/第 1 章简介.html">
+            
+                    
+                    第 1 章简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.1 系统性能.md">
+            
+                <span>
+            
+                    
+                    1.1 系统性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.10 方法论.md">
+            
+                <span>
+            
+                    
+                    1.10 方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.11 案例研究.md">
+            
+                <span>
+            
+                    
+                    1.11 案例研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.12 参考文献.md">
+            
+                <span>
+            
+                    
+                    1.12 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.2 角色.md">
+            
+                <span>
+            
+                    
+                    1.2 角色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.3 活动.md">
+            
+                <span>
+            
+                    
+                    1.3 活动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.4 观点.md">
+            
+                <span>
+            
+                    
+                    1.4 观点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.5 性能具有挑战性.md">
+            
+                <span>
+            
+                    
+                    1.5 性能具有挑战性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.9" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.6 延迟.md">
+            
+                <span>
+            
+                    
+                    1.6 延迟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.10" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.7 可观察性.md">
+            
+                <span>
+            
+                    
+                    1.7 可观察性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.11" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.8 实验.md">
+            
+                <span>
+            
+                    
+                    1.8 实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.12" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 1 章简介/1.9 云计算.md">
+            
+                <span>
+            
+                    
+                    1.9 云计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="第 10 章 网络/第 10 章 网络.html">
+            
+                <a href="第 10 章 网络/第 10 章 网络.html">
+            
+                    
+                    第 10 章 网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.1 术语.md">
+            
+                <span>
+            
+                    
+                    10.1 术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.10 参考文献.md">
+            
+                <span>
+            
+                    
+                    10.10 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.2 模型.md">
+            
+                <span>
+            
+                    
+                    10.2 模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.3 概念.md">
+            
+                <span>
+            
+                    
+                    10.3 概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.4 架构.md">
+            
+                <span>
+            
+                    
+                    10.4 架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.6" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.5 方法论.md">
+            
+                <span>
+            
+                    
+                    10.5 方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.7" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.6 可观测性工具.md">
+            
+                <span>
+            
+                    
+                    10.6 可观测性工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.8" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.7 实验.md">
+            
+                <span>
+            
+                    
+                    10.7 实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.9" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.8 调优.md">
+            
+                <span>
+            
+                    
+                    10.8 调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.10" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.9 练习.md">
+            
+                <span>
+            
+                    
+                    10.9 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="第 11 章云计算/第 11 章云计算.html">
+            
+                <a href="第 11 章云计算/第 11 章云计算.html">
+            
+                    
+                    第 11 章云计算
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.1 背景.md">
+            
+                <span>
+            
+                    
+                    11.1 背景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.2 硬件虚拟化.md">
+            
+                <span>
+            
+                    
+                    11.2 硬件虚拟化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.3 操作系统虚拟化.md">
+            
+                <span>
+            
+                    
+                    11.3 操作系统虚拟化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.4 轻量级虚拟化.md">
+            
+                <span>
+            
+                    
+                    11.4 轻量级虚拟化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.5 其他类型.md">
+            
+                <span>
+            
+                    
+                    11.5 其他类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.6 比较.md">
+            
+                <span>
+            
+                    
+                    11.6 比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.7 练习.md">
+            
+                <span>
+            
+                    
+                    11.7 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/11.8 参考文献.md">
+            
+                <span>
+            
+                    
+                    11.8 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="第 12 章. 基准测试/第 12 章. 基准测试.html">
+            
+                <a href="第 12 章. 基准测试/第 12 章. 基准测试.html">
+            
+                    
+                    第 12 章. 基准测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 12 章. 基准测试/12.1 背景.md">
+            
+                <span>
+            
+                    
+                    12.1 背景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 12 章. 基准测试/12.2 基准测试类型.md">
+            
+                <span>
+            
+                    
+                    12.2 基准测试类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 12 章. 基准测试/12.3 方法论.md">
+            
+                <span>
+            
+                    
+                    12.3 方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 12 章. 基准测试/12.4 基准问题.md">
+            
+                <span>
+            
+                    
+                    12.4 基准问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 12 章. 基准测试/12.5 练习.md">
+            
+                <span>
+            
+                    
+                    12.5 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 12 章. 基准测试/12.6 参考文献.md">
+            
+                <span>
+            
+                    
+                    12.6 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="第 13 章. 性能/第 13 章. 性能.html">
+            
+                <a href="第 13 章. 性能/第 13 章. 性能.html">
+            
+                    
+                    第 13 章. 性能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.1 子命令概述.md">
+            
+                <span>
+            
+                    
+                    13.1 子命令概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.10 性能报告.md">
+            
+                <span>
+            
+                    
+                    13.10 性能报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.11 性能脚本.md">
+            
+                <span>
+            
+                    
+                    13.11 性能脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.4" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.12 性能跟踪.md">
+            
+                <span>
+            
+                    
+                    13.12 性能跟踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.5" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.13 其他命令.md">
+            
+                <span>
+            
+                    
+                    13.13 其他命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.6" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.14 性能文档.md">
+            
+                <span>
+            
+                    
+                    13.14 性能文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.7" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.15 参考文献.md">
+            
+                <span>
+            
+                    
+                    13.15 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.8" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.2 单行线.md">
+            
+                <span>
+            
+                    
+                    13.2 单行线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.9" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.3 性能事件.md">
+            
+                <span>
+            
+                    
+                    13.3 性能事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.10" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.4 硬件事件.md">
+            
+                <span>
+            
+                    
+                    13.4 硬件事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.11" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.5 软件事件.md">
+            
+                <span>
+            
+                    
+                    13.5 软件事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.12" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.6 跟踪点事件.md">
+            
+                <span>
+            
+                    
+                    13.6 跟踪点事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.13" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.7 探测事件.md">
+            
+                <span>
+            
+                    
+                    13.7 探测事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.14" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.8 性能统计.md">
+            
+                <span>
+            
+                    
+                    13.8 性能统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.15" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 13 章. 性能/13.9 性能记录.md">
+            
+                <span>
+            
+                    
+                    13.9 性能记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="第 14 章 Ftrace/第 14 章 Ftrace.html">
+            
+                <a href="第 14 章 Ftrace/第 14 章 Ftrace.html">
+            
+                    
+                    第 14 章 Ftrace
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.7.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.1 能力概述.md">
+            
+                <span>
+            
+                    
+                    14.1 能力概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.10 FTrace 历史触发器.md">
+            
+                <span>
+            
+                    
+                    14.10 FTrace 历史触发器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.3" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.11 跟踪命令.md">
+            
+                <span>
+            
+                    
+                    14.11 跟踪命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.4" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.12 性能跟踪.md">
+            
+                <span>
+            
+                    
+                    14.12 性能跟踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.5" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.13 性能工具.md">
+            
+                <span>
+            
+                    
+                    14.13 性能工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.6" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.14 FTrace 文档.md">
+            
+                <span>
+            
+                    
+                    14.14 FTrace 文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.7" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.15 参考文献.md">
+            
+                <span>
+            
+                    
+                    14.15 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.8" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.2 跟踪 (_sys">
+            
+                <span>
+            
+                    
+                    14.2 跟踪 (_sys)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.9" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.3 FTrace 函数分析器.md">
+            
+                <span>
+            
+                    
+                    14.3 FTrace 函数分析器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.10" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.4 ftrace函数跟踪.md">
+            
+                <span>
+            
+                    
+                    14.4 ftrace函数跟踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.11" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.5 跟踪点.md">
+            
+                <span>
+            
+                    
+                    14.5 跟踪点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.12" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.6 k探针.md">
+            
+                <span>
+            
+                    
+                    14.6 k探针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.13" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.7 升级.md">
+            
+                <span>
+            
+                    
+                    14.7 升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.14" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.8 FTrace函数图.md">
+            
+                <span>
+            
+                    
+                    14.8 FTrace函数图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.15" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 14 章 Ftrace/14.9 ftrace hwlat.md">
+            
+                <span>
+            
+                    
+                    14.9 ftrace hwlat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="第 15 章 BPF/第 15 章 BPF.html">
+            
+                <a href="第 15 章 BPF/第 15 章 BPF.html">
+            
+                    
+                    第 15 章 BPF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.8.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 15 章 BPF/15.1 密件抄送.md">
+            
+                <span>
+            
+                    
+                    15.1 密件抄送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 15 章 BPF/15.2 bpftrace.md">
+            
+                <span>
+            
+                    
+                    15.2 bpftrace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.3" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 15 章 BPF/15.3 参考文献.md">
+            
+                <span>
+            
+                    
+                    15.3 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="第 16 章案例研究/第 16 章案例研究.html">
+            
+                <a href="第 16 章案例研究/第 16 章案例研究.html">
+            
+                    
+                    第 16 章案例研究
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.9.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 16 章案例研究/16.1 无法解释的胜利.md">
+            
+                <span>
+            
+                    
+                    16.1 无法解释的胜利
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 16 章案例研究/16.2 附加信息.md">
+            
+                <span>
+            
+                    
+                    16.2 附加信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.3" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 16 章案例研究/16.3 参考文献.md">
+            
+                <span>
+            
+                    
+                    16.3 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="第 2 章方法论/第 2 章方法论.html">
+            
+                <a href="第 2 章方法论/第 2 章方法论.html">
+            
+                    
+                    第 2 章方法论
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.1 术语.md">
+            
+                <span>
+            
+                    
+                    2.1 术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.10 可视化.md">
+            
+                <span>
+            
+                    
+                    2.10 可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.3" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.11 练习.md">
+            
+                <span>
+            
+                    
+                    2.11 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.4" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.12 参考文献.md">
+            
+                <span>
+            
+                    
+                    2.12 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.5" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.2 模型.md">
+            
+                <span>
+            
+                    
+                    2.2 模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.6" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.3 概念.md">
+            
+                <span>
+            
+                    
+                    2.3 概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.7" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.4 观点.md">
+            
+                <span>
+            
+                    
+                    2.4 观点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.8" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.5 方法论.md">
+            
+                <span>
+            
+                    
+                    2.5 方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.9" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.6 建模.md">
+            
+                <span>
+            
+                    
+                    2.6 建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.10" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.7 容量规划.md">
+            
+                <span>
+            
+                    
+                    2.7 容量规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.11" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.8 统计.md">
+            
+                <span>
+            
+                    
+                    2.8 统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.12" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 2 章方法论/2.9 监控.md">
+            
+                <span>
+            
+                    
+                    2.9 监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="第 3 章操作系统/第 3 章操作系统.html">
+            
+                <a href="第 3 章操作系统/第 3 章操作系统.html">
+            
+                    
+                    第 3 章操作系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="第 4 章可观察性工具/第 4 章可观察性工具.html">
+            
+                <a href="第 4 章可观察性工具/第 4 章可观察性工具.html">
+            
+                    
+                    第 4 章可观察性工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="第 5 章应用/第 5 章应用.html">
+            
+                <a href="第 5 章应用/第 5 章应用.html">
+            
+                    
+                    第 5 章应用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.13.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.1 应用基础知识.md">
+            
+                <span>
+            
+                    
+                    5.1 应用基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.2 应用性能技术.md">
+            
+                <span>
+            
+                    
+                    5.2 应用性能技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13.3" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.3 编程语言.md">
+            
+                <span>
+            
+                    
+                    5.3 编程语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13.4" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.4 方法论.md">
+            
+                <span>
+            
+                    
+                    5.4 方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13.5" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.5 可观测性工具.md">
+            
+                <span>
+            
+                    
+                    5.5 可观测性工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13.6" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.6 陷阱.md">
+            
+                <span>
+            
+                    
+                    5.6 陷阱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13.7" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.7 练习.md">
+            
+                <span>
+            
+                    
+                    5.7 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13.8" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 5 章应用/5.8 参考文献.md">
+            
+                <span>
+            
+                    
+                    5.8 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="第 6 章 CPU/第 6 章 CPU.html">
+            
+                <a href="第 6 章 CPU/第 6 章 CPU.html">
+            
+                    
+                    第 6 章 CPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="第 7 章 Memory/第 7 章 Memory.html">
+            
+                <a href="第 7 章 Memory/第 7 章 Memory.html">
+            
+                    
+                    第 7 章 Memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="第 8 章文件系统/第 8 章文件系统.html">
+            
+                <a href="第 8 章文件系统/第 8 章文件系统.html">
+            
+                    
+                    第 8 章文件系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.16.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.1 术语.md">
+            
+                <span>
+            
+                    
+                    8.1 术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.10 参考文献.md">
+            
+                <span>
+            
+                    
+                    8.10 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.3" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.2 模型.md">
+            
+                <span>
+            
+                    
+                    8.2 模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.4" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.3 概念.md">
+            
+                <span>
+            
+                    
+                    8.3 概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.5" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.4 架构.md">
+            
+                <span>
+            
+                    
+                    8.4 架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.6" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.5 方法论.md">
+            
+                <span>
+            
+                    
+                    8.5 方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.7" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.6 可观测性工具.md">
+            
+                <span>
+            
+                    
+                    8.6 可观测性工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.8" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.7 实验.md">
+            
+                <span>
+            
+                    
+                    8.7 实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.9" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.8 调优.md">
+            
+                <span>
+            
+                    
+                    8.8 调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16.10" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/8.9 练习.md">
+            
+                <span>
+            
+                    
+                    8.9 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="第 9 章磁盘/第 9 章磁盘.html">
+            
+                <a href="第 9 章磁盘/第 9 章磁盘.html">
+            
+                    
+                    第 9 章磁盘
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.17.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.1 术语.md">
+            
+                <span>
+            
+                    
+                    9.1 术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.10 练习.md">
+            
+                <span>
+            
+                    
+                    9.10 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.3" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.11 参考文献.md">
+            
+                <span>
+            
+                    
+                    9.11 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.4" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.2 模型.md">
+            
+                <span>
+            
+                    
+                    9.2 模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.5" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.3 概念.md">
+            
+                <span>
+            
+                    
+                    9.3 概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.6" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.4 架构.md">
+            
+                <span>
+            
+                    
+                    9.4 架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.7" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.5 方法论.md">
+            
+                <span>
+            
+                    
+                    9.5 方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.8" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.6 可观测性工具.md">
+            
+                <span>
+            
+                    
+                    9.6 可观测性工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.9" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.7 可视化.md">
+            
+                <span>
+            
+                    
+                    9.7 可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.10" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.8 实验.md">
+            
+                <span>
+            
+                    
+                    9.8 实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17.11" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/9.9 调优.md">
+            
+                <span>
+            
+                    
+                    9.9 调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="附录 C：bpftrace 单行代码/附录 C：bpftrace 单行代码.html">
+            
+                <a href="附录 C：bpftrace 单行代码/附录 C：bpftrace 单行代码.html">
+            
+                    
+                    附录 C：bpftrace 单行代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.18.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/中央处理器.md">
+            
+                <span>
+            
+                    
+                    中央处理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/文件系统.md">
+            
+                <span>
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18.3" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/磁盘.md">
+            
+                <span>
+            
+                    
+                    磁盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18.4" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/联网.md">
+            
+                <span>
+            
+                    
+                    联网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18.5" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/记忆.md">
+            
+                <span>
+            
+                    
+                    记忆
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="附录 D：选定练习的答案/附录 D：选定练习的答案.html">
+            
+                <a href="附录 D：选定练习的答案/附录 D：选定练习的答案.html">
+            
+                    
+                    附录 D：选定练习的答案
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.19.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 11 章—云计算.md">
+            
+                <span>
+            
+                    
+                    第 11 章—云计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 2 章——方法论.md">
+            
+                <span>
+            
+                    
+                    第 2 章——方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19.3" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 3 章——操作系统.md">
+            
+                <span>
+            
+                    
+                    第 3 章——操作系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19.4" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 6 章—CPU.md">
+            
+                <span>
+            
+                    
+                    第 6 章—CPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19.5" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 8 章—文件系统.md">
+            
+                <span>
+            
+                    
+                    第 8 章—文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19.6" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 9 章—磁盘.md">
+            
+                <span>
+            
+                    
+                    第 9 章—磁盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19.7" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第7章——记忆.md">
+            
+                <span>
+            
+                    
+                    第7章——记忆
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="附录 E：系统性能名人录/附录 E：系统性能名人录.html">
+            
+                <a href="附录 E：系统性能名人录/附录 E：系统性能名人录.html">
+            
+                    
+                    附录 E：系统性能名人录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.20.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 E：系统性能名人录/E.1 参考文献.md">
+            
+                <span>
+            
+                    
+                    E.1 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="附录A：使用方法：Linux/附录A：使用方法：Linux.html">
+            
+                <a href="附录A：使用方法：Linux/附录A：使用方法：Linux.html">
+            
+                    
+                    附录A：使用方法：Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.21.1" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录A：使用方法：Linux/A.1 参考文献.md">
+            
+                <span>
+            
+                    
+                    A.1 参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21.2" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录A：使用方法：Linux/物质资源.md">
+            
+                <span>
+            
+                    
+                    物质资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21.3" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录A：使用方法：Linux/软件资源.md">
+            
+                <span>
+            
+                    
+                    软件资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/Cover.md">
+            
+                <span>
+            
+                    
+                    Cover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/Systems Performance_ Enterprise and the Cl - Brendan Gregg.md">
+            
+                <span>
+            
+                    
+                    Systems Performance Enterprise And The Cl Brendan Gregg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/代码片段.md">
+            
+                <span>
+            
+                    
+                    代码片段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/关于作者.md">
+            
+                <span>
+            
+                    
+                    关于作者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.26" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/关于这本电子书.md">
+            
+                <span>
+            
+                    
+                    关于这本电子书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.27" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/内容.md">
+            
+                <span>
+            
+                    
+                    内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.28" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/内容一览.md">
+            
+                <span>
+            
+                    
+                    内容一览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.29" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/半扉页.md">
+            
+                <span>
+            
+                    
+                    半扉页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.30" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/奉献页面.md">
+            
+                <span>
+            
+                    
+                    奉献页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.31" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/封面.md">
+            
+                <span>
+            
+                    
+                    封面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.32" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/封面页.md">
+            
+                <span>
+            
+                    
+                    封面页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.33" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/指数.md">
+            
+                <span>
+            
+                    
+                    指数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.34" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/版权页.md">
+            
+                <span>
+            
+                    
+                    版权页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.35" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/致谢.md">
+            
+                <span>
+            
+                    
+                    致谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.36" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/词汇表.md">
+            
+                <span>
+            
+                    
+                    词汇表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.37" data-path="../Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/附录 B：SAR 摘要.md">
+            
+                <span>
+            
+                    
+                    附录 B：SAR 摘要
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Chapter%204 Processor Architecture.md">
+            
+                <span>
+            
+                    
+                    Chapter 4 Processor Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Chapter%206 The Memory Hierarchy（存储器层次结构）.md">
+            
+                <span>
+            
+                    
+                    Chapter 6 The Memory Hierarchy（存储器层次结构）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Figure.html">
+            
+                <a href="../Figure.html">
+            
+                    
+                    Figure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Systems Performance Enterprise And The Cl Brendan Gregg</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/Cover|Cover]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x5C01;&#x9762;&#x9875;|&#x5C01;&#x9762;&#x9875;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x5173;&#x4E8E;&#x8FD9;&#x672C;&#x7535;&#x5B50;&#x4E66;|&#x5173;&#x4E8E;&#x8FD9;&#x672C;&#x7535;&#x5B50;&#x4E66;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x534A;&#x6249;&#x9875;|&#x534A;&#x6249;&#x9875;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x5C01;&#x9762;|&#x5C01;&#x9762;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7248;&#x6743;&#x9875;|&#x7248;&#x6743;&#x9875;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x5949;&#x732E;&#x9875;&#x9762;|&#x5949;&#x732E;&#x9875;&#x9762;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x5185;&#x5BB9;&#x4E00;&#x89C8;|&#x5185;&#x5BB9;&#x4E00;&#x89C8;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x5185;&#x5BB9;|&#x5185;&#x5BB9;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x524D;&#x8A00;/&#x524D;&#x8A00;|&#x524D;&#x8A00;]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x524D;&#x8A00;/&#x5173;&#x4E8E;&#x6B64;&#x7248;&#x672C;|&#x5173;&#x4E8E;&#x6B64;&#x7248;&#x672C;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x524D;&#x8A00;/&#x5173;&#x4E8E;&#x672C;&#x4E66;|&#x5173;&#x4E8E;&#x672C;&#x4E66;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x81F4;&#x8C22;|&#x81F4;&#x8C22;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x5173;&#x4E8E;&#x4F5C;&#x8005;|&#x5173;&#x4E8E;&#x4F5C;&#x8005;]]</li>
+<li>[[&#x7B2C; 1 &#x7AE0;&#x7B80;&#x4ECB;|&#x7B2C; 1 &#x7AE0;&#x7B80;&#x4ECB;]]<ul>
+<li>[[1.1 &#x7CFB;&#x7EDF;&#x6027;&#x80FD;|1.1 &#x7CFB;&#x7EDF;&#x6027;&#x80FD;]]</li>
+<li>[[1.2 &#x89D2;&#x8272;|1.2 &#x89D2;&#x8272;]]</li>
+<li>[[1.3 &#x6D3B;&#x52A8;|1.3 &#x6D3B;&#x52A8;]]</li>
+<li>[[1.4 &#x89C2;&#x70B9;|1.4 &#x89C2;&#x70B9;]]</li>
+<li>[[1.5 &#x6027;&#x80FD;&#x5177;&#x6709;&#x6311;&#x6218;&#x6027;|1.5 &#x6027;&#x80FD;&#x5177;&#x6709;&#x6311;&#x6218;&#x6027;]]</li>
+<li>[[1.6 &#x5EF6;&#x8FDF;|1.6 &#x5EF6;&#x8FDF;]]</li>
+<li>[[1.7 &#x53EF;&#x89C2;&#x5BDF;&#x6027;|1.7 &#x53EF;&#x89C2;&#x5BDF;&#x6027;]]</li>
+<li>[[1.8 &#x5B9E;&#x9A8C;|1.8 &#x5B9E;&#x9A8C;]]</li>
+<li>[[1.9 &#x4E91;&#x8BA1;&#x7B97;|1.9 &#x4E91;&#x8BA1;&#x7B97;]]</li>
+<li>[[1.10 &#x65B9;&#x6CD5;&#x8BBA;|1.10 &#x65B9;&#x6CD5;&#x8BBA;]]</li>
+<li>[[1.11 &#x6848;&#x4F8B;&#x7814;&#x7A76;|1.11 &#x6848;&#x4F8B;&#x7814;&#x7A76;]]</li>
+<li>[[1.12 &#x53C2;&#x8003;&#x6587;&#x732E;|1.12 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 2 &#x7AE0;&#x65B9;&#x6CD5;&#x8BBA;/&#x7B2C; 2 &#x7AE0;&#x65B9;&#x6CD5;&#x8BBA;|&#x7B2C; 2 &#x7AE0;&#x65B9;&#x6CD5;&#x8BBA;]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 2 &#x7AE0;&#x65B9;&#x6CD5;&#x8BBA;/2.1 &#x672F;&#x8BED;|2.1 &#x672F;&#x8BED;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 2 &#x7AE0;&#x65B9;&#x6CD5;&#x8BBA;/2.2 &#x6A21;&#x578B;|2.2 &#x6A21;&#x578B;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 2 &#x7AE0;&#x65B9;&#x6CD5;&#x8BBA;/2.3 &#x6982;&#x5FF5;|2.3 &#x6982;&#x5FF5;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 2 &#x7AE0;&#x65B9;&#x6CD5;&#x8BBA;/2.4 &#x89C2;&#x70B9;|2.4 &#x89C2;&#x70B9;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 2 &#x7AE0;&#x65B9;&#x6CD5;&#x8BBA;/2.5 &#x65B9;&#x6CD5;&#x8BBA;|2.5 &#x65B9;&#x6CD5;&#x8BBA;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 2 &#x7AE0;&#x65B9;&#x6CD5;&#x8BBA;/2.6 &#x5EFA;&#x6A21;|2.6 &#x5EFA;&#x6A21;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 2 &#x7AE0;&#x65B9;&#x6CD5;&#x8BBA;/2.7 &#x5BB9;&#x91CF;&#x89C4;&#x5212;|2.7 &#x5BB9;&#x91CF;&#x89C4;&#x5212;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 2 &#x7AE0;&#x65B9;&#x6CD5;&#x8BBA;/2.8 &#x7EDF;&#x8BA1;|2.8 &#x7EDF;&#x8BA1;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 2 &#x7AE0;&#x65B9;&#x6CD5;&#x8BBA;/2.9 &#x76D1;&#x63A7;|2.9 &#x76D1;&#x63A7;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 2 &#x7AE0;&#x65B9;&#x6CD5;&#x8BBA;/2.10 &#x53EF;&#x89C6;&#x5316;|2.10 &#x53EF;&#x89C6;&#x5316;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 2 &#x7AE0;&#x65B9;&#x6CD5;&#x8BBA;/2.11 &#x7EC3;&#x4E60;|2.11 &#x7EC3;&#x4E60;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 2 &#x7AE0;&#x65B9;&#x6CD5;&#x8BBA;/2.12 &#x53C2;&#x8003;&#x6587;&#x732E;|2.12 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 3 &#x7AE0;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;/&#x7B2C; 3 &#x7AE0;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;|&#x7B2C; 3 &#x7AE0;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 3 &#x7AE0;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;/3.1 &#x672F;&#x8BED;|3.1 &#x672F;&#x8BED;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 3 &#x7AE0;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;/3.2 &#x80CC;&#x666F;|3.2 &#x80CC;&#x666F;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 3 &#x7AE0;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;/3.3 &#x5185;&#x6838;|3.3 &#x5185;&#x6838;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 3 &#x7AE0;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;/3.4 Linux|3.4 Linux]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 3 &#x7AE0;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;/3.5 &#x5176;&#x4ED6;&#x4E3B;&#x9898;|3.5 &#x5176;&#x4ED6;&#x4E3B;&#x9898;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 3 &#x7AE0;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;/3.6 &#x5185;&#x6838;&#x6BD4;&#x8F83;|3.6 &#x5185;&#x6838;&#x6BD4;&#x8F83;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 3 &#x7AE0;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;/3.7 &#x7EC3;&#x4E60;|3.7 &#x7EC3;&#x4E60;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 3 &#x7AE0;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;/3.8 &#x53C2;&#x8003;&#x6587;&#x732E;|3.8 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 4 &#x7AE0;&#x53EF;&#x89C2;&#x5BDF;&#x6027;&#x5DE5;&#x5177;/&#x7B2C; 4 &#x7AE0;&#x53EF;&#x89C2;&#x5BDF;&#x6027;&#x5DE5;&#x5177;|&#x7B2C; 4 &#x7AE0;&#x53EF;&#x89C2;&#x5BDF;&#x6027;&#x5DE5;&#x5177;]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 4 &#x7AE0;&#x53EF;&#x89C2;&#x5BDF;&#x6027;&#x5DE5;&#x5177;/4.1 &#x5DE5;&#x5177;&#x8986;&#x76D6;&#x8303;&#x56F4;|4.1 &#x5DE5;&#x5177;&#x8986;&#x76D6;&#x8303;&#x56F4;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 4 &#x7AE0;&#x53EF;&#x89C2;&#x5BDF;&#x6027;&#x5DE5;&#x5177;/4.2 &#x5DE5;&#x5177;&#x7C7B;&#x578B;|4.2 &#x5DE5;&#x5177;&#x7C7B;&#x578B;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 4 &#x7AE0;&#x53EF;&#x89C2;&#x5BDF;&#x6027;&#x5DE5;&#x5177;/4.3 &#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x6765;&#x6E90;|4.3 &#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x6765;&#x6E90;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 4 &#x7AE0;&#x53EF;&#x89C2;&#x5BDF;&#x6027;&#x5DE5;&#x5177;/4.4 SAR|4.4 SAR]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 4 &#x7AE0;&#x53EF;&#x89C2;&#x5BDF;&#x6027;&#x5DE5;&#x5177;/4.5 &#x8FFD;&#x8E2A;&#x5DE5;&#x5177;|4.5 &#x8FFD;&#x8E2A;&#x5DE5;&#x5177;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 4 &#x7AE0;&#x53EF;&#x89C2;&#x5BDF;&#x6027;&#x5DE5;&#x5177;/4.6 &#x89C2;&#x5BDF;&#x53EF;&#x89C2;&#x5BDF;&#x6027;|4.6 &#x89C2;&#x5BDF;&#x53EF;&#x89C2;&#x5BDF;&#x6027;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 4 &#x7AE0;&#x53EF;&#x89C2;&#x5BDF;&#x6027;&#x5DE5;&#x5177;/4.7 &#x7EC3;&#x4E60;|4.7 &#x7EC3;&#x4E60;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 4 &#x7AE0;&#x53EF;&#x89C2;&#x5BDF;&#x6027;&#x5DE5;&#x5177;/4.8 &#x53C2;&#x8003;&#x6587;&#x732E;|4.8 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 5 &#x7AE0;&#x5E94;&#x7528;/&#x7B2C; 5 &#x7AE0;&#x5E94;&#x7528;|&#x7B2C; 5 &#x7AE0;&#x5E94;&#x7528;]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 5 &#x7AE0;&#x5E94;&#x7528;/5.1 &#x5E94;&#x7528;&#x57FA;&#x7840;&#x77E5;&#x8BC6;|5.1 &#x5E94;&#x7528;&#x57FA;&#x7840;&#x77E5;&#x8BC6;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 5 &#x7AE0;&#x5E94;&#x7528;/5.2 &#x5E94;&#x7528;&#x6027;&#x80FD;&#x6280;&#x672F;|5.2 &#x5E94;&#x7528;&#x6027;&#x80FD;&#x6280;&#x672F;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 5 &#x7AE0;&#x5E94;&#x7528;/5.3 &#x7F16;&#x7A0B;&#x8BED;&#x8A00;|5.3 &#x7F16;&#x7A0B;&#x8BED;&#x8A00;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 5 &#x7AE0;&#x5E94;&#x7528;/5.4 &#x65B9;&#x6CD5;&#x8BBA;|5.4 &#x65B9;&#x6CD5;&#x8BBA;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 5 &#x7AE0;&#x5E94;&#x7528;/5.5 &#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x5DE5;&#x5177;|5.5 &#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x5DE5;&#x5177;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 5 &#x7AE0;&#x5E94;&#x7528;/5.6 &#x9677;&#x9631;|5.6 &#x9677;&#x9631;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 5 &#x7AE0;&#x5E94;&#x7528;/5.7 &#x7EC3;&#x4E60;|5.7 &#x7EC3;&#x4E60;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 5 &#x7AE0;&#x5E94;&#x7528;/5.8 &#x53C2;&#x8003;&#x6587;&#x732E;|5.8 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 6 &#x7AE0; CPU/&#x7B2C; 6 &#x7AE0; CPU|&#x7B2C; 6 &#x7AE0; CPU]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 6 &#x7AE0; CPU/6.1 &#x672F;&#x8BED;|6.1 &#x672F;&#x8BED;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 6 &#x7AE0; CPU/6.2 &#x6A21;&#x578B;|6.2 &#x6A21;&#x578B;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 6 &#x7AE0; CPU/6.3 &#x6982;&#x5FF5;|6.3 &#x6982;&#x5FF5;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 6 &#x7AE0; CPU/6.4 &#x67B6;&#x6784;|6.4 &#x67B6;&#x6784;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 6 &#x7AE0; CPU/6.5 &#x65B9;&#x6CD5;&#x8BBA;|6.5 &#x65B9;&#x6CD5;&#x8BBA;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 6 &#x7AE0; CPU/6.6 &#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x5DE5;&#x5177;|6.6 &#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x5DE5;&#x5177;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 6 &#x7AE0; CPU/6.7 &#x53EF;&#x89C6;&#x5316;|6.7 &#x53EF;&#x89C6;&#x5316;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 6 &#x7AE0; CPU/6.8 &#x5B9E;&#x9A8C;|6.8 &#x5B9E;&#x9A8C;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 6 &#x7AE0; CPU/6.9 &#x8C03;&#x4F18;|6.9 &#x8C03;&#x4F18;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 6 &#x7AE0; CPU/6.10 &#x7EC3;&#x4E60;|6.10 &#x7EC3;&#x4E60;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 6 &#x7AE0; CPU/6.11 &#x53C2;&#x8003;&#x6587;&#x732E;|6.11 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[&#x7B2C; 7 &#x7AE0; Memory|&#x7B2C; 7 &#x7AE0; Memory]]<ul>
+<li>[[7.1 &#x672F;&#x8BED;|7.1 &#x672F;&#x8BED;]]</li>
+<li>[[7.2 &#x6982;&#x5FF5;|7.2 &#x6982;&#x5FF5;]]</li>
+<li>[[7.3 &#x67B6;&#x6784;|7.3 &#x67B6;&#x6784;]]</li>
+<li>[[7.4 &#x65B9;&#x6CD5;&#x8BBA;|7.4 &#x65B9;&#x6CD5;&#x8BBA;]]</li>
+<li>[[7.5 &#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x5DE5;&#x5177;|7.5 &#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x5DE5;&#x5177;]]</li>
+<li>[[7.6 &#x8C03;&#x4F18;|7.6 &#x8C03;&#x4F18;]]</li>
+<li>[[7.7 &#x7EC3;&#x4E60;|7.7 &#x7EC3;&#x4E60;]]</li>
+<li>[[7.8 &#x53C2;&#x8003;&#x6587;&#x732E;|7.8 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 8 &#x7AE0;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;/&#x7B2C; 8 &#x7AE0;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;|&#x7B2C; 8 &#x7AE0;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 8 &#x7AE0;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;/8.1 &#x672F;&#x8BED;|8.1 &#x672F;&#x8BED;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 8 &#x7AE0;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;/8.2 &#x6A21;&#x578B;|8.2 &#x6A21;&#x578B;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 8 &#x7AE0;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;/8.3 &#x6982;&#x5FF5;|8.3 &#x6982;&#x5FF5;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 8 &#x7AE0;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;/8.4 &#x67B6;&#x6784;|8.4 &#x67B6;&#x6784;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 8 &#x7AE0;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;/8.5 &#x65B9;&#x6CD5;&#x8BBA;|8.5 &#x65B9;&#x6CD5;&#x8BBA;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 8 &#x7AE0;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;/8.6 &#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x5DE5;&#x5177;|8.6 &#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x5DE5;&#x5177;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 8 &#x7AE0;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;/8.7 &#x5B9E;&#x9A8C;|8.7 &#x5B9E;&#x9A8C;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 8 &#x7AE0;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;/8.8 &#x8C03;&#x4F18;|8.8 &#x8C03;&#x4F18;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 8 &#x7AE0;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;/8.9 &#x7EC3;&#x4E60;|8.9 &#x7EC3;&#x4E60;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 8 &#x7AE0;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;/8.10 &#x53C2;&#x8003;&#x6587;&#x732E;|8.10 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 9 &#x7AE0;&#x78C1;&#x76D8;/&#x7B2C; 9 &#x7AE0;&#x78C1;&#x76D8;|&#x7B2C; 9 &#x7AE0;&#x78C1;&#x76D8;]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 9 &#x7AE0;&#x78C1;&#x76D8;/9.1 &#x672F;&#x8BED;|9.1 &#x672F;&#x8BED;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 9 &#x7AE0;&#x78C1;&#x76D8;/9.2 &#x6A21;&#x578B;|9.2 &#x6A21;&#x578B;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 9 &#x7AE0;&#x78C1;&#x76D8;/9.3 &#x6982;&#x5FF5;|9.3 &#x6982;&#x5FF5;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 9 &#x7AE0;&#x78C1;&#x76D8;/9.4 &#x67B6;&#x6784;|9.4 &#x67B6;&#x6784;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 9 &#x7AE0;&#x78C1;&#x76D8;/9.5 &#x65B9;&#x6CD5;&#x8BBA;|9.5 &#x65B9;&#x6CD5;&#x8BBA;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 9 &#x7AE0;&#x78C1;&#x76D8;/9.6 &#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x5DE5;&#x5177;|9.6 &#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x5DE5;&#x5177;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 9 &#x7AE0;&#x78C1;&#x76D8;/9.7 &#x53EF;&#x89C6;&#x5316;|9.7 &#x53EF;&#x89C6;&#x5316;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 9 &#x7AE0;&#x78C1;&#x76D8;/9.8 &#x5B9E;&#x9A8C;|9.8 &#x5B9E;&#x9A8C;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 9 &#x7AE0;&#x78C1;&#x76D8;/9.9 &#x8C03;&#x4F18;|9.9 &#x8C03;&#x4F18;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 9 &#x7AE0;&#x78C1;&#x76D8;/9.10 &#x7EC3;&#x4E60;|9.10 &#x7EC3;&#x4E60;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 9 &#x7AE0;&#x78C1;&#x76D8;/9.11 &#x53C2;&#x8003;&#x6587;&#x732E;|9.11 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 10 &#x7AE0; &#x7F51;&#x7EDC;/&#x7B2C; 10 &#x7AE0; &#x7F51;&#x7EDC;|&#x7B2C; 10 &#x7AE0; &#x7F51;&#x7EDC;]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 10 &#x7AE0; &#x7F51;&#x7EDC;/10.1 &#x672F;&#x8BED;|10.1 &#x672F;&#x8BED;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 10 &#x7AE0; &#x7F51;&#x7EDC;/10.2 &#x6A21;&#x578B;|10.2 &#x6A21;&#x578B;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 10 &#x7AE0; &#x7F51;&#x7EDC;/10.3 &#x6982;&#x5FF5;|10.3 &#x6982;&#x5FF5;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 10 &#x7AE0; &#x7F51;&#x7EDC;/10.4 &#x67B6;&#x6784;|10.4 &#x67B6;&#x6784;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 10 &#x7AE0; &#x7F51;&#x7EDC;/10.5 &#x65B9;&#x6CD5;&#x8BBA;|10.5 &#x65B9;&#x6CD5;&#x8BBA;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 10 &#x7AE0; &#x7F51;&#x7EDC;/10.6 &#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x5DE5;&#x5177;|10.6 &#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x5DE5;&#x5177;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 10 &#x7AE0; &#x7F51;&#x7EDC;/10.7 &#x5B9E;&#x9A8C;|10.7 &#x5B9E;&#x9A8C;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 10 &#x7AE0; &#x7F51;&#x7EDC;/10.8 &#x8C03;&#x4F18;|10.8 &#x8C03;&#x4F18;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 10 &#x7AE0; &#x7F51;&#x7EDC;/10.9 &#x7EC3;&#x4E60;|10.9 &#x7EC3;&#x4E60;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 10 &#x7AE0; &#x7F51;&#x7EDC;/10.10 &#x53C2;&#x8003;&#x6587;&#x732E;|10.10 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 11 &#x7AE0;&#x4E91;&#x8BA1;&#x7B97;/&#x7B2C; 11 &#x7AE0;&#x4E91;&#x8BA1;&#x7B97;|&#x7B2C; 11 &#x7AE0;&#x4E91;&#x8BA1;&#x7B97;]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 11 &#x7AE0;&#x4E91;&#x8BA1;&#x7B97;/11.1 &#x80CC;&#x666F;|11.1 &#x80CC;&#x666F;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 11 &#x7AE0;&#x4E91;&#x8BA1;&#x7B97;/11.2 &#x786C;&#x4EF6;&#x865A;&#x62DF;&#x5316;|11.2 &#x786C;&#x4EF6;&#x865A;&#x62DF;&#x5316;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 11 &#x7AE0;&#x4E91;&#x8BA1;&#x7B97;/11.3 &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x865A;&#x62DF;&#x5316;|11.3 &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x865A;&#x62DF;&#x5316;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 11 &#x7AE0;&#x4E91;&#x8BA1;&#x7B97;/11.4 &#x8F7B;&#x91CF;&#x7EA7;&#x865A;&#x62DF;&#x5316;|11.4 &#x8F7B;&#x91CF;&#x7EA7;&#x865A;&#x62DF;&#x5316;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 11 &#x7AE0;&#x4E91;&#x8BA1;&#x7B97;/11.5 &#x5176;&#x4ED6;&#x7C7B;&#x578B;|11.5 &#x5176;&#x4ED6;&#x7C7B;&#x578B;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 11 &#x7AE0;&#x4E91;&#x8BA1;&#x7B97;/11.6 &#x6BD4;&#x8F83;|11.6 &#x6BD4;&#x8F83;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 11 &#x7AE0;&#x4E91;&#x8BA1;&#x7B97;/11.7 &#x7EC3;&#x4E60;|11.7 &#x7EC3;&#x4E60;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 11 &#x7AE0;&#x4E91;&#x8BA1;&#x7B97;/11.8 &#x53C2;&#x8003;&#x6587;&#x732E;|11.8 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 12 &#x7AE0;. &#x57FA;&#x51C6;&#x6D4B;&#x8BD5;/&#x7B2C; 12 &#x7AE0;. &#x57FA;&#x51C6;&#x6D4B;&#x8BD5;|&#x7B2C; 12 &#x7AE0;. &#x57FA;&#x51C6;&#x6D4B;&#x8BD5;]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 12 &#x7AE0;. &#x57FA;&#x51C6;&#x6D4B;&#x8BD5;/12.1 &#x80CC;&#x666F;|12.1 &#x80CC;&#x666F;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 12 &#x7AE0;. &#x57FA;&#x51C6;&#x6D4B;&#x8BD5;/12.2 &#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x7C7B;&#x578B;|12.2 &#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x7C7B;&#x578B;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 12 &#x7AE0;. &#x57FA;&#x51C6;&#x6D4B;&#x8BD5;/12.3 &#x65B9;&#x6CD5;&#x8BBA;|12.3 &#x65B9;&#x6CD5;&#x8BBA;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 12 &#x7AE0;. &#x57FA;&#x51C6;&#x6D4B;&#x8BD5;/12.4 &#x57FA;&#x51C6;&#x95EE;&#x9898;|12.4 &#x57FA;&#x51C6;&#x95EE;&#x9898;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 12 &#x7AE0;. &#x57FA;&#x51C6;&#x6D4B;&#x8BD5;/12.5 &#x7EC3;&#x4E60;|12.5 &#x7EC3;&#x4E60;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 12 &#x7AE0;. &#x57FA;&#x51C6;&#x6D4B;&#x8BD5;/12.6 &#x53C2;&#x8003;&#x6587;&#x732E;|12.6 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;|&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/13.1 &#x5B50;&#x547D;&#x4EE4;&#x6982;&#x8FF0;|13.1 &#x5B50;&#x547D;&#x4EE4;&#x6982;&#x8FF0;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/13.2 &#x5355;&#x884C;&#x7EBF;|13.2 &#x5355;&#x884C;&#x7EBF;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/13.3 &#x6027;&#x80FD;&#x4E8B;&#x4EF6;|13.3 &#x6027;&#x80FD;&#x4E8B;&#x4EF6;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/13.4 &#x786C;&#x4EF6;&#x4E8B;&#x4EF6;|13.4 &#x786C;&#x4EF6;&#x4E8B;&#x4EF6;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/13.5 &#x8F6F;&#x4EF6;&#x4E8B;&#x4EF6;|13.5 &#x8F6F;&#x4EF6;&#x4E8B;&#x4EF6;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/13.6 &#x8DDF;&#x8E2A;&#x70B9;&#x4E8B;&#x4EF6;|13.6 &#x8DDF;&#x8E2A;&#x70B9;&#x4E8B;&#x4EF6;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/13.7 &#x63A2;&#x6D4B;&#x4E8B;&#x4EF6;|13.7 &#x63A2;&#x6D4B;&#x4E8B;&#x4EF6;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/13.8 &#x6027;&#x80FD;&#x7EDF;&#x8BA1;|13.8 &#x6027;&#x80FD;&#x7EDF;&#x8BA1;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/13.9 &#x6027;&#x80FD;&#x8BB0;&#x5F55;|13.9 &#x6027;&#x80FD;&#x8BB0;&#x5F55;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/13.10 &#x6027;&#x80FD;&#x62A5;&#x544A;|13.10 &#x6027;&#x80FD;&#x62A5;&#x544A;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/13.11 &#x6027;&#x80FD;&#x811A;&#x672C;|13.11 &#x6027;&#x80FD;&#x811A;&#x672C;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/13.12 &#x6027;&#x80FD;&#x8DDF;&#x8E2A;|13.12 &#x6027;&#x80FD;&#x8DDF;&#x8E2A;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/13.13 &#x5176;&#x4ED6;&#x547D;&#x4EE4;|13.13 &#x5176;&#x4ED6;&#x547D;&#x4EE4;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/13.14 &#x6027;&#x80FD;&#x6587;&#x6863;|13.14 &#x6027;&#x80FD;&#x6587;&#x6863;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 13 &#x7AE0;. &#x6027;&#x80FD;/13.15 &#x53C2;&#x8003;&#x6587;&#x732E;|13.15 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/&#x7B2C; 14 &#x7AE0; Ftrace|&#x7B2C; 14 &#x7AE0; Ftrace]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/14.1 &#x80FD;&#x529B;&#x6982;&#x8FF0;|14.1 &#x80FD;&#x529B;&#x6982;&#x8FF0;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/14.2 &#x8DDF;&#x8E2A; (_sys)|14.2 &#x8DDF;&#x8E2A; (/sys)]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/14.3 FTrace &#x51FD;&#x6570;&#x5206;&#x6790;&#x5668;|14.3 FTrace &#x51FD;&#x6570;&#x5206;&#x6790;&#x5668;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/14.4 ftrace&#x51FD;&#x6570;&#x8DDF;&#x8E2A;|14.4 ftrace&#x51FD;&#x6570;&#x8DDF;&#x8E2A;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/14.5 &#x8DDF;&#x8E2A;&#x70B9;|14.5 &#x8DDF;&#x8E2A;&#x70B9;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/14.6 k&#x63A2;&#x9488;|14.6 k&#x63A2;&#x9488;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/14.7 &#x5347;&#x7EA7;|14.7 &#x5347;&#x7EA7;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/14.8 FTrace&#x51FD;&#x6570;&#x56FE;|14.8 FTrace&#x51FD;&#x6570;&#x56FE;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/14.9 ftrace hwlat|14.9 ftrace hwlat]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/14.10 FTrace &#x5386;&#x53F2;&#x89E6;&#x53D1;&#x5668;|14.10 FTrace &#x5386;&#x53F2;&#x89E6;&#x53D1;&#x5668;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/14.11 &#x8DDF;&#x8E2A;&#x547D;&#x4EE4;|14.11 &#x8DDF;&#x8E2A;&#x547D;&#x4EE4;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/14.12 &#x6027;&#x80FD;&#x8DDF;&#x8E2A;|14.12 &#x6027;&#x80FD;&#x8DDF;&#x8E2A;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/14.13 &#x6027;&#x80FD;&#x5DE5;&#x5177;|14.13 &#x6027;&#x80FD;&#x5DE5;&#x5177;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/14.14 FTrace &#x6587;&#x6863;|14.14 FTrace &#x6587;&#x6863;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 14 &#x7AE0; Ftrace/14.15 &#x53C2;&#x8003;&#x6587;&#x732E;|14.15 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 15 &#x7AE0; BPF/&#x7B2C; 15 &#x7AE0; BPF|&#x7B2C; 15 &#x7AE0; BPF]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 15 &#x7AE0; BPF/15.1 &#x5BC6;&#x4EF6;&#x6284;&#x9001;|15.1 &#x5BC6;&#x4EF6;&#x6284;&#x9001;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 15 &#x7AE0; BPF/15.2 bpftrace|15.2 bpftrace]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 15 &#x7AE0; BPF/15.3 &#x53C2;&#x8003;&#x6587;&#x732E;|15.3 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 16 &#x7AE0;&#x6848;&#x4F8B;&#x7814;&#x7A76;/&#x7B2C; 16 &#x7AE0;&#x6848;&#x4F8B;&#x7814;&#x7A76;|&#x7B2C; 16 &#x7AE0;&#x6848;&#x4F8B;&#x7814;&#x7A76;]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 16 &#x7AE0;&#x6848;&#x4F8B;&#x7814;&#x7A76;/16.1 &#x65E0;&#x6CD5;&#x89E3;&#x91CA;&#x7684;&#x80DC;&#x5229;|16.1 &#x65E0;&#x6CD5;&#x89E3;&#x91CA;&#x7684;&#x80DC;&#x5229;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 16 &#x7AE0;&#x6848;&#x4F8B;&#x7814;&#x7A76;/16.2 &#x9644;&#x52A0;&#x4FE1;&#x606F;|16.2 &#x9644;&#x52A0;&#x4FE1;&#x606F;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x7B2C; 16 &#x7AE0;&#x6848;&#x4F8B;&#x7814;&#x7A76;/16.3 &#x53C2;&#x8003;&#x6587;&#x732E;|16.3 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55;A&#xFF1A;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;Linux/&#x9644;&#x5F55;A&#xFF1A;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;Linux|&#x9644;&#x5F55;A&#xFF1A;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;Linux]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55;A&#xFF1A;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;Linux/&#x7269;&#x8D28;&#x8D44;&#x6E90;|&#x7269;&#x8D28;&#x8D44;&#x6E90;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55;A&#xFF1A;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;Linux/&#x8F6F;&#x4EF6;&#x8D44;&#x6E90;|&#x8F6F;&#x4EF6;&#x8D44;&#x6E90;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55;A&#xFF1A;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;Linux/A.1 &#x53C2;&#x8003;&#x6587;&#x732E;|A.1 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; B&#xFF1A;SAR &#x6458;&#x8981;|&#x9644;&#x5F55; B&#xFF1A;SAR &#x6458;&#x8981;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; C&#xFF1A;bpftrace &#x5355;&#x884C;&#x4EE3;&#x7801;/&#x9644;&#x5F55; C&#xFF1A;bpftrace &#x5355;&#x884C;&#x4EE3;&#x7801;|&#x9644;&#x5F55; C&#xFF1A;bpftrace &#x5355;&#x884C;&#x4EE3;&#x7801;]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; C&#xFF1A;bpftrace &#x5355;&#x884C;&#x4EE3;&#x7801;/&#x4E2D;&#x592E;&#x5904;&#x7406;&#x5668;|&#x4E2D;&#x592E;&#x5904;&#x7406;&#x5668;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; C&#xFF1A;bpftrace &#x5355;&#x884C;&#x4EE3;&#x7801;/&#x8BB0;&#x5FC6;|&#x8BB0;&#x5FC6;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; C&#xFF1A;bpftrace &#x5355;&#x884C;&#x4EE3;&#x7801;/&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;|&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; C&#xFF1A;bpftrace &#x5355;&#x884C;&#x4EE3;&#x7801;/&#x78C1;&#x76D8;|&#x78C1;&#x76D8;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; C&#xFF1A;bpftrace &#x5355;&#x884C;&#x4EE3;&#x7801;/&#x8054;&#x7F51;|&#x8054;&#x7F51;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; D&#xFF1A;&#x9009;&#x5B9A;&#x7EC3;&#x4E60;&#x7684;&#x7B54;&#x6848;/&#x9644;&#x5F55; D&#xFF1A;&#x9009;&#x5B9A;&#x7EC3;&#x4E60;&#x7684;&#x7B54;&#x6848;|&#x9644;&#x5F55; D&#xFF1A;&#x9009;&#x5B9A;&#x7EC3;&#x4E60;&#x7684;&#x7B54;&#x6848;]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; D&#xFF1A;&#x9009;&#x5B9A;&#x7EC3;&#x4E60;&#x7684;&#x7B54;&#x6848;/&#x7B2C; 2 &#x7AE0;&#x2014;&#x2014;&#x65B9;&#x6CD5;&#x8BBA;|&#x7B2C; 2 &#x7AE0;&#x2014;&#x2014;&#x65B9;&#x6CD5;&#x8BBA;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; D&#xFF1A;&#x9009;&#x5B9A;&#x7EC3;&#x4E60;&#x7684;&#x7B54;&#x6848;/&#x7B2C; 3 &#x7AE0;&#x2014;&#x2014;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;|&#x7B2C; 3 &#x7AE0;&#x2014;&#x2014;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; D&#xFF1A;&#x9009;&#x5B9A;&#x7EC3;&#x4E60;&#x7684;&#x7B54;&#x6848;/&#x7B2C; 6 &#x7AE0;&#x2014;CPU|&#x7B2C; 6 &#x7AE0;&#x2014;CPU]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; D&#xFF1A;&#x9009;&#x5B9A;&#x7EC3;&#x4E60;&#x7684;&#x7B54;&#x6848;/&#x7B2C;7&#x7AE0;&#x2014;&#x2014;&#x8BB0;&#x5FC6;|&#x7B2C;7&#x7AE0;&#x2014;&#x2014;&#x8BB0;&#x5FC6;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; D&#xFF1A;&#x9009;&#x5B9A;&#x7EC3;&#x4E60;&#x7684;&#x7B54;&#x6848;/&#x7B2C; 8 &#x7AE0;&#x2014;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;|&#x7B2C; 8 &#x7AE0;&#x2014;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; D&#xFF1A;&#x9009;&#x5B9A;&#x7EC3;&#x4E60;&#x7684;&#x7B54;&#x6848;/&#x7B2C; 9 &#x7AE0;&#x2014;&#x78C1;&#x76D8;|&#x7B2C; 9 &#x7AE0;&#x2014;&#x78C1;&#x76D8;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; D&#xFF1A;&#x9009;&#x5B9A;&#x7EC3;&#x4E60;&#x7684;&#x7B54;&#x6848;/&#x7B2C; 11 &#x7AE0;&#x2014;&#x4E91;&#x8BA1;&#x7B97;|&#x7B2C; 11 &#x7AE0;&#x2014;&#x4E91;&#x8BA1;&#x7B97;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; E&#xFF1A;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x540D;&#x4EBA;&#x5F55;/&#x9644;&#x5F55; E&#xFF1A;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x540D;&#x4EBA;&#x5F55;|&#x9644;&#x5F55; E&#xFF1A;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x540D;&#x4EBA;&#x5F55;]]<ul>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x9644;&#x5F55; E&#xFF1A;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x540D;&#x4EBA;&#x5F55;/E.1 &#x53C2;&#x8003;&#x6587;&#x732E;|E.1 &#x53C2;&#x8003;&#x6587;&#x732E;]]</li>
+</ul>
+</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x8BCD;&#x6C47;&#x8868;|&#x8BCD;&#x6C47;&#x8868;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x6307;&#x6570;|&#x6307;&#x6570;]]</li>
+<li>[[Systems Performance_ Enterprise and the Cl - Brendan Gregg/&#x4EE3;&#x7801;&#x7247;&#x6BB5;|&#x4EE3;&#x7801;&#x7247;&#x6BB5;]]</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Systems Performance/Chapter 4 Observability Tools/Chapter 4 Observability Tools.html" class="navigation navigation-prev " aria-label="Previous page: Chapter 4 Observability Tools">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="前言/前言.html" class="navigation navigation-next " aria-label="Next page: 前言">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Systems Performance Enterprise And The Cl Brendan Gregg","author":"Brendan Gregg","publisher":"Pearson","status":false,"tags":["book"],"cover":"/Systems Performance_ Enterprise and the Cl - Brendan Gregg/images/9780136821656.jpg","level":"1.4","depth":1,"next":{"title":"前言","level":"1.4.1","depth":2,"path":"Systems Performance_ Enterprise and the Cl - Brendan Gregg/前言/前言.md","ref":"Systems Performance_ Enterprise and the Cl - Brendan Gregg/前言/前言.md","articles":[{"title":"关于本书","level":"1.4.1.1","depth":3,"path":"Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/前言/关于本书.md","ref":"Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/前言/关于本书.md","articles":[]},{"title":"关于此版本","level":"1.4.1.2","depth":3,"path":"Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/前言/关于此版本.md","ref":"Systems%20Performance_ Enterprise and the Cl - Brendan Gregg/前言/关于此版本.md","articles":[]}]},"previous":{"title":"Chapter 4 Observability Tools","level":"1.3.2","depth":2,"path":"Systems Performance/Chapter 4 Observability Tools/Chapter 4 Observability Tools.md","ref":"Systems Performance/Chapter 4 Observability Tools/Chapter 4 Observability Tools.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","disqus","splitter","intopic-toc","github","expandable-chapters-small","chapter-fold","edit-link-plus"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"disqus":{"useIdentifier":false,"shortName":"fanxiang"},"github":{"url":"https://github.com/fanxiangs"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"simple-page-toc":{"maxDepth":3,"skipFirstH1":false},"splitter":{},"search":{},"edit-link-plus":{"label":"Edit This Page","base":"https://github.com/fanxiangs/notebook/edit/main"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"showGoTop":true},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Xiang Fan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"Systems Performance_ Enterprise and the Cl - Brendan Gregg/Systems Performance_ Enterprise and the Cl - Brendan Gregg.md","mtime":"2024-12-18T12:49:40.424Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-12-18T12:50:25.215Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link-plus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
