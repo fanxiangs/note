@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 7 章 Memory/第 7 章 Memory.md",
+                "file": "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 15 章 BPF/第 15 章 BPF.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "第 7 章 Memory"
+              "title": "第 15 章 BPF"
             }
           }
         ]
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 7 章 Memory/第 7 章 Memory.md"
+                "file": "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 15 章 BPF/第 15 章 BPF.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of 第 7 章 Memory"
+              "title": "Outline of 第 15 章 BPF"
             }
           }
         ],
@@ -160,15 +160,27 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "github-sync:Sync with Remote": false
+      "github-sync:Sync with Remote": false,
+      "copilot:Open Copilot Chat": false
     }
   },
-  "active": "2ae45c368d7781e5",
+  "active": "749720508dfe892c",
   "lastOpenFiles": [
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 6 章 CPU/第 6 章 CPU.md",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 7 章 Memory/第 7 章 Memory.md",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 6 章 CPU/6.1 术语.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 11 章云计算/第 11 章云计算.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/第 10 章 网络.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.10 参考文献.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.9 练习.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.8 调优.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.7 实验.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.6 可观测性工具.md",
     "Systems Performance/README.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 10 章 网络/10.1 术语.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘/第 9 章磁盘.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统/第 8 章文件系统.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 7 章 Memory/第 7 章 Memory.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 7 章 Memory/7.1 术语.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 6 章 CPU/第 6 章 CPU.md",
+    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 6 章 CPU/6.1 术语.md",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 4 章可观察性工具/第 4 章可观察性工具.md",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/images/06fig18 1.jpg",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 6 章 CPU/6.11 参考文献.md",
@@ -196,18 +208,7 @@
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 E：系统性能名人录",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/附录 D：选定练习的答案.md",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第7章——记忆.md",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 9 章—磁盘.md",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 8 章—文件系统.md",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 6 章—CPU.md",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 3 章——操作系统.md",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 2 章——方法论.md",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案/第 11 章—云计算.md",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 D：选定练习的答案",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/附录 C：bpftrace 单行代码.md",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/记忆.md",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/联网.md",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/磁盘.md",
-    "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码/文件系统.md",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/附录 C：bpftrace 单行代码",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 9 章磁盘",
     "Systems Performance_ Enterprise and the Cl - Brendan Gregg/第 8 章文件系统",
