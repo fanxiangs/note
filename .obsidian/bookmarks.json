@@ -136,9 +136,197 @@
                 }
               ],
               "title": "1. What Is eBPF, and Why Is It Important_"
+            },
+            {
+              "type": "group",
+              "ctime": 1740573313242,
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 1740573355523,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/2. eBPF’s “Hello World”.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740573355523,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BCC’s “Hello World”.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740573355523,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/Running “Hello World”.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "group",
+                  "ctime": 1740573349807,
+                  "items": [
+                    {
+                      "type": "file",
+                      "ctime": 1740573395030,
+                      "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/BPF Maps.md",
+                      "subpath": "#^-"
+                    },
+                    {
+                      "type": "file",
+                      "ctime": 1740573395030,
+                      "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Function Calls.md",
+                      "subpath": "#^-"
+                    },
+                    {
+                      "type": "file",
+                      "ctime": 1740573395030,
+                      "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Hash Table Map.md",
+                      "subpath": "#^-"
+                    },
+                    {
+                      "type": "file",
+                      "ctime": 1740573395030,
+                      "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Perf and Ring Buffer Maps.md",
+                      "subpath": "#^-"
+                    },
+                    {
+                      "type": "file",
+                      "ctime": 1740573395030,
+                      "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Tail Calls.md",
+                      "subpath": "#^-"
+                    }
+                  ],
+                  "title": "BPF Maps"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740573355523,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/Exercises.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740573355523,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/Summary.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740573355523,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/Exercises.md",
+                  "subpath": "#^-"
+                }
+              ],
+              "title": "2. eBPF’s “Hello World”"
+            },
+            {
+              "type": "group",
+              "ctime": 1740573371334,
+              "items": [],
+              "title": "3. Anatomy of an eBPF Program"
+            },
+            {
+              "type": "group",
+              "ctime": 1740573371334,
+              "items": [],
+              "title": "4. The bpf() System Call"
+            },
+            {
+              "type": "group",
+              "ctime": 1740573371334,
+              "items": [],
+              "title": "5. CO-RE, BTF, and Libbpf"
+            },
+            {
+              "type": "group",
+              "ctime": 1740573371334,
+              "items": [],
+              "title": "6. The eBPF Verifier"
+            },
+            {
+              "type": "group",
+              "ctime": 1740573371334,
+              "items": [],
+              "title": "7. eBPF Program and Attachment Types"
+            },
+            {
+              "type": "group",
+              "ctime": 1740573371334,
+              "items": [],
+              "title": "8. eBPF for Networking"
+            },
+            {
+              "type": "group",
+              "ctime": 1740573371334,
+              "items": [],
+              "title": "9. eBPF for Security"
+            },
+            {
+              "type": "group",
+              "ctime": 1740573371334,
+              "items": [],
+              "title": "10. eBPF Programming"
+            },
+            {
+              "type": "group",
+              "ctime": 1740573371334,
+              "items": [],
+              "title": "11. The Future Evolution of eBPF"
+            },
+            {
+              "type": "group",
+              "ctime": 1740573371334,
+              "items": [],
+              "title": "images"
+            },
+            {
+              "type": "group",
+              "ctime": 1740573371334,
+              "items": [],
+              "title": "Preface"
+            },
+            {
+              "type": "file",
+              "ctime": 1740573371334,
+              "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/copyright-page01.md",
+              "subpath": "#^-"
+            },
+            {
+              "type": "file",
+              "ctime": 1740573371334,
+              "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/cover.md",
+              "subpath": "#^-"
+            },
+            {
+              "type": "file",
+              "ctime": 1740573371334,
+              "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/Index.md",
+              "subpath": "#^-"
+            },
+            {
+              "type": "file",
+              "ctime": 1740573371334,
+              "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library).md",
+              "subpath": "#^-"
+            },
+            {
+              "type": "file",
+              "ctime": 1740573371334,
+              "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/preface01.md",
+              "subpath": "#^-"
+            },
+            {
+              "type": "file",
+              "ctime": 1740573371334,
+              "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/titlepage01.md",
+              "subpath": "#^-"
+            },
+            {
+              "type": "file",
+              "ctime": 1740573371334,
+              "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/toc01.md",
+              "subpath": "#^-"
             }
           ],
-          "title": "\\\\Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)"
+          "title": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)"
         }
       ],
       "title": "sortspec"

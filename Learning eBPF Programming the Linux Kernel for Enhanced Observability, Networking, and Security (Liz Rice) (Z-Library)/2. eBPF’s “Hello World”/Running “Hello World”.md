@@ -12,18 +12,14 @@ b'     bash-5412    \[001\] .... 90432.904952: 0: bpf\_trace\_printk: Hello Worl
 `CAP_BPF` was introduced in kernel version 5.8, and it gives sufficient privilege to perform some eBPF operations like creating certain types of map. However, you will probably need additional capabilities:
 
 *   `CAP_PERFMON` and `CAP_BPF` are both required to load tracing programs.
-    
 *   `CAP_NET_ADMIN` and `CAP_BPF` are both required for loading networking programs.
-    
 
 There is a lot more detail on this in the blog post [“Introduction to CAP_BPF”](https://oreil.ly/G2zFO) by Milan Landaverde.
 
 As soon as the _hello_ eBPF program is loaded and attached to an event, it gets triggered by events that are being generated from preexisting processes. This should reinforce a couple of points that you learned in [[ch01.xhtml#what_is_ebpf_and_why_is_it_importantque|Chapter 1]]:
 
 *   eBPF programs can be used to dynamically change the behavior of the system. There’s no need to reboot the machine or restart existing processes. eBPF code starts taking effect as soon as it is attached to an event.
-    
 *   There’s no need to change anything about other applications for them to be visible to eBPF. Wherever you have terminal access on that machine, if you run an executable in it, that will use the `execve()` syscall, and if you have the _hello_ program attached to that syscall, it will be triggered to generate tracing output. Likewise, if you have a script that runs executables, that will also trigger the _hello_ eBPF program. You don’t need to change anything about the terminal’s shell, the script, or the executables you’re running.
-    
 
 The trace output shows not only the `"Hello World`" string, but also some additional contextual information about the event that triggered the _hello_ eBPF program to run. In the example output shown at the beginning of this section, the process that made the `execve` system call had a process ID of 5412, and it was running the command `bash`. For trace messages, this contextual information is added as part of the kernel tracing infrastructure (which isn’t specific to eBPF), but as you’ll see later in this chapter, it’s also possible to retrieve contextual information like this within the eBPF program itself.
 

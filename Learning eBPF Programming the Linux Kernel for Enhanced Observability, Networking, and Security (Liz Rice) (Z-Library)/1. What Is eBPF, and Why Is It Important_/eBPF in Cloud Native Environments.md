@@ -13,16 +13,12 @@ Visibility of all the processes on the node, combined with the ability to load e
 *   We don’t need to change our applications, or even the way they are configured, to instrument them with eBPF tooling.
     
 *   As soon as it’s loaded into the kernel and attached to an event, an eBPF program can start observing preexisting application processes.
-    
 
-[[null|]][[null|]]Contrast this with the _sidecar model_, which has been used to add functionality like logging, tracing, security, and service mesh functionality into Kubernetes apps. In the sidecar approach, the instrumentation runs as a container that is “injected” into each application pod. This process involves modifying the YAML that defines the application pods, adding in the definition of the sidecar container. This approach is certainly more convenient than adding the instrumentation into the source code of the application (which is what we had to do before the sidecar approach; for example, including a logging library in our application and making calls into that library at appropriate points in the code). Nevertheless, the sidecar approach has a few downsides:
+Contrast this with the _sidecar model_, which has been used to add functionality like logging, tracing, security, and service mesh functionality into Kubernetes apps. In the sidecar approach, the instrumentation runs as a container that is “injected” into each application pod. This process involves modifying the YAML that defines the application pods, adding in the definition of the sidecar container. This approach is certainly more convenient than adding the instrumentation into the source code of the application (which is what we had to do before the sidecar approach; for example, including a logging library in our application and making calls into that library at appropriate points in the code). Nevertheless, the sidecar approach has a few downsides:
 
 *   The application pod has to be restarted for the sidecar to be added.
-    
 *   Something has to modify the application YAML. This is generally an automated process, but if something goes wrong, the sidecar won’t be added, which means the pod doesn’t get instrumented. For example, a deployment might be annotated to indicate that an admission controller should add the sidecar YAML to the pod spec for that deployment. But if the deployment isn’t labeled correctly, the sidecar won’t get added, and it’s therefore not visible to the instrumentation.
-    
 *   When there are multiple containers within a pod, they might reach readiness at different times, the ordering of which may not be predictable. Pod start-up time can be significantly slowed by the injection of sidecars, or worse, it can cause race conditions or other instabilities. For example, the [Open Service Mesh documentation](https://oreil.ly/z80Q5) describes how application containers have to be resilient to all traffic being dropped until the Envoy proxy container is ready.
-    
 *   Where networking functionality such as service mesh is implemented as a sidecar, it necessarily means that all traffic to and from the application container has to travel through the network stack in the kernel to reach a network proxy container, adding latency to that traffic; this is illustrated in [[#path_of_a_network_packet_using_a_networ|Figure 1-5]]. We’ll talk about improving network efficiency with eBPF in [[ch09.xhtml#ebpf_for_security|Chapter 9]].
     
 
