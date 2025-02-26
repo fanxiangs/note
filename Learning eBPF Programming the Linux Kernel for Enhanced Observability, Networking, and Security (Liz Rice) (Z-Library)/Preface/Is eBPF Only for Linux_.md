@@ -1,0 +1,3 @@
+# Is eBPF Only for Linux?
+
+eBPF was originally developed for Linux. There’s no particular reason why the same approach couldn’t be used in other operating systems too—indeed, Microsoft has been developing an [eBPF implementation for Windows](https://oreil.ly/k7AvA). I discuss that briefly in [[ch11.xhtml#the_future_evolution_of_ebpf|Chapter 11]], but throughout the rest of the book I focus on the Linux implementation, and all the examples will be from Linux.

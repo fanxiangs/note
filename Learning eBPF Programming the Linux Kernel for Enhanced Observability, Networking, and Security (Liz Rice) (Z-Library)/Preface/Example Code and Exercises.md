@@ -1,0 +1,7 @@
+# Example Code and Exercises
+
+[[null|]]There are lots of code examples in this book. If you want to try them out for yourself, you’ll find an accompanying GitHub repository and instructions for installing and running the code at [https://github.com/lizrice/learning-ebpf](https://github.com/lizrice/learning-ebpf).
+
+I have also included exercises at the end of most of the chapters to help you explore eBPF programming by extending the examples or writing your own programs.
+
+[[null|]]Because eBPF is continually evolving, the features available to you depend on the kernel version you’re running. Many of the restrictions that apply to earlier versions have been lifted or relaxed in later versions. [[null|]]The Iovisor project has a useful overview of the [kernel versions in which different BPF features were added](https://oreil.ly/SsnEV), and in this book I have attempted to note when the particular capabilities I’m describing were added. The examples were tested using version 5.15 of the kernel, and at the time of this writing some of the popular Linux distributions don’t yet support such a recent kernel version. If you’re reading this book shortly after it was published, you might find that some of the features won’t work on the Linux kernel your organization uses in production.

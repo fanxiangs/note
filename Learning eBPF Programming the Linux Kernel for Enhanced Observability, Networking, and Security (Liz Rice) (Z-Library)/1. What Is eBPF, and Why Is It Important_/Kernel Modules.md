@@ -1,0 +1,11 @@
+# Kernel Modules
+
+[[null|]][[null|]][[null|]]If you don’t want to wait years for your change to make it into the kernel, there is another option. The Linux kernel was designed to accept kernel modules, which can be loaded and unloaded on demand. If you want to change or extend kernel behavior, writing a module is certainly one way to do it. A kernel module can be distributed for others to use independent of the official Linux kernel release, so it doesn’t have to be accepted into the main upstream codebase.
+
+The biggest challenge here is that this is still full-on kernel programming. Users have historically been very cautious about using kernel modules, for one simple reason: if kernel code crashes, it takes down the machine and everything running on it. How can a user be confident that a kernel module is safe to run?
+
+Being “safe to run” doesn’t just mean not crashing—the user wants to know that a kernel module is safe from a security perspective. Does it include vulnerabilities that an attacker could exploit? Do we trust the authors of the module not to put malicious code in it? Because the kernel is privileged code, it has access to everything on the machine, including all the data, so malicious code in the kernel would be a serious cause for concern. This applies to kernel modules too.
+
+The safety of the kernel is one important reason why Linux distributions take so long to incorporate new releases. If other people have been running a kernel version in a variety of circumstances for months or years, this should have flushed out issues. The distribution maintainers can have some confidence that the kernel they ship to their users/customers is _hardened_—that is, it is safe to run.
+
+eBPF offers a very different approach to safety: the _eBPF verifier_, which ensures that an eBPF program is loaded only if it’s safe to run—it won’t crash the machine or lock it up in a hard loop, and it won’t allow data to be compromised. We’ll discuss the verification process in more detail in [[ch06.xhtml#the_ebpf_verifier|Chapter 6]].

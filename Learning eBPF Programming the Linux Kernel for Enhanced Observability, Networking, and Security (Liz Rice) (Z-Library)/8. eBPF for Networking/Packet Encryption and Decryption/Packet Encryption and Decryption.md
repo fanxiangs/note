@@ -1,0 +1,5 @@
+# Packet Encryption and Decryption
+
+[[null|]][[null|]][[null|]][[null|]][[null|]][[null|]]If an application uses encryption to secure data it sends or receives, there will be a point before it’s encrypted or after it’s decrypted where the data is in the clear. Recall that eBPF can attach programs pretty much anywhere on a machine, so if you can hook into a point where data is being passed and isn’t yet encrypted, or just after it has been decrypted, that would allow your eBPF program to observe that data in the clear. There’s no need to supply any certificates to decrypt the traffic, as you would in a traditional SSL inspection tool.
+
+In many cases an application will encrypt data using a library like OpenSSL or BoringSSL that lives in user space. In this case the traffic will already be encrypted by the time it reaches the socket, which is the user space/kernel boundary for network traffic. If you want to trace out this data in its unencrypted form, you can use an eBPF program attached to the right place in the user space code.

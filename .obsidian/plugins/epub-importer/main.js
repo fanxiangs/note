@@ -37887,12 +37887,30 @@ var Chapter = class {
 var path = __toModule(require("path"));
 
 // src/lib/EpubParser/utils.ts
-var findProperty = (obj, propertyName) => {
-  if (obj[propertyName])
-    return obj[propertyName];
+var findProperty = (obj, propertyNames) => {
+  const names = Array.isArray(propertyNames) ? propertyNames : [propertyNames];
+  for (const name of names) {
+    if (obj[name])
+      return obj[name];
+    for (const key in obj) {
+      const parts = key.split(":");
+      if (parts.length === 2 && parts[1] === name && obj[key]) {
+        return obj[key];
+      }
+    }
+  }
+  if (Array.isArray(obj)) {
+    for (const item of obj) {
+      if (typeof item === "object" && item !== null) {
+        const result = findProperty(item, propertyNames);
+        if (result)
+          return result;
+      }
+    }
+  }
   for (const key in obj) {
     if (typeof obj[key] === "object" && obj[key] !== null) {
-      const result = findProperty(obj[key], propertyName);
+      const result = findProperty(obj[key], propertyNames);
       if (result)
         return result;
     }
@@ -37916,14 +37934,24 @@ var OPFParser = class {
     return coverItem ? path.posix.join(path.dirname(this.filePath), coverItem.$.href) : null;
   }
   getMeta() {
-    const meta = findProperty(this.content, "metadata")[0];
-    const getValue = (key) => meta[key]?.[0] ?? "";
-    return {
-      title: getValue("dc:title"),
-      publisher: getValue("dc:publisher"),
-      language: getValue("dc:language"),
-      author: meta["dc:creator"]?.[0]?.["_"] ? `"${meta["dc:creator"][0]["_"]}"` : ""
+    const meta = findProperty(this.content, "metadata")?.[0] ?? {};
+    const defaultMeta = {
+      title: "",
+      publisher: "",
+      language: "",
+      author: ""
     };
+    try {
+      const getValue = (key) => meta[key]?.[0] ? `"${meta[key][0]}"` : "";
+      return {
+        title: getValue("dc:title"),
+        publisher: getValue("dc:publisher"),
+        language: getValue("dc:language"),
+        author: meta["dc:creator"]?.[0]?.["_"] ? `"${meta["dc:creator"][0]["_"]}"` : ""
+      };
+    } catch {
+      return defaultMeta;
+    }
   }
 };
 
@@ -37936,16 +37964,17 @@ var NCXParser = class {
     this.content = content3;
   }
   getToc() {
-    const navPoints = this.content.ncx.navMap[0].navPoint;
+    console.log(this.content);
+    const navPoints = findProperty(this.content, ["navPoint", "navpoint"]);
     const getToc = (navPoint, level) => {
       const title = navPoint.navLabel?.[0]?.text?.[0] || (() => {
-        const filePath2 = path2.posix.join(path2.dirname(this.filePath), navPoint.content[0].$["src"]);
+        const filePath2 = path2.posix.join(path2.dirname(this.filePath), findProperty(navPoint, "content")[0].$["src"].replace(/%20/g, " "));
         const html = import_fs_jetpack3.default.read(filePath2);
         return new DOMParser().parseFromString(html, "text/html").title || path2.basename(filePath2, path2.extname(filePath2)) || "";
       })();
       if (!title)
         return null;
-      const filePath = path2.posix.join(path2.dirname(this.filePath), navPoint.content[0].$["src"]);
+      const filePath = path2.posix.join(path2.dirname(this.filePath), findProperty(navPoint, "content")[0].$["src"].replace(/%20/g, " "));
       const subItems = navPoint["navPoint"]?.map((pt) => getToc(pt, level + 1)) || [];
       const chapter = new Chapter(title, filePath, subItems, level);
       subItems.forEach((sub) => sub.parent = chapter);
@@ -38011,28 +38040,51 @@ var ContentSplitter = class {
     const doc = parser.parseFromString(file.html, "text/html");
     const htmls = [];
     let currentHtml = "";
-    let currentNode = doc.body.firstChild;
-    while (currentNode) {
-      if (currentNode.nodeType === Node.ELEMENT_NODE) {
-        const element = currentNode;
+    let currentAnchorIndex = -1;
+    const processNode = (node) => {
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        const element = node;
         const id = element.getAttribute("id");
         if (id && file.hrefs.includes(id)) {
-          if (currentHtml) {
+          if (currentHtml && currentAnchorIndex >= 0) {
             htmls.push(currentHtml);
-            currentHtml = "";
           }
+          currentHtml = "";
+          currentAnchorIndex = file.hrefs.indexOf(id);
         }
+        currentHtml += `<${element.tagName.toLowerCase()}${getAttributes(element)}>`;
+        if (node.hasChildNodes()) {
+          node.childNodes.forEach((child) => {
+            processNode(child);
+          });
+        }
+        currentHtml += `</${element.tagName.toLowerCase()}>`;
+      } else if (node.nodeType === Node.TEXT_NODE) {
+        currentHtml += node.textContent;
       }
-      currentHtml += currentNode.outerHTML || currentNode.textContent;
-      currentNode = currentNode.nextSibling;
-    }
+    };
+    const getAttributes = (element) => {
+      const attributes = element.attributes;
+      let result = "";
+      for (let i = 0; i < attributes.length; i++) {
+        const attr = attributes[i];
+        result += ` ${attr.name}="${attr.value}"`;
+      }
+      return result;
+    };
+    processNode(doc.body);
     if (currentHtml) {
       htmls.push(currentHtml);
     }
-    if (file.hrefs[0] != "") {
-      htmls.shift();
-    }
     const hrefs = file.hrefs.map((href) => href ? "#" + href : "");
+    if (htmls.length !== file.hrefs.length) {
+      file.hrefs.forEach((href, index) => {
+        const element = doc.getElementById(href);
+        if (!element) {
+          console.warn(`\u951A\u70B9 ${href} (\u7D22\u5F15 ${index}) \u672A\u627E\u5230`);
+        }
+      });
+    }
     this.distributeHtmlToSections(file, htmls, hrefs);
   }
   distributeHtmlToSections(file, htmls, hrefs) {
@@ -38051,6 +38103,7 @@ var EpubParser = class {
   constructor(path8, moreLog) {
     this.toc = [];
     this.chapters = [];
+    this.existingTitles = new Set();
     this.epubPath = path8;
     this.moreLog = moreLog;
     if (this.moreLog)
@@ -38203,7 +38256,14 @@ var EpubParser = class {
       if (this.moreLog)
         console.log("Creating new chapter for unmapped file:", href);
       const html = import_fs_jetpack5.default.read(href);
-      const title = new DOMParser().parseFromString(html, "text/html").title || path4.basename(href, path4.extname(href));
+      let title = new DOMParser().parseFromString(html, "text/html").title || path4.basename(href, path4.extname(href));
+      let suffix = 1;
+      let originalTitle = title;
+      while (this.existingTitles.has(title)) {
+        title = `${originalTitle} (${suffix})`;
+        suffix++;
+      }
+      this.existingTitles.add(title);
       this.toc.splice(k, 0, new Chapter(title, href));
     }
   }

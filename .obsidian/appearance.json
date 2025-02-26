@@ -1,3 +1,6 @@
 {
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "baseFontSizeAction": true,
+  "baseFontSize": 20,
+  "textFontFamily": "Consolas"
 }

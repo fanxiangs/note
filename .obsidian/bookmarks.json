@@ -1,0 +1,147 @@
+{
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1740487760775,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1740487774434,
+          "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/1. What Is eBPF, and Why Is It Important_.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1740487796077,
+          "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/From BPF to eBPF.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1740487811890,
+          "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/The Evolution of eBPF to Production Systems.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1740487817621,
+          "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Naming Is Hard.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1740487823591,
+          "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/The Linux Kernel.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1740487827006,
+          "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Adding New Functionality to the Kernel.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1740487835977,
+          "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Kernel Modules.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1740487842291,
+          "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Dynamic Loading of eBPF Programs.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1740487847604,
+          "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/High Performance of eBPF Programs.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1740487851624,
+          "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/eBPF in Cloud Native Environments.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1740487854215,
+          "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Summary.md"
+        }
+      ],
+      "title": "Chapter 1. What Is eBPF, and Why Is It Important?"
+    },
+    {
+      "type": "group",
+      "ctime": 1740488428561,
+      "items": [
+        {
+          "type": "group",
+          "ctime": 1740488428561,
+          "items": [
+            {
+              "type": "group",
+              "ctime": 1740488428561,
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 1740488711523,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/1. What Is eBPF, and Why Is It Important_.md"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740488548244,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/eBPF’s Roots_ The Berkeley Packet Filter.md"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740488555844,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/From BPF to eBPF.md"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740488618188,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/The Evolution of eBPF to Production Systems.md"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740488623520,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Naming Is Hard.md"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740488629588,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/The Linux Kernel.md"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740488475365,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Adding New Functionality to the Kernel.md"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740488721965,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Kernel Modules.md"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740488473936,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Dynamic Loading of eBPF Programs.md"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740488644763,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/High Performance of eBPF Programs.md"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740488468504,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/eBPF in Cloud Native Environments.md"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1740488649217,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Summary.md"
+                }
+              ],
+              "title": "1. What Is eBPF, and Why Is It Important_"
+            }
+          ],
+          "title": "\\\\Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)"
+        }
+      ],
+      "title": "sortspec"
+    }
+  ]
+}

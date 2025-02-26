@@ -1,4 +1,6 @@
 [
   "github-sync",
-  "epub-importer"
+  "epub-importer",
+  "custom-sort",
+  "enhanced-annotations"
 ]

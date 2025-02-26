@@ -1,0 +1,7 @@
+# High Performance of eBPF Programs
+
+[[null|]][[null|]]eBPF programs are a very efficient way to add instrumentation. Once loaded and JIT-compiled (which you’ll see in [[ch03.xhtml#anatomy_of_an_ebpf_program|Chapter 3]]), the program runs as native machine instructions on the CPU. Additionally, there’s no need to incur the cost of transitioning between kernel and user space (which is an expensive operation) to handle each event.
+
+The 2018 paper[^10] that describes the eXpress Data Path (XDP) includes some illustrations of the kinds of performance improvements eBPF enables in networking. For example, implementing routing in XDP “improves performance with a factor of 2.5” compared to the regular Linux kernel implementation, and “XDP offers a performance gain of 4.3x over IPVS” for load balancing.
+
+For performance tracing and security observability, another advantage of eBPF is that relevant events can be filtered within the kernel before incurring the costs of sending them to user space. Filtering only certain network packets was, after all, the point of the original BPF implementation. Today eBPF programs can collect information about all manner of events across a system, and they can use complex, customized programmatic filters to send only the relevant subset of information to user space.

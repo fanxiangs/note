@@ -8,20 +8,73 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a3135687152e27ba",
+            "id": "f1aaee244e277e5d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix A_ USE Method_ Linux/A.1 References.md",
+                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Adding New Functionality to the Kernel.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "A.1 References"
+              "title": "Adding New Functionality to the Kernel"
+            }
+          },
+          {
+            "id": "06fb02005b89b2c9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "13accc4ac907a118",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/1. What Is eBPF, and Why Is It Important_.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. What Is eBPF, and Why Is It Important_"
+            }
+          },
+          {
+            "id": "d668fe4dcc07200c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/The Linux Kernel.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "The Linux Kernel"
+            }
+          },
+          {
+            "id": "6086cbefbba929c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Summary.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Summary"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -40,7 +93,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -62,22 +116,12 @@
               "icon": "lucide-search",
               "title": "Search"
             }
-          },
-          {
-            "id": "c64b422f8dd8929e",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "Bookmarks"
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 228.5
+    "width": 310.5
   },
   "right": {
     "id": "771babcb44be1c12",
@@ -138,18 +182,31 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix A_ USE Method_ Linux/A.1 References.md"
+                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/The Linux Kernel.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of A.1 References"
+              "title": "Outline of The Linux Kernel"
+            }
+          },
+          {
+            "id": "04d273539774cdd4",
+            "type": "leaf",
+            "state": {
+              "type": "annotations-outline",
+              "state": {},
+              "icon": "message-square",
+              "title": "Enhanced Annotations"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 376.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -159,57 +216,59 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "github-sync:Sync with Remote": false
+      "github-sync:Sync with Remote": false,
+      "custom-sort:Toggle custom sorting": false,
+      "translate:Open translation view": false
     }
   },
-  "active": "a3135687152e27ba",
+  "active": "d668fe4dcc07200c",
   "lastOpenFiles": [
-    "Systems Performance/Chapter 3 Operating Systems.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 1. Introduction/1.5 Performance Is Challenging.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 1. Introduction/1.4 Perspectives.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 1. Introduction/1.2 Roles.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 1. Introduction/1.1 Systems Performance.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library).md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Code Snippets.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Index.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Glossary.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix E_ Systems Performance Who’s Who/E.1 References.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix E_ Systems Performance Who’s Who/Appendix E_ Systems Performance Who’s Who.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix E_ Systems Performance Who’s Who",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Chapter 11—Cloud Computing.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Chapter 9—Disks.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Chapter 8—File Systems.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Chapter 7—Memory.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Chapter 6—CPUs.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Chapter 3—Operating Systems.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Chapter 2—Methodology.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises/Appendix D_ Solutions to Selected Exercises.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix D_ Solutions to Selected Exercises",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix C_ bpftrace One-Liners/Networking.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix C_ bpftrace One-Liners/Disks.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix C_ bpftrace One-Liners/File Systems.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix C_ bpftrace One-Liners/Memory.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix C_ bpftrace One-Liners/CPUs.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix C_ bpftrace One-Liners/Appendix C_ bpftrace One-Liners.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix C_ bpftrace One-Liners",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix B_ sar Summary.md",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Appendix A_ USE Method_ Linux",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 16. Case Study",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 15. BPF",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 14. Ftrace",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 13. perf",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 12. Benchmarking",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/Chapter 11. Cloud Computing",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pub.jpg",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-9.jpg",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-7.jpg",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-8.jpg",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-6.jpg",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-5.jpg",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-4.jpg",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-2.jpg",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-3.jpg",
-    "Systems Performance Enterprise and the Cloud (Brendan Gregg) (Z-Library)/images/pg808-13.jpg",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Summary.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/The Linux Kernel.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Naming Is Hard.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/The Evolution of eBPF to Production Systems.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/1. What Is eBPF, and Why Is It Important_.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/From BPF to eBPF.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/eBPF’s Roots_ The Berkeley Packet Filter.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Adding New Functionality to the Kernel.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/cover.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/eBPF in Cloud Native Environments.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/Index.md",
+    "Chapter 6 The Memory Hierarchy（存储器层次结构）.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Dynamic Loading of eBPF Programs.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/The eBPF Virtual Machine/The eBPF Virtual Machine.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library).md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/2. eBPF’s “Hello World”.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/11. The Future Evolution of eBPF/Conclusion.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/11. The Future Evolution of eBPF/eBPF Is a Platform, Not a Feature.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/11. The Future Evolution of eBPF/Linux eBPF Evolution.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/11. The Future Evolution of eBPF/eBPF for Windows.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/11. The Future Evolution of eBPF/The eBPF Foundation.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/11. The Future Evolution of eBPF/11. The Future Evolution of eBPF.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/11. The Future Evolution of eBPF",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/10. eBPF Programming/Exercises.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/10. eBPF Programming/Summary.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/10. eBPF Programming/Multiple eBPF Programs.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/10. eBPF Programming/Testing BPF Programs.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/10. eBPF Programming/Rust",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/10. eBPF Programming/C and Libbpf",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/10. eBPF Programming",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/9. eBPF for Security/Cilium Tetragon",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/9. eBPF for Security/Using System Calls for Security Events",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/9. eBPF for Security",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/8. eBPF for Networking/eBPF and Kubernetes Networking",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/8. eBPF for Networking/Packet Encryption and Decryption",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/8. eBPF for Networking/Packet Drops",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/titlepage_footer_ebook.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0905.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_1101.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0904.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0902.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0903.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0901.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0807.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0808.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0806.png",
     "Untitled.canvas"
   ]
 }
