@@ -7,7 +7,6 @@ Maps can be used to share data among multiple eBPF programs or to communicate be
 *   User space writing configuration information to be retrieved by an eBPF program
 *   An eBPF program storing state, for later retrieval by another eBPF program (or a future run of the same program)
 *   An eBPF program writing results or metrics into a map, for retrieval by the user space app that will present results
-    
 
 There are various types of BPF maps defined in Linux’s [uapi/linux/bpf.h file](https://oreil.ly/1s1GM), and there is some information about them in the [kernel docs](https://oreil.ly/5oUW7). In general they are all key–value stores, and in this chapter you’ll see examples of maps for hash tables, perf and ring buffers, and arrays of eBPF programs.
 
