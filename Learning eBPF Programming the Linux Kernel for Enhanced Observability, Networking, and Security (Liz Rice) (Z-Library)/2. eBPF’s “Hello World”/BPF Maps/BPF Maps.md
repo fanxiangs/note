@@ -5,9 +5,7 @@
 Maps can be used to share data among multiple eBPF programs or to communicate between a user space application and eBPF code running in the kernel. Typical uses include the following:
 
 *   User space writing configuration information to be retrieved by an eBPF program
-    
 *   An eBPF program storing state, for later retrieval by another eBPF program (or a future run of the same program)
-    
 *   An eBPF program writing results or metrics into a map, for retrieval by the user space app that will present results
     
 
