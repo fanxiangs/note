@@ -4,39 +4,40 @@
 
 First, let’s look at the C code for the eBPF program itself:
 
-    BPF_HASH
+```c
+BPF_HASH(counter_table);                                     
 
-[[#code_id_2_1|]]
+int hello(void *ctx) {
+  u64 uid;                                                  
+  u64 counter = 0;
+  u64 *p;
 
-`BPF_HASH()` is a BCC macro that defines a hash table map.
-
-[[#code_id_2_2|]]
-
-`bpf_get_current_uid_gid()` is a helper function used to obtain the user ID that is running the process that triggered this kprobe event. The user ID is held in the lowest 32 bits of the 64-bit value that gets returned. (The top 32 bits hold the group ID, but that part is masked out.)
-
-[[#code_id_2_3|]]
-
-Look for an entry in the hash table with a key matching the user ID. It returns a pointer to the corresponding value in the hash table.
-
-[[#code_id_2_4|]]
-
-If there is an entry for this user ID, set the `counter` variable to the current value in the hash table (pointed to by `p`). If there is no entry for this user ID in the hash table, the pointer will be `0`, and the counter value will be left at `0`.
-
-[[#code_id_2_5|]]
-
-Whatever the current counter value is, it gets incremented by one.
-
-[[#code_id_2_6|]]
-
-Update the hash table with the new counter value for this user ID.
-
+  uid = bpf_get_current_uid_gid() & 0xFFFFFFFF;              
+  p = counter_table.lookup(&uid);                            
+  if (p != 0) {                                              
+     counter = *p;
+  }
+  counter++;                                                 
+  counter_table.update(&uid, &counter);                      
+  return 0;
+}
+```
+1. `BPF_HASH()` is a BCC macro that defines a hash table map.
+2. `bpf_get_current_uid_gid()` is a helper function used to obtain the user ID that is running the process that triggered this kprobe event. The user ID is held in the lowest 32 bits of the 64-bit value that gets returned. (The top 32 bits hold the group ID, but that part is masked out.)
+3. Look for an entry in the hash table with a key matching the user ID. It returns a pointer to the corresponding value in the hash table.
+4. If there is an entry for this user ID, set the `counter` variable to the current value in the hash table (pointed to by `p`). If there is no entry for this user ID in the hash table, the pointer will be `0`, and the counter value will be left at `0`.
+5. Whatever the current counter value is, it gets incremented by one.
+6. Update the hash table with the new counter value for this user ID.
 Take a closer look at the lines of code that access the hash table:
-
-      
+```c
+  p = counter_table.lookup(&uid);
+```
 
 And later:
+```c
+  counter_table.update(&uid, &counter);
 
-      
+```
 
 If you’re thinking “that’s not proper C code!” you’re absolutely right. C doesn’t support defining methods on structures like that.[^5] This is a great example where BCC’s version of C is very loosely a C-like language that BCC rewrites before it sends the code to the compiler. BCC offers some convenient shortcuts and macros that it converts into “proper” C.
 
