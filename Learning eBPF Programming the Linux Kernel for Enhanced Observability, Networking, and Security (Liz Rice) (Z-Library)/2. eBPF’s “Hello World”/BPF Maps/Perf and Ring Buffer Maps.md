@@ -1,14 +1,10 @@
-## Perf and Ring Buffer Maps
-
 [[null|]][[null|]][[null|]]In this section I’m going to describe a slightly more sophisticated version of “Hello World” that uses BCC’s `BPF_PERF_OUTPUT` capabilities, which let you write data in a structure of your choosing into a perf ring buffer map.
 
-###### Note
-
-[[null|]][[null|]]There is a newer construct called “BPF ring buffers” that are now generally preferred over BPF perf buffers, if you have a kernel of version 5.8 or above. Andrii Nakryiko discusses the difference in his [BPF ring buffer](https://oreil.ly/ARRyV) blog post. You’ll see an example of BCC’s `BPF_RINGBUF_OUTPUT` in [[ch04.xhtml#the_bpfleft_parenthesisright_parenthesi|Chapter 4]].
-
+>[!note]
+>There is a newer construct called “BPF ring buffers” that are now generally preferred over BPF perf buffers, if you have a kernel of version 5.8 or above. Andrii Nakryiko discusses the difference in his [BPF ring buffer](https://oreil.ly/ARRyV) blog post. You’ll see an example of BCC’s `BPF_RINGBUF_OUTPUT` in [[ch04.xhtml#the_bpfleft_parenthesisright_parenthesi|Chapter 4]].
 # Ring Buffers
 
-[[null|]]Ring buffers are by no means unique to eBPF, but I’ll explain them just in case you haven’t come across them before. You can think of a ring buffer as a piece of memory logically organized in a ring, with separate “write” and “read” pointers. Data of some arbitrary length gets written to wherever the write pointer is, with the length information included in a header for that data. The write pointer moves to after the end of that data, ready for the next write operation.
+Ring buffers are by no means unique to eBPF, but I’ll explain them just in case you haven’t come across them before. You can think of a ring buffer as a piece of memory logically organized in a ring, with separate “write” and “read” pointers. Data of some arbitrary length gets written to wherever the write pointer is, with the length information included in a header for that data. The write pointer moves to after the end of that data, ready for the next write operation.^ddd
 
 Similarly, for a read operation, data gets read from wherever the read pointer is, using the header to determine how much data to read. The read pointer moves along in the same direction as the write pointer so that it points to the next available piece of data. This is illustrated in [[#a_ring_buffer|Figure 2-3]], showing a ring buffer with three items of different length available for reading.
 
@@ -23,40 +19,41 @@ If read and write operations happened at precisely the same rate with no variabi
 You’ll find the source code for this example in _chapter2/hello-buffer.py_ in the _Learning eBPF_ [GitHub repository](http://github.com/lizrice/learning-ebpf). As in the first “Hello World” example you saw early in this chapter, this version will write the string `"Hello World"` to the screen every time the `execve()` syscall is used. It will also look up the process ID and the name of the command that makes each `execve()` call so that you’ll get similar output to the first example. This gives me the opportunity to show you a couple more examples of BPF helper functions.
 
 Here’s the eBPF program that will be loaded into the kernel:
+```c
+BPF_PERF_OUTPUT(output);                                                
 
-    BPF_PERF_OUTPUT
+struct data_t {                                                         
+   int pid;
+   int uid;
+   char command[16];
+   char message[12];
+};
 
-[[#code_id_2_9|]]
+int hello(void *ctx) {
+   struct data_t data = {};                                             
+   char message[12] = "Hello World";
 
-[[null|]]BCC defines the macro `BPF_PERF_OUTPUT` for creating a map that will be used to pass messages from the kernel to user space. I’ve called this map `output`.
+   data.pid = bpf_get_current_pid_tgid() >> 32;                         
+   data.uid = bpf_get_current_uid_gid() & 0xFFFFFFFF;                   
 
-[[#code_id_2_10|]]
+   bpf_get_current_comm(&data.command, sizeof(data.command));            
+   bpf_probe_read_kernel(&data.message, sizeof(data.message), message); 
 
-Every time `hello()` is run, the code will write a structure’s worth of data. This is the definition of that structure, which has fields for the process ID, the name of the currently running command, and a text message.
+   output.perf_submit(ctx, &data, sizeof(data));                        
 
-[[#code_id_2_11|]]
+   return 0;
+}
+```
 
-`data` is a local variable that holds the data structure to be submitted, and `message` holds the `"Hello World"` string.
 
-[[#code_id_2_12|]]
-
-`bpf_get_current_pid_tgid()` is a helper function that gets the ID of the process that triggered this eBPF program to run. It returns a 64-bit value with the process ID in the top 32 bits.[^6]
-
-[[#code_id_2_13|]]
-
-`bpf_get_current_uid_gid()` is the helper function you saw in the previous example for obtaining the user ID.
-
-[[#code_id_2_14|]]
-
-Similarly, `bpf_get_current_comm()` is a helper function for getting the name of the executable (or “command”) that’s running in the process that made the `execve` syscall. This is a string, not a numeric value like the process and user IDs, and in C you can’t simply assign a string using `=`. You have to pass the address of the field where the string should be written, `&data.command`, as an argument to the helper function.
-
-[[#code_id_2_15|]]
-
-For this example, the message is `"Hello World"` every time. `bpf_probe_read_kernel()` copies it into the right place in the data structure.
-
-[[#code_id_2_16|]]
-
-At this point the data structure is populated with the process ID, command name, and message. This call to `output.perf_submit()` puts that data into the map.
+1. [[null|]]BCC defines the macro `BPF_PERF_OUTPUT` for creating a map that will be used to pass messages from the kernel to user space. I’ve called this map `output`.
+2. Every time `hello()` is run, the code will write a structure’s worth of data. This is the definition of that structure, which has fields for the process ID, the name of the currently running command, and a text message.
+3. `data` is a local variable that holds the data structure to be submitted, and `message` holds the `"Hello World"` string.
+4. `bpf_get_current_pid_tgid()` is a helper function that gets the ID of the process that triggered this eBPF program to run. It returns a 64-bit value with the process ID in the top 32 bits.[^6]
+5. `bpf_get_current_uid_gid()` is the helper function you saw in the previous example for obtaining the user ID.
+6. Similarly, `bpf_get_current_comm()` is a helper function for getting the name of the executable (or “command”) that’s running in the process that made the `execve` syscall. This is a string, not a numeric value like the process and user IDs, and in C you can’t simply assign a string using `=`. You have to pass the address of the field where the string should be written, `&data.command`, as an argument to the helper function.
+7. For this example, the message is `"Hello World"` every time. `bpf_probe_read_kernel()` copies it into the right place in the data structure.
+8. At this point the data structure is populated with the process ID, command name, and message. This call to `output.perf_submit()` puts that data into the map.
 
 Just as in the first “Hello World” example, this C program is assigned to a string called `program` in the Python code. What follows is the rest of the Python code:
 
