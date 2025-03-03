@@ -43,19 +43,24 @@ If you’re thinking “that’s not proper C code!” you’re absolutely right
 
 Just like in the previous example, the C code is defined as a string called `program`. The program is compiled, loaded into the kernel, and attached to the `execve` kprobe, in exactly the same way as the previous “Hello World” example:
 
-    b
-
+```c
+b = BPF(text=program)
+syscall = b.get_syscall_fnname("execve")
+b.attach_kprobe(event=syscall, fn_name="hello")
+```
 This time a little more work is required on the Python side to read the information out of the hash table:
 
-    while
+```c
+while True:                                       
+  sleep(2)                                         
+  s = ""
+  for k,v in b["counter_table"].items():          
+    s += f"ID {k.value}: {v.value}\t"
+  print(s)
+```
 
-[[#code_id_2_7|]]
-
-This part of the code loops indefinitely, looking for output to display every two seconds.
-
-[[#code_id_2_8|]]
-
-BCC automatically creates a Python object to represent the hash table. This code loops through any values and prints them to the screen.
+1. This part of the code loops indefinitely, looking for output to display every two seconds.
+2. BCC automatically creates a Python object to represent the hash table. This code loops through any values and prints them to the screen.
 
 When you run this example, you’ll want a second terminal window where you can run some commands. Here’s some example output I obtained, annotated on the right side with the commands I ran in another terminal:
 
