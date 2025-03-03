@@ -48,6 +48,7 @@ b = BPF(text=program)
 syscall = b.get_syscall_fnname("execve")
 b.attach_kprobe(event=syscall, fn_name="hello")
 ```
+
 This time a little more work is required on the Python side to read the information out of the hash table:
 
 ```c
@@ -78,9 +79,7 @@ ID 501: 5       ID 0: 2             sudo ls
 This example generates a line of output every two seconds, whether anything has happened or not. At the end of this output, the hash table contains two entries:
 
 *   `key=501, value=5`
-    
 *   `key=0, value=2`
-    
 
 In the second terminal, I have the user ID of 501. Running the `ls` command with this user ID increments the `execve` counter. When I run `sudo ls`, this results in two calls to `execve`: one is the execution of `sudo`, under user ID 501; the other is the execution of `ls`, under root’s user ID of 0.
 
