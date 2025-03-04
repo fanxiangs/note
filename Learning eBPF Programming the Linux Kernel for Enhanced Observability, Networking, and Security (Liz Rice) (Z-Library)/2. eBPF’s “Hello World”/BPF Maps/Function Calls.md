@@ -1,8 +1,9 @@
 # Function Calls
 
 [[null|]][[null|]]You’ve seen that eBPF programs can call helper functions provided by the kernel, but what if you want to split the code you’re writing into functions? Generally, in software development it’s considered good practice[^8] to pull common code into a function that you can call from multiple places, rather than duplicating the same lines over and over again. But in the early days, eBPF programs were not permitted to call functions other than helper functions. To work around this, programmers have directed the compiler to “always inline” their functions, like this:
-
-    static
+```c
+static __always_inline void my_function(void *ctx, int val)
+```
 
 [[null|]]Generally, a function in source code results in the compiler emitting a jump instruction, which causes execution to jump to the set of instructions that make up the called function (and then to jump back again when that function has completed). You can see this illustrated on the left side of [[#layout_of_noninlined_and_inlined_functi|Figure 2-5]]. The right side shows what happens when a function is inlined: there is no jump instruction; instead, a copy of the function’s instructions is emitted directly within the calling function.
 

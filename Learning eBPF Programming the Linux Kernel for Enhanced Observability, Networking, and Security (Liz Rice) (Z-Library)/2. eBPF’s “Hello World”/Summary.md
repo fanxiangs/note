@@ -1,5 +1,3 @@
-# Summary
-
 I hope that by showing some concrete examples of an eBPF program, this chapter helped you consolidate your mental model of eBPF code running in the kernel, triggered by events. You’ve also seen examples of data being passed from the kernel to user space using BPF maps.
 
 Using the BCC framework hides many of the details of how the program is built, loaded into the kernel, and attached to events. In the next chapter I’ll show you a different approach to writing “Hello World,” and we’ll dive deeper into those hidden details.[[null|]][[null|]]

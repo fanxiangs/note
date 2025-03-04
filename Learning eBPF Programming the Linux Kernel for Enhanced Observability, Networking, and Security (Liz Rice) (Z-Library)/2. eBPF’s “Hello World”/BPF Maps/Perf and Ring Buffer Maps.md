@@ -45,7 +45,6 @@ int hello(void *ctx) {
 }
 ```
 
-
 1. [[null|]]BCC defines the macro `BPF_PERF_OUTPUT` for creating a map that will be used to pass messages from the kernel to user space. I’ve called this map `output`.
 2. Every time `hello()` is run, the code will write a structure’s worth of data. This is the definition of that structure, which has fields for the process ID, the name of the currently running command, and a text message.
 3. `data` is a local variable that holds the data structure to be submitted, and `message` holds the `"Hello World"` string.
@@ -57,23 +56,24 @@ int hello(void *ctx) {
 
 Just as in the first “Hello World” example, this C program is assigned to a string called `program` in the Python code. What follows is the rest of the Python code:
 
-    b
+```c
+b = BPF(text=program)                                
+syscall = b.get_syscall_fnname("execve")
+b.attach_kprobe(event=syscall, fn_name="hello")
 
-[[#code_id_2_17|]]
+def print_event(cpu, data, size):                    
+   data = b["output"].event(data)
+   print(f"{data.pid} {data.uid} {data.command.decode()} " + \
+         f"{data.message.decode()}")
 
-The lines that compile the C code, load it into the kernel, and attach it to the syscall event are unchanged from the version of “Hello World” you saw earlier.
-
-[[#code_id_2_18|]]
-
-`print_event` is a callback function that will output a line of data to the screen. BCC does some heavy lifting so that I can refer to the map simply as `b["output"]` and grab data from it using `b["output"].event()`.
-
-[[#code_id_2_19|]]
-
-`b["output"].open_perf_buffer()` opens the perf ring buffer. The function takes `print_event` as an argument to define that this is the callback function to be used whenever there is data to read from the buffer.
-
-[[#code_id_2_20|]]
-
-The program will now loop indefinitely,[^7] polling the perf ring buffer. If there is any data available, `print_event` will get called.
+b["output"].open_perf_buffer(print_event)            
+while True:                                          
+   b.perf_buffer_poll()
+```
+1. The lines that compile the C code, load it into the kernel, and attach it to the syscall event are unchanged from the version of “Hello World” you saw earlier.
+2. `print_event` is a callback function that will output a line of data to the screen. BCC does some heavy lifting so that I can refer to the map simply as `b["output"]` and grab data from it using `b["output"].event()`.
+3. `b["output"].open_perf_buffer()` opens the perf ring buffer. The function takes `print_event` as an argument to define that this is the callback function to be used whenever there is data to read from the buffer.
+4. The program will now loop indefinitely,[^7] polling the perf ring buffer. If there is any data available, `print_event` will get called.
 
 Running this code gives us output that’s fairly similar to the original “Hello World”:
 
