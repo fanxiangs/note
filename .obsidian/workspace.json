@@ -93,12 +93,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Hash Table Map.md",
+                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Perf and Ring Buffer Maps.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hash Table Map"
+              "title": "Perf and Ring Buffer Maps"
             }
           }
         ],
@@ -210,13 +210,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Hash Table Map.md",
+                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Perf and Ring Buffer Maps.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Hash Table Map"
+              "title": "Outline of Perf and Ring Buffer Maps"
             }
           },
           {
@@ -252,6 +252,7 @@
   },
   "active": "4c8d536abf3af0f8",
   "lastOpenFiles": [
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Hash Table Map.md",
     "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Function Calls.md",
     "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/BPF Maps.md",
     "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/Running “Hello World”.md",
@@ -278,7 +279,6 @@
     "Chapter 6 The Memory Hierarchy（存储器层次结构）.md",
     "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/The eBPF Virtual Machine/The eBPF Virtual Machine.md",
     "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library).md",
-    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/11. The Future Evolution of eBPF/Conclusion.md",
     "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/11. The Future Evolution of eBPF",
     "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/10. eBPF Programming/Rust",
     "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/10. eBPF Programming/C and Libbpf",
