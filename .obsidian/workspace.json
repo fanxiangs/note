@@ -58,9 +58,23 @@
               "icon": "lucide-file",
               "title": "Tail Calls"
             }
+          },
+          {
+            "id": "2762203e4cd207c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/Exercises.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Exercises"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -142,12 +156,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Tail Calls.md",
+                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/Exercises.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Tail Calls"
+              "title": "Outgoing links from Exercises"
             }
           },
           {
@@ -171,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Tail Calls.md",
+                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/Exercises.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Tail Calls"
+              "title": "Outline of Exercises"
             }
           },
           {
@@ -211,13 +225,13 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "06fb02005b89b2c9",
+  "active": "2762203e4cd207c6",
   "lastOpenFiles": [
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Tail Calls.md",
     "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/Exercises.md",
     "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/The eBPF Virtual Machine/eBPF Instructions.md",
     "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/The eBPF Virtual Machine/eBPF Registers.md",
     "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/Note.md",
-    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Tail Calls.md",
     "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/Summary.md",
     "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Function Calls.md",
     "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/BPF Maps.md",
