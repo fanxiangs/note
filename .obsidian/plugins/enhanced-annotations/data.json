@@ -41,7 +41,9 @@
     "truncateFileName": false
   },
   "idling": {
-    "daysUnused": []
+    "daysUnused": [
+      "2025-03-06"
+    ]
   },
   "clipboard": {
     "templates": {

@@ -328,12 +328,6 @@
                 {
                   "type": "file",
                   "ctime": 1741093129754,
-                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Exercises.md",
-                  "subpath": "#^-"
-                },
-                {
-                  "type": "file",
-                  "ctime": 1741093129754,
                   "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Inspecting an eBPF Object File.md",
                   "subpath": "#^-"
                 },
@@ -352,12 +346,6 @@
                 {
                   "type": "file",
                   "ctime": 1741093129754,
-                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/BPF to BPF Calls.md",
-                  "subpath": "#^-"
-                },
-                {
-                  "type": "file",
-                  "ctime": 1741093129754,
                   "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Summary.md",
                   "subpath": "#^-"
                 },
@@ -365,6 +353,12 @@
                   "type": "file",
                   "ctime": 1741093129754,
                   "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Exercises.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1741253048107,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/BPF to BPF Calls.md",
                   "subpath": "#^-"
                 }
               ],
