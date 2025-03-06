@@ -216,6 +216,12 @@
               "ctime": 1740573371334,
               "items": [
                 {
+                  "type": "file",
+                  "ctime": 1741093129754,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/3. Anatomy of an eBPF Program.md",
+                  "subpath": "#^-"
+                },
+                {
                   "type": "group",
                   "ctime": 1741093189060,
                   "items": [
@@ -255,7 +261,7 @@
                 {
                   "type": "file",
                   "ctime": 1741093129754,
-                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/3. Anatomy of an eBPF Program.md",
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Compiling an eBPF Object File.md",
                   "subpath": "#^-"
                 },
                 {
@@ -285,15 +291,15 @@
                       "ctime": 1741093244304,
                       "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Inspecting the Loaded Program/The Translated Bytecode.md",
                       "subpath": "#^-"
+                    },
+                    {
+                      "type": "file",
+                      "ctime": 1741093244304,
+                      "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Inspecting the Loaded Program/The JIT-Compiled Machine Code.md",
+                      "subpath": "#^-"
                     }
                   ],
                   "title": "Inspecting the Loaded Program"
-                },
-                {
-                  "type": "file",
-                  "ctime": 1741093129754,
-                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/3. Anatomy of an eBPF Program.md",
-                  "subpath": "#^-"
                 },
                 {
                   "type": "file",
@@ -304,13 +310,7 @@
                 {
                   "type": "file",
                   "ctime": 1741093129754,
-                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/BPF to BPF Calls.md",
-                  "subpath": "#^-"
-                },
-                {
-                  "type": "file",
-                  "ctime": 1741093129754,
-                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Compiling an eBPF Object File.md",
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Global Variables.md",
                   "subpath": "#^-"
                 },
                 {
@@ -322,13 +322,13 @@
                 {
                   "type": "file",
                   "ctime": 1741093129754,
-                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Exercises.md",
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Unloading the Program.md",
                   "subpath": "#^-"
                 },
                 {
                   "type": "file",
                   "ctime": 1741093129754,
-                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Global Variables.md",
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Exercises.md",
                   "subpath": "#^-"
                 },
                 {
@@ -352,7 +352,19 @@
                 {
                   "type": "file",
                   "ctime": 1741093129754,
-                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Unloading the Program.md",
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/BPF to BPF Calls.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1741093129754,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Summary.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1741093129754,
+                  "path": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Exercises.md",
                   "subpath": "#^-"
                 }
               ],
