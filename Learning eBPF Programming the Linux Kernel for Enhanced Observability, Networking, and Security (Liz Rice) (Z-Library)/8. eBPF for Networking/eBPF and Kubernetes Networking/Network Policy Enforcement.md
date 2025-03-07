@@ -1,0 +1,15 @@
+# Network Policy Enforcement
+
+[[null|]][[null|]]You saw at the start of this chapter how eBPF programs can drop packets, and that means they simply won’t reach their destination. This is the basis of network policy enforcement, and conceptually it’s essentially the same whether we are thinking about “traditional” or cloud native firewalling. A policy determines whether a packet should be dropped or not, based on information about its source and/or destination.
+
+[[null|]]In traditional environments, IP addresses are assigned to a particular server for a long period of time, but in Kubernetes, IP addresses come and go dynamically, and the address assigned today for a particular application pod might very well be reused for a completely different application tomorrow. [[null|]]This is why traditional firewalling isn’t terribly effective in cloud native environments. It would be impractical to redefine firewall rules manually every time IP addresses change.
+
+Instead, Kubernetes supports the concept of a NetworkPolicy resource, which defines firewalling rules based on the labels applied to particular pods rather than based on their IP address. Although the resource type is native to Kubernetes, it’s not implemented by Kubernetes itself. [[null|]][[null|]][[null|]]Instead, this functionality is delegated to whatever CNI plug-in you’re using. If you choose a CNI that doesn’t support NetworkPolicy resources, any rules you might configure are simply ignored. On the flip side, CNIs are free to configure custom resources that allow for more sophisticated network policy configurations than the native Kubernetes definition allows. For example, Cilium supports features like DNS-based network policy rules, so you can define whether traffic is or isn’t allowed not based on an IP address but based on the DNS name (e.g., “_example.com_”). You can also define policies for various Layer 7 protocols, for example, allowing or denying traffic for HTTP GET calls but not for POST calls to a particular URL.
+
+##### Note
+
+Isovalent’s free hands-on lab [“Getting Started with Cilium”](https://oreil.ly/afdeh) walks you through defining network policies at Layers 3/4 and Layer 7. Another very useful resource is the Network Policy Editor at [networkpolicy.io](http://networkpolicy.io), which visually presents the effects of a network policy.
+
+As I discussed earlier in this chapter, it’s possible to use iptables rules to drop traffic, and that’s an approach some CNIs have taken to implement Kubernetes NetworkPolicy rules. Cilium uses eBPF programs to drop traffic that doesn’t match the set of rules currently in place. Having seen examples of dropping packets earlier in this chapter, I hope you have a rough mental model for how this would work.
+
+Cilium uses Kubernetes identities to determine whether a given network policy rule applies. In the same way labels define which pods are part of a service in Kubernetes, labels also define Cilium’s security identity for the pod. eBPF hash tables, indexed by these service identities, make for very efficient rule lookups.

@@ -1,0 +1,3 @@
+# Using System Calls for Security Events
+
+[[null|]][[null|]]System calls (or syscalls) are the interface between user space applications and the kernel. If you can restrict the set of syscalls an app can make, that will limit what it is able to do. For example, if you stop an app from making syscalls in the `open*()` family, it won’t be able to open files. If you have an application that you never expect to open files, you might want to create this limitation so that even if the app gets compromised, it won’t be able to open files maliciously. If you’ve been using Docker or Kubernetes over the past few years, there is a very good chance you have already come across a security tool that uses BPF to limit syscalls: seccomp_._
