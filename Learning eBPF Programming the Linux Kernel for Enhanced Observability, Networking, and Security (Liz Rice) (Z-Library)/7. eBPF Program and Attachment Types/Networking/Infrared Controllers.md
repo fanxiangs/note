@@ -1,0 +1,3 @@
+# Infrared Controllers
+
+[[null|]][[null|]]Programs of type [BPF_PROG_TYPE_LIRC_MODE2](https://oreil.ly/AwG1C) can be attached to the file descriptor for an infrared controller device to provide decoding for infrared protocols. At the time of this writing, this program type requires `CAP_NET_ADMIN`, but I think this illustrates that the division of program types into tracing related and networking related doesn’t fully express the range of different applications that eBPF can address.[[null|]][[null|]][[null|]]
