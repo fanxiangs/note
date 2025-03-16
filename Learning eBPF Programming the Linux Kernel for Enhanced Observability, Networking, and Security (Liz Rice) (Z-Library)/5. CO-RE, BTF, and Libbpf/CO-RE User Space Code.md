@@ -1,0 +1,3 @@
+# CO-RE User Space Code
+
+[[null|]][[null|]]There are a few different frameworks in different programming languages that support CO-RE by implementing the relocations as they load eBPF programs into the kernel. In this chapter I’ll show C code that uses _libbpf_; other options include the Go packages _cilium/ebpf_ and _libbpfgo_, and Aya for Rust. I’ll discuss those options further in [[ch10.xhtml#ebpf_programming|Chapter 10]].

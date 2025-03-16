@@ -1,0 +1,219 @@
+{
+  "main": {
+    "id": "f3f8feee64b702de",
+    "type": "split",
+    "children": [
+      {
+        "id": "70998fa3f24de427",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6ce58f8a989e074a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4d819f8a68701940",
+    "type": "split",
+    "children": [
+      {
+        "id": "65d035eebccb1c0d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aee0144caa3f514d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "b6c200d70017ef10",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 310.5
+  },
+  "right": {
+    "id": "771babcb44be1c12",
+    "type": "split",
+    "children": [
+      {
+        "id": "d03d8afab43ddad3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e8cfa71ff366452b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "BPF Performance Tools/Chapter 7. Memory.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Chapter 7. Memory"
+            }
+          },
+          {
+            "id": "38dd0306f35fcba2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/eBPF “Hello World” for a Network Interface.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from eBPF “Hello World” for a Network Interface"
+            }
+          },
+          {
+            "id": "bfe0b383d7c1b346",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "749720508dfe892c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Summary.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Summary"
+            }
+          },
+          {
+            "id": "04d273539774cdd4",
+            "type": "leaf",
+            "state": {
+              "type": "annotations-outline",
+              "state": {},
+              "icon": "message-square",
+              "title": "Enhanced Annotations"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "github-sync:Sync with Remote": false,
+      "custom-sort:Toggle custom sorting": false
+    }
+  },
+  "active": "6ce58f8a989e074a",
+  "lastOpenFiles": [
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Exercises.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Summary.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/3. Anatomy of an eBPF Program.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/BPF to BPF Calls.md",
+    "BPF Performance Tools/Chapter 4. BCC.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Compiling an eBPF Object File.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/eBPF “Hello World” for a Network Interface.md",
+    "Untitled.md",
+    "Note.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/The eBPF Virtual Machine/eBPF Instructions.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/The eBPF Virtual Machine/eBPF Registers.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/The eBPF Virtual Machine/The eBPF Virtual Machine.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/3. Anatomy of an eBPF Program/Inspecting the Loaded Program/Inspecting the Loaded Program.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/1. What Is eBPF, and Why Is It Important_/Adding New Functionality to the Kernel.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/Note.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/Exercises.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Tail Calls.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/Summary.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Function Calls.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/BPF Maps.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Hash Table Map.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BPF Maps/Perf and Ring Buffer Maps.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/2. eBPF’s “Hello World”.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/Running “Hello World”.md",
+    "README.md",
+    "新建文件夹",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/2. eBPF’s “Hello World”/BCC’s “Hello World”.md",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/11. The Future Evolution of eBPF",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/10. eBPF Programming/Rust",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/10. eBPF Programming/C and Libbpf",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/10. eBPF Programming",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/9. eBPF for Security/Cilium Tetragon",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/9. eBPF for Security/Using System Calls for Security Events",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/9. eBPF for Security",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/8. eBPF for Networking/eBPF and Kubernetes Networking",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/8. eBPF for Networking/Packet Encryption and Decryption",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/titlepage_footer_ebook.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0905.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_1101.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0904.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0902.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0903.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0901.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0807.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0808.png",
+    "Learning eBPF Programming the Linux Kernel for Enhanced Observability, Networking, and Security (Liz Rice) (Z-Library)/images/lebp_0806.png",
+    "Untitled.canvas"
+  ]
+}

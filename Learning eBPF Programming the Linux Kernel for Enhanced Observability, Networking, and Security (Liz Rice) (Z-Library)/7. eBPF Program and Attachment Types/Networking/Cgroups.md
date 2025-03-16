@@ -1,0 +1,7 @@
+# Cgroups
+
+[[null|]][[null|]][[null|]][[null|]]eBPF programs can be attached to cgroups (short for “control groups”). _Cgroups_ are a concept in the Linux kernel that restricts the set of resources a given process or group of processes can have access to. Cgroups are one of the mechanisms that isolate one container (or one Kubernetes pod) from another. Attaching eBPF programs to a cgroup allows for custom behavior that only applies to that cgroup’s processes. All processes are associated with a cgroup, including processes that are not running inside a container.
+
+There are several cgroup-related program types, and even more hooks where they can be attached. At least at the time of this writing, they are nearly all networking related, although there is also a `BPF_CGROUP_SYSCTL` program type that can be attached to sysctl commands affecting a particular cgroup.
+
+As an example, there are socket-related program types specific to cgroups `BPF_PROG_TYPE_CGROUP_SOCK` and `BPF_PROG_TYPE_CGROUP_SKB`. eBPF programs can determine whether a given cgroup is permitted to perform a requested socket operation or data transmission. This is useful for network security policy enforcement (which I’ll cover in the next chapter). Socket programs can also trick the calling process into thinking they are connecting to a particular destination address.
