@@ -1,0 +1,5 @@
+# Traffic Control
+
+[[null|]][[null|]]Further down the network stack comes “TC” or traffic control. There is a whole subsystem in the Linux kernel related to TC, and a glance at the [manpage for the tc command](https://oreil.ly/kfyg5) will give you an idea of how complex it is and how important it is to computing in general to have deep levels of flexibility and configuration over the way network packets are handled.
+
+eBPF programs can be attached to provide custom filters and classifiers for network packets for both ingress and egress traffic. This is one of the building blocks of the Cilium project, and I’ll cover some examples in the next chapter. If you can’t wait until then, there are some good examples on [Quentin Monnet’s blog](https://oreil.ly/heQ2D). This can be done programmatically, but you also have the option to use the `tc` command to manipulate these kinds of eBPF programs.

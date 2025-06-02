@@ -1,0 +1,3 @@
+# Accessing Context
+
+[[null|]][[null|]]Every eBPF program is passed some context information as an argument, but depending on the program and attachment type, it may be allowed to access only some of that context information. For example, [tracepoint programs](https://oreil.ly/6RFFI) receive a pointer to some tracepoint data. The format of that data depends on the particular tracepoint, but they all start with some common fields—yet those common fields are not accessible to eBPF programs. Only the tracepoint-specific fields that follow can be accessed. Attempting to read or write the wrong fields leads to an `invalid bpf_context access` error. There is an example of this in the exercises at the end of this chapter.
